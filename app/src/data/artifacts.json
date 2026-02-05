@@ -1,0 +1,1342 @@
+{
+  "generatedAt": "2026-02-04T19:09:36",
+  "totalArtifacts": 61,
+  "pdfSource": "/materials/raw/%E6%9D%A5%E8%87%AA%E3%80%8A%E9%B2%81%E8%BF%85%E8%97%8F%E6%B1%89%E7%94%BB%E7%8F%8D%E8%B5%8F%E3%80%8B/%E7%AB%A0%E8%8A%82%EF%BC%88%E4%B8%80%EF%BC%89%E6%AD%A6%E6%B0%8F%E7%A5%A0%E6%B1%89%E7%94%BB.pdf",
+  "pdfTotalPages": 36,
+  "artifacts": [
+    {
+      "id": "artifact-001",
+      "name": "一对门柱-右门柱",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E4%B8%80%E5%AF%B9%E9%97%A8%E6%9F%B1-%E5%8F%B3%E9%97%A8%E6%9F%B1.png",
+      "modelImageThumb": "/generated/models/artifact-001-320.webp",
+      "modelImageLarge": "/generated/models/artifact-001-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-002",
+      "name": "一对门柱-左门柱",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E4%B8%80%E5%AF%B9%E9%97%A8%E6%9F%B1-%E5%B7%A6%E9%97%A8%E6%9F%B1.png",
+      "modelImageThumb": "/generated/models/artifact-002-320.webp",
+      "modelImageLarge": "/generated/models/artifact-002-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-003",
+      "name": "其他第一石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B8%80%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-003-320.webp",
+      "modelImageLarge": "/generated/models/artifact-003-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B8%80%E7%9F%B3.jpg",
+      "infoText": "## 其他第一石 【海神出游】\n> Other first stone [Poseidon travels.]",
+      "pdfPages": [],
+      "pdfTopic": "海神出游",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "海神出游"
+      ]
+    },
+    {
+      "id": "artifact-004",
+      "name": "其他第三石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B8%89%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-004-320.webp",
+      "modelImageLarge": "/generated/models/artifact-004-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B8%89%E7%9F%B3.jpg",
+      "infoText": "## 其他第三石\n> Other third stone\n\n【第一层】西王母和神话人物。\n> The first layer: Xi Wangmu and mythological figures.\n\n【第二层】云纹。\n> The second layer: moire.",
+      "pdfPages": [],
+      "pdfTopic": "西王母、云纹",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-005",
+      "name": "其他第九石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B9%9D%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-005-320.webp",
+      "modelImageLarge": "/generated/models/artifact-005-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%B9%9D%E7%9F%B3.jpg",
+      "infoText": "## 其它第九石【搏击】（上）\n> Other ninth stone Fighting, (top)",
+      "pdfPages": [],
+      "pdfTopic": "搏击",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "搏击"
+      ]
+    },
+    {
+      "id": "artifact-006",
+      "name": "其他第二石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-006-320.webp",
+      "modelImageLarge": "/generated/models/artifact-006-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 其他第二石【祭品】（下）\n> Other second stone Offerings. (down)",
+      "pdfPages": [],
+      "pdfTopic": "祭品",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "祭品"
+      ]
+    },
+    {
+      "id": "artifact-007",
+      "name": "其他第五石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%BA%94%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-007-320.webp",
+      "modelImageLarge": "/generated/models/artifact-007-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E4%BA%94%E7%9F%B3.jpg",
+      "infoText": "## 其他第五石\n> Other fifth stone\n\n【第一层】车骑。\n> The first layer: cars and rides.\n\n【第二层】六博。\n> The second layer: Liubo.\n\n【第三层】车骑。\n> The third layer: Chariot and rides.",
+      "pdfPages": [],
+      "pdfTopic": "车骑、六博",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-008",
+      "name": "其他第十石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E5%8D%81%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-008-320.webp",
+      "modelImageLarge": "/generated/models/artifact-008-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E5%8D%81%E7%9F%B3.jpg",
+      "infoText": "## 其他第十石【云纹、菱纹、连弧纹】（下）\n> Other tenth stone Cloud pattern, rhombus pattern, arc pattern. (down)",
+      "pdfPages": [],
+      "pdfTopic": "云纹、菱纹、连弧纹",
+      "linkedPdf": [],
+      "tags": [
+        "云纹",
+        "其他石刻系列",
+        "菱纹",
+        "连弧纹"
+      ]
+    },
+    {
+      "id": "artifact-009",
+      "name": "其他第四石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E5%9B%9B%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-009-320.webp",
+      "modelImageLarge": "/generated/models/artifact-009-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E4%BB%96%E7%AC%AC%E5%9B%9B%E7%9F%B3.jpg",
+      "infoText": "## 其他第四石【祥瑞图】（上）\n> Other fourth stone Auspicious pictures. (top)",
+      "pdfPages": [],
+      "pdfTopic": "祥瑞图",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "祥瑞图"
+      ]
+    },
+    {
+      "id": "artifact-010",
+      "name": "其它第七石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E4%B8%83%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-010-320.webp",
+      "modelImageLarge": "/generated/models/artifact-010-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E4%B8%83%E7%9F%B3.jpg",
+      "infoText": "## 其它第七石【仙人狩猎】\n> Other seventh stone Immortal hunting.",
+      "pdfPages": [],
+      "pdfTopic": "仙人狩猎",
+      "linkedPdf": [],
+      "tags": [
+        "仙人狩猎",
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-011",
+      "name": "其它第六石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E5%85%AD%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-011-320.webp",
+      "modelImageLarge": "/generated/models/artifact-011-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E5%85%AD%E7%9F%B3.jpg",
+      "infoText": "## 其它第六石【正面，升鼎】\n> Other sixth stone Front, Shengding.",
+      "pdfPages": [],
+      "pdfTopic": "升鼎",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列",
+        "升鼎",
+        "正面"
+      ]
+    },
+    {
+      "id": "artifact-012",
+      "name": "其它第十一石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-012-320.webp",
+      "modelImageLarge": "/generated/models/artifact-012-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%85%B6%E5%AE%83%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.jpg",
+      "infoText": "## 其它第十一石【供桌】云纹（下）\n> Other eleventh stone (Table) moire. (down)",
+      "pdfPages": [],
+      "pdfTopic": "供桌、云纹",
+      "linkedPdf": [],
+      "tags": [
+        "供桌",
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-013",
+      "name": "前石室第七石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-013-320.webp",
+      "modelImageLarge": "/generated/models/artifact-013-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第七石\n> The former stone room, The seventh stone\n\n【第一层】自右至左为义姐、刑渠、闵子骞、赵盾救灵辄的故事。\n> The first layer: from right to left are the stories of Yi Ju, Xing Qu, Min Zisai, and Zhao Dun rescuing Ling Zhe.\n\n【第二层】自右至左为伯游、老莱子娱亲、文王十子的故事。\n> The second floor: From right to left, there are stories about Bo You, Lao Laizi entertaining relatives, and King Wen's ten sons.\n\n【第三层】自右至左为一人倒立、一人甩袖起舞、六博、车骑。\n> The third layer: From right to left, one person stands on his head, one person dances with sleeves thrown, Liubo, and chariot riding.\n\n【第四层】庖厨。（下）\n> The fourth floor: kitchen. (down)",
+      "pdfPages": [
+        35
+      ],
+      "pdfTopic": "文王十子·六博·椎牛（含义姐、刑渠、闵子骞、赵盾等）",
+      "linkedPdf": [
+        {
+          "page": 35,
+          "title": "文王十子·六博·椎牛",
+          "content": "## 第35页\n\n### 文王十子·六博·椎牛\n> Ten Sons of King Wen, Liubo, and Ox-slaughtering\n\n这幅汉画共四层。第一层，自右至左，为四个节义和孝亲故事：鲁义姑姊、邢渠哺父、闵子骞失槌和赵盾哺灵辄。\n> This Han Dynasty stone carving consists of four tiers. The first tier, from right to left, depicts four stories of integrity and filial piety: The Righteous Aunt of Lu, Xing Qu Feeding His Father, Min Ziqian Losing the Whip, and Zhao Dun Feeding Ling Zhe.\n\n第二层，自右至左，为三个孝亲故事：伯朞孝亲、老莱子娱亲、文王十子。\n> The second tier, from right to left, depicts three stories of filial piety: Bo Qi's Filial Piety, Lao Laizi Amusing His Parents, and the Ten Sons of King Wen.\n\n第三层为六博戏。右起第八人以左，为达官显贵乘车前来博局博戏，第八人应为博局侍者在迎接贵客。其后四位贵胃，左三右一分列博局两边博戏，在右者似为“庄家”，其旁有侍者侍酒。最右二人在表演七盘舞助兴。\n> The third tier depicts the game of Liubo. To the left of the eighth person from the right, high-ranking officials are shown arriving in carriages at the gaming board to play. The eighth person is likely an attendant welcoming the distinguished guests. Following them are four aristocrats, three on the left and one on the right, positioned around the board to play. The one on the right appears to be the \"banker,\" with an attendant serving wine nearby. The two people on the far right are performing the Seven-Disk Dance for entertainment.\n\n六博，又作陆博，是古代一种掷采行棋的博戏类游戏，因使用六根博箸，故称六博，以吃子为胜，是围棋的变异和象棋滥觞。六博的棋子多以象牙、玉石或金属制成。从文献记载和出土文物以及汉画像石、汉画像砖上的画面看，战国至两汉，六博是在全国各地广受欢迎的一种博彩游戏，魏晋之后，这种游戏渐渐消失。此汉画反映了汉代六博之盛。\n> Liubo, also known as Lubo, was an ancient board game involving the throwing of sticks and moving pieces. It was named Liubo because it used six bamboo sticks (bozhu). The objective was to capture the opponent's pieces, and it is considered a variation of Go and a precursor to Xiangqi (Chinese Chess). Liubo pieces were often made of ivory, jade, or metal. Based on literature, unearthed artifacts, and depictions on Han Dynasty stone and brick carvings, Liubo was a widely popular gambling game throughout the country from the Warring States period to the Han Dynasty. The game gradually disappeared after the Wei and Jin Dynasties. This carving reflects the popularity of Liubo during the Han Dynasty.\n\n第四层为庖厨图。画面左边有一畜，尽管头部损泐，仍不难认出是一头牛。其右一人举槌，正欲椎牛。椎牛亦称槌牛、击牛，是以大槌或铁锤将牛击毙，然后屠宰。至今在我国西南少数民族地区仍盛行椎牛游戏，这很可能源自汉朝。\n> The fourth tier is a kitchen scene. On the left side of the image is an animal; although the head is damaged, it is easily identifiable as an ox. To its right, a man raises a mallet, about to strike the ox. \"Chui Niu\" (ox-slaughtering), also known as \"Chui Niu\" or \"Ji Niu,\" involves killing an ox with a large mallet or iron hammer before butchering it. The practice of \"Chui Niu\" games is still prevalent among ethnic minorities in Southwest China today and likely originated in the Han Dynasty.\n\n这里重点介绍一下文王十子。\n> Here, we focus on the Ten Sons of King Wen.\n\n据《史记》和《列女传》，周文王妻子太姒是夏禹之后，她仁爱有智慧，文王慕其美名，亲到渭水相迎，造舟为梁，请到封地岐。文王主外，太姒主内。太姒孝敬祖母、婆母，日夜勤于家务，教儿育女。她与文王育有十子：长子伯邑考，次子姬发，三子管叔鲜，四子周公旦，五子蔡叔度，六子曹叔振铎，七子成叔武，八子霍叔处，九子康叔封，十子冉季载。除长子伯邑考遭商纣王杀害外，其他九子都很有一成就，其中次子即周武王。\n> According to the Records of the Grand Historian and Biographies of Exemplary Women, Taisi, the wife of King Wen of Zhou, was a descendant of Yu the Great. She was benevolent and wise. King Wen, admiring her reputation, personally went to the Wei River to welcome her, building a bridge of boats to bring her to his fief in Qi. King Wen managed external affairs while Taisi managed internal ones. Taisi was filial to her grandmother and mother-in-law, worked diligently day and night, and educated her children. She and King Wen had ten sons: the eldest Bo Yikao, the second Ji Fa, the third Guan Shu Xian, the fourth Duke of Zhou (Dan), the fifth Cai Shu Du, the sixth Cao Shu Zhenduo, the seventh Cheng Shu Wu, the eighth Huo Shu Chu, the ninth Kang Shu Feng, and the tenth Ran Ji Zai. Except for the eldest son Bo Yikao, who was killed by King Zhou of Shang, the other nine sons were all very successful, with the second son becoming King Wu of Zhou.\n\n第二层左边超过全层一半的位置刻画的是文王十子的内容。左边坐于榻上的老年夫妇为文王和夫人太姒，榜题“文王”。最左边有一女侍执便面侍立。文王右边，依次为十子，均左向拱手重立，石面多有损泐，从此拓本上可以看到榜题“伯邑考”“武王发”“周公旦”“蔡叔度”“霍叔处”“康叔封”。最右边三人，左为文王幼子，中为持节女子，右为执笏家臣，榜题“乳母，冉季载”，季字半泐。脱落的榜题应为“管叔鲜”“曹叔振铎”“成叔武”。\n> The content regarding the Ten Sons of King Wen is depicted on the left side of the second tier, occupying more than half of the tier's length. The elderly couple sitting on the couch on the left are King Wen and his wife Taisi, with the inscription \"King Wen.\" On the far left, a female attendant stands holding a fan. To the right of King Wen are the ten sons, all standing with their hands clasped in greeting facing left. The stone surface is heavily damaged, but inscriptions such as \"Bo Yikao,\" \"King Wu Fa,\" \"Duke of Zhou Dan,\" \"Cai Shu Du,\" \"Huo Shu Chu,\" and \"Kang Shu Feng\" can still be seen in this rubbing. Of the three people on the far right, the one on the left is the youngest son of King Wen, the middle one is a woman holding a ceremonial staff, and the one on the right is a courtier holding a tablet. The inscription reads \"Wet Nurse, Ran Ji Zai,\" with the character \"Ji\" partially damaged. The missing inscriptions should have been \"Guan Shu Xian,\" \"Cao Shu Zhenduo,\" and \"Cheng Shu Wu.\""
+        }
+      ],
+      "tags": [
+        "前石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-014",
+      "name": "前石室第三石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-014-320.webp",
+      "modelImageLarge": "/generated/models/artifact-014-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第三石\n> The former stone room, The third stone\n\n【第一层】楼阁燕居。\n> The first layer: Pavilion Yanju.\n\n【第二层】车骑。（中）\n> The second layer: chariots and riders.(middle)",
+      "pdfPages": [],
+      "pdfTopic": "楼阁燕居、车骑",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列",
+        "第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-015",
+      "name": "前石室第二石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-015-320.webp",
+      "modelImageLarge": "/generated/models/artifact-015-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第二石\n> The former stone room, The second stone\n\n【第一层】东王公和奇禽异兽。\n> The first layer: Dong Wang Gong and strange birds and beasts.\n\n【第二层】孔门弟子。\n> The second layer: Confucian disciples.\n\n【第三层】车骑。（上）\n> The third layer: chariots and riders.(top)",
+      "pdfPages": [
+        1
+      ],
+      "pdfTopic": "东王公（东王公、孔门弟子、车马出行）",
+      "linkedPdf": [
+        {
+          "page": 1,
+          "title": "东王公",
+          "content": "## 第1页\n\n### 东王公\n\n这幅汉画分三层，自上至下分别表现神话题材东王公、历史故事“孔门弟子诵经图”和现实生活题材车马出行。\n> This Han painting is divided into three registers, representing from top to bottom the mythological theme of Dong Wang Gong (Lord King of the East), the historical story of \"Confucius' Disciples Reciting Classics,\" and the real-life theme of a chariot and horse procession.\n\n第三层车马出行图中飞翔着三只燕子。其中一只，燕尾如小儿筒裤的两个裤管。在上层的昆仑仙境里，有五个长着这样无足两腿的羽人。这是飞廉，是开路的神鸟。\n> In the third register's procession scene, three swallows are flying. One of them has a tail like the two legs of a child's trousers. In the upper Kunlun fairyland, there are five feathered beings with such footless legs. These are Feilian, the divine birds that clear the path.\n\n第二层的诵经图里共有十七人。其中七人手捧简册诵读。诵读的方式很不同。一人跪诵；一人站立把经册高高举过头顶仰诵；二人捧册毕恭毕敬诵读；三人捧册经所回过头来，好像在回答身后同学的问题。其余十一人，或与诵经者相谈交流，或指指点点，或交头接耳，既显得成竹在胸，又颇似“疑义相与析”。这既是春秋时孔子谓徒的情景再现，也不啻为汉代大儒传经布道的录影。\n> There are seventeen people in the second register's recitation scene. Seven of them hold bamboo slips and recite. The ways of recitation are quite different: one kneels; one stands holding the scrolls high above the head; two hold the scrolls reverently; and three turn back while holding the scrolls, as if answering questions from classmates behind. The other eleven are either talking with the reciters, pointing, or whispering, appearing both confident and as if \"analyzing doubts together.\" This is both a recreation of Confucius teaching his disciples in the Spring and Autumn period and a recording of great Han scholars preaching the classics.\n\n这里重点介绍一下第一层的内容。第一层正中是创世神东王公。他戴着三朵冠，肩生肉翅。他面目圆润姣好，显示东王公形象脱胎于西王母。\n> This section focuses on the content of the first register. In the center of the first register is the creator god Dong Wang Gong. He wears a three-lobed crown and has fleshy wings on his shoulders. His face is round and handsome, showing that the image of Dong Wang Gong was modeled after Xi Wang Mu (Queen Mother of the West).\n\n东王公左右的羽人飞仙和神禽异兽，可以视为他与西王母的造物。其中有飞蟾两只，马头鸟翼人身的“马人”一个，鸡头的“鸡人”一个，羽人九个，双蛇足羽人四个，人面鸟身神一个，鸟首云身的云雀四只，云身鸟翼人面神一个，双头人面兽两个，鸟三只。\n> The feathered immortals and divine beasts to the left and right of Dong Wang Gong can be seen as creations of him and Xi Wang Mu. Among them are two flying toads, one \"horse-man\" with a horse head and bird wings, one \"chicken-man\" with a chicken head, nine feathered beings, four feathered beings with double snake feet, one deity with a human face and bird body, four skylarks with bird heads and cloud bodies, one deity with a cloud body, bird wings and human face, two double-headed human-faced beasts, and three birds.\n\n最左面，一云神和一只云雀似在抵足而眠，其中寓意着生殖活动。马人和鸡人执谒跪拜，象征东王公创立文明制度。左侧一羽人在向东王公敬献冰糖葫芦样的物品，可能是《山海经》里说的琅玕树结的琅玕和《尚书》里说的球琳琅玕或璆琳琅玕。它也是甲骨文“糸”字的象形，少一个球果成甲骨文“玄”字，多一个球果成甲骨文“索”字。这可能象征东王公开启“众妙之门”或发明文字。右边羽人举着的玉杯是用来盛甘露的。\n> On the far left, a cloud god and a skylark seem to be sleeping foot-to-foot, which implies reproductive activities. The horse-man and chicken-man kneel in greeting, symbolizing Dong Wang Gong's establishment of the civilizational system. On the left, a feathered being offers Dong Wang Gong an item like a candied hawthorn, which may be the Langgan fruit from the Langgan tree mentioned in the \"Classic of Mountains and Seas\" or the Qiulin Langgan mentioned in the \"Book of Documents.\" It is also the pictograph for the character \"糸\" (silk) in oracle bone script; removing one fruit makes it the character \"玄\" (mysterious), and adding one makes it \"索\" (search/rope). This may symbolize Dong Wang Gong opening the \"Gate of All Mysteries\" or inventing writing. The jade cup held by the feathered being on the right is used to hold sweet dew.\n\n画中右侧两尊双头人面兽，兽蹄连着基座，腰身柔韧而雄健，活似汉代的天禄辟邪。\n> On the right side of the painting are two double-headed human-faced beasts with hooves connected to bases. Their bodies are flexible and robust, resembling the Tianlu and Pixiu of the Han Dynasty.\n\n年代：东汉；产地：山东嘉祥；规格：197cm×86.5cm\n> Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 197cm × 86.5cm"
+        }
+      ],
+      "tags": [
+        "前石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-016",
+      "name": "前石室第五石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-016-320.webp",
+      "modelImageLarge": "/generated/models/artifact-016-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第五石\n> The former stone room The fifth stone\n\n【第一层】西王母和奇禽异兽。\n> The first layer: Xi Wangmu and strange birds and beasts.\n\n【第二层】孔门弟子。\n> The second layer: confucian disciples.\n\n【第三层】车骑。（上）\n> The third layer: chariots and riders (top)",
+      "pdfPages": [
+        15,
+        16
+      ],
+      "pdfTopic": "子路顶鸠（西王母、孔门弟子）",
+      "linkedPdf": [
+        {
+          "page": 15,
+          "title": "子路顶鸠",
+          "content": "## 第15页\n\n### 子路顶鸠\n\n这幅汉画共有三格，上格是东王公及昆仑诸仙，下格为车马出行，中格为十九位孔门弟子。其中一人头上顶鸠，应为子路。另一人戴牟耳软帻，其余皆戴冠。孔子的这些门徒，一个个身材匀称，相貌周正，好像统一穿着礼服，要去参加重要的拜祭活动。\n> This Han painting consists of three registers: the top register features the Duke of the East and various immortals of Kunlun; the bottom register depicts a chariot procession; and the middle register shows nineteen disciples of Confucius. One of them, with a pigeon on his head, is likely Zilu. Another wears a soft cap with earflaps, while the rest wear formal crowns. These disciples of Confucius are well-proportioned and dignified in appearance, as if dressed in uniform ritual attire for an important sacrificial ceremony.\n\n孔子非常讲究礼。《史记·孔子世家》记孔子“割不正，不食；席不正，不坐；食于有丧者之侧，未尝饱也”。画中孔门弟子衣冠周正，是赞美孔子重视礼教，也是汉代倡导礼教的一个缩影。\n> Confucius was very particular about ritual. The \"Records of the Grand Historian: Hereditary House of Confucius\" notes that he \"would not eat meat that was not cut properly, nor sit on a mat that was not straight; when eating beside someone in mourning, he never ate to fullness.\" The neat attire of the disciples in the painting praises Confucius's emphasis on ritual education and serves as a microcosm of the promotion of ritual in the Han Dynasty.\n\n接下来重点谈谈子路头上的鸠。前面介绍过羔雁。子路顶鸠，可以理解成子路带着看望孔子的礼物。\n> Next, let's focus on the pigeon on Zilu's head. Lambs and geese were mentioned previously as gifts. Zilu wearing a pigeon can be understood as him bringing a gift to visit Confucius.\n\n古有鹖冠之说。鹖是像雉而善斗的鸟，古代武士戴鹖冠，表示英勇不惧战斗。史书记载子路为人耿直，好勇力。他少年时好逞强，常头戴雄鸡式的帽子耍威风。他甚至瞧不起孔子，有动手冒犯孔子的劣迹，可以说是个“问题少年”。孔子循循善诱，慢慢引导子路好学向礼。子路后来穿着儒服带着拜师礼物，主动请求成为孔门弟子。\n> In ancient times, there was the \"He Crown\" (Crossoptilon crown). The He is a pheasant-like bird known for its fighting spirit; ancient warriors wore He crowns to signify bravery and fearlessness in battle. Historical records describe Zilu as upright and fond of physical prowess. In his youth, he liked to show off, often wearing a rooster-style hat to look imposing. He even looked down on Confucius and had a history of physically offending him, making him a \"troubled youth.\" Confucius guided him patiently, gradually leading him toward learning and ritual. Zilu later dressed in Confucian robes, brought apprenticeship gifts, and requested to become a disciple.\n\n孔子因材施教，教导子路成为有勇善断、品德高尚之人。孔子周游列国，子路常跟随左右，保护老师免受羞辱和伤害。孔子内心感激子路，自言“自吾得由，恶言不闻于耳”。汉画中子路每每头顶一只鸟，应该是子路勇敢坚强的形象化表达。\n> Confucius taught according to the student's ability, guiding Zilu to become a brave, decisive, and noble person. When Confucius traveled through various states, Zilu often followed him to protect his teacher from humiliation and harm. Confucius was inwardly grateful to Zilu, saying, \"Since I got You (Zilu), I have not heard an unkind word.\" In Han paintings, Zilu is often depicted with a bird on his head, which is likely a visual representation of his brave and strong character.\n\n据《史记·仲尼弟子列传》，子路后来在卫国做官，卫国内乱，子路被击落冠缨。子路说：“君子死而冠不免。”然后“结缨而死”，被政敌所为肉酱。从一个“冠雄鸡”的顽劣少年到临死还要正衣冠的直臣，子路完成了人生的蜕变和升华，是孔子呕心沥血成功教育的奇迹。子路死，孔子万分悲痛。《礼记》记孔子不忍食用肉酱，见肉酱让人倒掉，借此表达对弟子的哀悼。\n> According to the \"Records of the Grand Historian: Biographies of Confucius's Disciples,\" Zilu later served as an official in the State of Wei. During internal strife in Wei, Zilu's hat string was struck off. Zilu said, \"A gentleman does not remove his crown even in death,\" then \"tied the strings and died,\" after which he was made into minced meat by his political enemies. From a rebellious youth \"crowning himself with a rooster\" to a loyal official who straightened his crown even at the moment of death, Zilu completed a life transformation and sublimation—a miracle of Confucius's dedicated education. Upon Zilu's death, Confucius was deeply grieved. The \"Book of Rites\" records that Confucius could not bear to eat minced meat and would have it discarded upon seeing it, expressing his mourning for his disciple."
+        },
+        {
+          "page": 16,
+          "title": "",
+          "content": "## 第16页\n\n（续上页）这幅汉画共有三格，上格是东王公及昆仑诸仙，中格为十九位孔门弟子，下格为车马出行。\n> (Continued from the previous page) This Han Dynasty stone carving consists of three registers: the top register depicts the King Father of the East (Dongwang Gong) and various immortals of the Kunlun Mountains; the middle register features nineteen disciples of Confucius; and the bottom register shows a procession of chariots and horses.\n\n年代：东汉；产地：山东嘉祥；规格：197.5cm×85.5cm\n> Period: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 197.5cm × 85.5cm"
+        }
+      ],
+      "tags": [
+        "前石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-017",
+      "name": "前石室第六石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-017-320.webp",
+      "modelImageLarge": "/generated/models/artifact-017-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第六石\n> The former stone room The sixth stone\n\n【第一层】车骑。\n> The first layer: chariots and riders\n\n【第二层】水陆攻战图。(上)\n> The second layer: water and land attack map. (top)",
+      "pdfPages": [],
+      "pdfTopic": "车骑、水陆攻战图",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列",
+        "第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-018",
+      "name": "前石室第十一石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-018-320.webp",
+      "modelImageLarge": "/generated/models/artifact-018-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第十一石\n> The former stone room, The eleventh stone\n\n【右面第一层】卷云纹。\n> The first layer on the right: cirrus moire.\n\n【第二层】燕居图。\n> The second layer: Yanju map.\n\n【第三层】车骑。\n> The third layer: chariot and the rides.\n\n【第四层】车骑。（下）\n> The fourth layer: chariot and the rides. (down)",
+      "pdfPages": [],
+      "pdfTopic": "卷云纹、燕居图、车骑",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列",
+        "右面第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-019",
+      "name": "前石室第十二石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-019-320.webp",
+      "modelImageLarge": "/generated/models/artifact-019-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第十二石\n> The former stone room, The twelfth stone\n\n【右面第一层】抚琴。\n> The first layer on the right: Play the guqin.\n\n【第二层】宴享。（下）。\n> The second layer: banquet. (down)",
+      "pdfPages": [],
+      "pdfTopic": "抚琴、宴享",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列",
+        "右面第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-020",
+      "name": "前石室第十石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-020-320.webp",
+      "modelImageLarge": "/generated/models/artifact-020-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第十石 车骑。(上)\n> The former stone room, The tenth stone Chariot and the rides. (top)",
+      "pdfPages": [],
+      "pdfTopic": "车骑",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列"
+      ]
+    },
+    {
+      "id": "artifact-021",
+      "name": "前石室第四石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-021-320.webp",
+      "modelImageLarge": "/generated/models/artifact-021-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第四石 车骑。(下)\n> The former stone room, The fourth stone Chariots and riders.(down)",
+      "pdfPages": [],
+      "pdfTopic": "车骑",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列"
+      ]
+    },
+    {
+      "id": "artifact-022",
+      "name": "另一个前石室第十一石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-022-320.webp",
+      "modelImageLarge": "/generated/models/artifact-022-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%B8%80%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第十一石\n> The former stone room No. 11\n\n【左面第一层】荆轲刺秦王。\n> The First layer on the left: Jing Ke's attempt on the life of the King of Qin.\n\n【第二层】车骑。\n> The second layer: Chariot and horse.\n\n【第三层】车骑。（下）\n> The third layer: Chariot and horse. (Down)",
+      "pdfPages": [
+        29,
+        30
+      ],
+      "pdfTopic": "荆轲刺秦（荆轲刺秦王）",
+      "linkedPdf": [
+        {
+          "page": 29,
+          "title": "荆轲刺秦",
+          "content": "## 第29页\n\n### 荆轲刺秦\n（续上页）这幅汉画分左右两区，中间以竖格区隔。左右两区的下边二格皆为车马出行图，榜题有口吏车、行亭车等。左右区最上格为云龙纹，亦称草龙纹。左区第二格内容可能为“赵氏孤儿”，右区第二格为荆轲刺秦图。\n> (Continued from the previous page) This Han painting is divided into left and right sections, separated by a vertical grid. The bottom two registers of both sections depict processions of chariots and horses, with inscriptions such as \"Official's Chariot\" and \"Pavilion Chariot.\" The top register of both sections features cloud and dragon patterns, also known as \"grass dragon\" patterns. The content of the second register in the left section may be \"The Orphan of Zhao,\" while the second register in the right section is \"Jing Ke's Assassination of the King of Qin.\"\n\n“赵氏孤儿”，表现孤儿的母亲晋国公主为保存赵家的唯一血脉，忍痛将刚出生不久的孤儿托付与人的情节。\n> \"The Orphan of Zhao\" depicts the scene where the orphan's mother, the Princess of the State of Jin, endures the pain of entrusting her newborn infant to others to preserve the sole bloodline of the Zhao family.\n\n我们重点来看荆轲刺秦图。武梁祠另有两幅荆轲刺秦图。\n> Let us focus on the \"Jing Ke's Assassination of the King of Qin\" illustration. There are two other depictions of this scene in the Wu Liang Shrine.\n\n第一幅，位于专诸刺吴王图的左上方。画上，荆轲右臂扬起，匕首刺在柱上；秦王张皇失措，躲在柱后，一手伸向后背，欲拔背上宝剑。荆轲助手秦舞阳匍匐于地，不敢抬头。荆轲带来的盛樊於期人头的箱盖已打开，出露出来。榜题有“荆轲”“秦王”“樊於期头”“秦武阳”等。\n> The first one is located at the top left of the \"Zhuan Zhu Assassinating the King of Wu\" illustration. In the painting, Jing Ke's right arm is raised, and his dagger is stuck in a pillar; the King of Qin is in a panic, hiding behind the pillar, reaching one hand behind his back to draw his sword. Jing Ke's assistant, Qin Wuyang, is prostrate on the ground, not daring to look up. The lid of the box containing Fan Yuqi's head, brought by Jing Ke, has been opened, revealing the head. There are inscriptions such as \"Jing Ke,\" \"King of Qin,\" \"Fan Yuqi's Head,\" and \"Qin Wuyang.\"\n\n第二幅，在武氏祠左石室画像之五，“管仲射主”下。画面中为立柱，上有斗拱，匕首自左向右贯穿立柱，匕首尾部飘带飞向左下，极有动感。左边一戴帻穿短裤男子一跃而起，双臂舒展，面向柱右，极有气势，当为荆轲。其身后一戴冠者，跨步向左，当为秦庭官佐。柱右，地上箱盖半开，露出樊於期人头。箱右地上，仰面跌躺一人，当为荆轲伙伴秦舞阳。左上，一人蛾冠袍服，右行左顾，左臂高举，右臂横伸，右袖被斩断，斜落于地；其袍服下端向左下斜曳，显出仓皇奔逃的动态，此人当为秦王。秦王右边，一武士左剑右盾，向左奔赴，当为秦庭卫士。画面无榜题。整个画面中秦庭官佐与荆轲在一侧，秦舞阳与秦王在一侧，显示荆轲绕柱追击秦王，极具戏剧性和视觉冲击力。\n> The second one is located under \"Guan Zhong Shooting the Prince\" in the fifth image of the left stone chamber of the Wu Family Shrine. The scene features a standing pillar with bracket sets. A dagger pierces the pillar from left to right, with the ribbon at its hilt flying towards the bottom left, creating a strong sense of motion. On the left, a man wearing a headcloth and short trousers leaps up, arms outstretched, facing the right of the pillar with great momentum; he is likely Jing Ke. Behind him, a figure wearing a crown strides to the left, likely an official of the Qin court. To the right of the pillar, a box lid lies half-open on the ground, revealing Fan Yuqi's head. To the right of the box, a person lies flat on their back, likely Jing Ke's companion, Qin Wuyang. At the top left, a person in a high hat and robes walks to the right while looking back, left arm raised and right arm extended; the right sleeve is severed and falling to the ground. The lower part of the robe drags towards the bottom left, showing a panicked flight; this person is likely the King of Qin. To the right of the King of Qin, a warrior with a sword in his left hand and a shield in his right rushes to the left, likely a guard of the Qin court. There are no inscriptions in this image. In the entire scene, the Qin official and Jing Ke are on one side, while Qin Wuyang and the King of Qin are on the other, showing Jing Ke chasing the King of Qin around the pillar, which is highly dramatic and visually impactful.\n\n本图为第三幅荆轲刺秦图。\n> This illustration is the third depiction of \"Jing Ke's Assassination of the King of Qin.\"\n\n图中间为立柱，柱上端有斗拱，一匕首自左向右贯穿中柱，飘带右飞。柱右地上，箱盖半开，露出樊於期人头。箱右一戴帻宽袍魁伟男子，自右向左跨步向前，手臂向左上方高举，似刚刚投出匕首，其挥手处有榜题“荆轲”。荆轲前面，秦舞阳五体投地，其头顶上方榜题“秦武阳”。荆轲右后方，一武士向左挥剑扬盾，为秦庭卫士。荆\n> In the center of the image is a standing pillar with bracket sets at the top. A dagger pierces the central pillar from left to right, with its ribbon flying to the right. On the ground to the right of the pillar, a box lid is half-open, revealing Fan Yuqi's head. To the right of the box, a tall, sturdy man in a headcloth and wide robes strides from right to left, his arm raised high towards the top left as if he has just thrown the dagger. Near his hand is the inscription \"Jing Ke.\" In front of Jing Ke, Qin Wuyang is prostrate on the ground, with the inscription \"Qin Wuyang\" above his head. To the right and behind Jing Ke, a warrior brandishes a sword and shield to the left, serving as a guard of the Qin court. Jin..."
+        },
+        {
+          "page": 30,
+          "title": "",
+          "content": "## 第30页\n\n（续上页）轲后面，一平冠男子一手抓持荆轲，一面向右边武士招引。柱左，石上部损泐，但仍可看出，其中一扬臂断袖、左弃右顾、衣帻后曳之男子，当为秦王。其前把戟向左仆地者为秦宫大臣。而朝地扑倒之廷臣上方石泐，仍可看出为一面朝上跌倒之人，当亦为秦庭臣僚。秦王右后方，一秦宫武士扬盾跌地，而露怯色。秦王左臂上方石泐，依稀可见榜题残字“也”字，据《金石聚》，“也”字上有“此秦王”三字，合为“此秦王也”。\n> (Continued from the previous page) Behind Jing Ke, a man wearing a flat crown holds Jing Ke with one hand while beckoning to the warriors on the right. To the left of the pillar, although the upper part of the stone is damaged, one can still discern a man with raised arms and a torn sleeve, looking back to the right with his headgear trailing behind; he is likely the King of Qin. In front of him, a Qin court official holding a halberd has fallen to the ground facing left. Above the prostrate official, despite the stone damage, another person falling face-up can be seen, likely another court official. To the rear right of the King of Qin, a Qin palace warrior drops his shield and falls, showing a look of fear. Above the King of Qin's left arm, the stone is damaged, but a residual character \"ye\" (也) from an inscription is faintly visible. According to the *Jin Shi Ju*, there were three characters \"Ci Qin Wang\" (此秦王) above \"ye\", forming the phrase \"This is the King of Qin.\"\n\n柱左地面，为虚设之荐席，其旁为秦王来不及穿上的双履。这幅汉画里人物众多，追击奔逃情景更为惊心动魄，格斗屠杀场面更为激烈，懦夫筛糠，弱者不堪嘶吼；帝王失色，烈士气贯九霄，堪称一部英雄喋血史，一曲石上《大风歌》。\n> On the ground to the left of the pillar is an empty mat, beside which are the King of Qin's shoes that he had no time to put on. This Han dynasty painting features numerous characters, with the scenes of pursuit and flight being even more soul-stirring and the combat and slaughter more intense. Cowards tremble, and the weak cannot stop screaming; the monarch loses his composure, while the martyr's spirit pierces the heavens. It can be called a heroic history of blood and sacrifice, a \"Song of the Great Wind\" carved in stone.\n\n年代：东汉；产地：山东嘉祥；规格：160cm×63.5cm\n> Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 160cm × 63.5cm"
+        }
+      ],
+      "tags": [
+        "前石室系列",
+        "左面第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-023",
+      "name": "另一个前石室第十二石",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-023-320.webp",
+      "modelImageLarge": "/generated/models/artifact-023-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%89%8D%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 前石室 第十二石\n> The former stone room, The twelfth stone\n\n【左面第一层】卷云纹。\n> The first layer on the left: cirrus moire.\n\n【第二层】神话人物。\n> The second layer: deified characters.\n\n【第三层】自右至左为刑渠哺父李善的故事。\n> The third layer: from right to left is the story of Xing Qu nurturing his father Li Shan.\n\n【第四层】车骑。（下）\n> The fourth layer: chariot and rides. (down)",
+      "pdfPages": [],
+      "pdfTopic": "卷云纹、神话人物、刑渠哺父",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列",
+        "左面第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-024",
+      "name": "另一个后石室第八石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-024-320.webp",
+      "modelImageLarge": "/generated/models/artifact-024-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第八石\n> The back stone room, The eighth stone\n\n【正面第一层】仙人、云纹、羽人等。\n> The first layer on the front side: immortals, cloud patterns, Yuren, etc.\n\n【第二层】人物、车马。\n> The second layer: characters, chariots and horses.\n\n【第三层】车骑。\n> The third layer: chariot and rides.",
+      "pdfPages": [],
+      "pdfTopic": "仙人、云纹、羽人",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "正面第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-025",
+      "name": "另一个后石室第十石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-025-320.webp",
+      "modelImageLarge": "/generated/models/artifact-025-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第十石\n> The back stone room, The tenth stone\n\n【背面第一层】翼龙、羽人、车马。\n> The first layer on the back pterosaurs, feathered figures, chariots and horses.\n\n【第二层】人物、车马。\n> The second layer: characters, chariots and horses.",
+      "pdfPages": [],
+      "pdfTopic": "翼龙、羽人、车马",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第二层",
+        "背面第一层"
+      ]
+    },
+    {
+      "id": "artifact-026",
+      "name": "另一对门柱-右门柱",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E5%AF%B9%E9%97%A8%E6%9F%B1-%E5%8F%B3%E9%97%A8%E6%9F%B1.png",
+      "modelImageThumb": "/generated/models/artifact-026-320.webp",
+      "modelImageLarge": "/generated/models/artifact-026-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-027",
+      "name": "另一对门柱-左门柱",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%8F%A6%E4%B8%80%E5%AF%B9%E9%97%A8%E6%9F%B1-%E5%B7%A6%E9%97%A8%E6%9F%B1.png",
+      "modelImageThumb": "/generated/models/artifact-027-320.webp",
+      "modelImageLarge": "/generated/models/artifact-027-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-028",
+      "name": "后石室第一石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%80%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-028-320.webp",
+      "modelImageLarge": "/generated/models/artifact-028-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%80%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第一石【车骑】（上）\n> The back stone room, The first stone Chariot and rides (top)\n\n【第一层】海神出战图。\n> The first layer: the sea god's battle map.\n\n【第二层】农庄忙作。\n> The second floor: the farm is busy.\n\n【第三层】神话人物。\n> The third layer: mythological characters.",
+      "pdfPages": [],
+      "pdfTopic": "海神出战图、农庄忙作",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "车骑"
+      ]
+    },
+    {
+      "id": "artifact-029",
+      "name": "后石室第七石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-029-320.webp",
+      "modelImageLarge": "/generated/models/artifact-029-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第七石【水陆攻战】（下）\n> The back stone room, The seventh stone Water and land battle. (down)",
+      "pdfPages": [],
+      "pdfTopic": "水陆攻战",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "水陆攻战"
+      ]
+    },
+    {
+      "id": "artifact-030",
+      "name": "后石室第三石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-030-320.webp",
+      "modelImageLarge": "/generated/models/artifact-030-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第三石\n> The back stone room, The third stone\n\n【第一层】仙人出行。\n> The first layer: fairy travel.\n\n【第二层】雷神出行。\n> The second layer: thor travels.\n\n【第三层】傩戏。\n> The third layer: Nuo opera\n\n【第四层】狩猎。\n> The fourth layer: hunting.",
+      "pdfPages": [],
+      "pdfTopic": "仙人出行、雷神出行、傩戏、狩猎",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-031",
+      "name": "后石室第九石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B9%9D%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-031-320.webp",
+      "modelImageLarge": "/generated/models/artifact-031-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B9%9D%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第九石\n> The back stone room, The ninth stone\n\n【第一层】西王母和神话人物。\n> The first layer: Xi Wangmu and mythological figures.\n\n【第二层】孔门弟子。\n> There are two layers: the disciples of Confucius.\n\n【第三层】车骑。(上)\n> The third layer: chariot and rides (top)",
+      "pdfPages": [],
+      "pdfTopic": "西王母、孔门弟子、车骑",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-032",
+      "name": "后石室第二石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-032-320.webp",
+      "modelImageLarge": "/generated/models/artifact-032-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第二石\n> The back stone room, The second stone\n\n【第一层】仙人出行。\n> The first layer: fairy travel.\n\n【第二层】东王公、西王母等神话人物。\n> The second layer: mythical figures such as the Dong Wanggong and the Xi Wangmu",
+      "pdfPages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "pdfTopic": "天母·天公·战蚩尤·五力士、北斗星君",
+      "linkedPdf": [
+        {
+          "page": 2,
+          "title": "天母·天公·战蚩尤·五力士",
+          "content": "## 第2页\n### 天母·天公·战蚩尤·五力士\n这幅汉画自上至下共分四层：第一层为天母出行；第二层为天公出行；第三层为战蚩尤；第四层为五力士。\n> This Han dynasty painting is divided into four layers from top to bottom: the first layer depicts the procession of Tianmu (Heavenly Mother); the second layer shows the procession of Tiangong (Heavenly Father); the third layer illustrates the battle with Chiyu; and the fourth layer features five strongmen.\n\n第一层刻画天母乘龙驾云辇在天庭出行的情景。左为三龙驱驾的云辇，云辇以云为轮，以云作盖，天母戴胜端坐其上。车御戴兔耳帻，奋力驱驾。御辇前有三个戴长筒软帻的飞廉乘龙前驱，中间夹杂一备御之龙。龙阵后腾起壮观的云氛。在御辇三龙上方，腾一羽人双腿若蛇。云辇后边，两羽人分推华盖与云轮，似在助力。画面最右首，两戴平头帻者执笏跪拜。跪拜者上有一云龙，后有一人执笏肃立。天母的安详雍容与凡人的毅赫震恐形成鲜明对照。\n> The first layer depicts Tianmu traveling in the heavenly court in a dragon-drawn cloud chariot. On the left is the cloud chariot driven by three dragons, with clouds serving as wheels and a canopy, where Tianmu sits upright wearing a Sheng headdress. The charioteer wears a rabbit-ear cap and drives vigorously. In front of the imperial chariot, three Feilian (wind spirits) wearing long soft caps ride dragons as precursors, with a spare dragon interspersed among them. A magnificent cloud atmosphere rises behind the dragon formation. Above the three dragons of the chariot, a winged immortal with snake-like legs soars. Behind the cloud chariot, two winged immortals push the canopy and cloud wheels, seemingly assisting. On the far right of the scene, two figures wearing flat-topped caps kneel in worship holding tablets. Above the worshipers is a cloud dragon, followed by a person standing solemnly with a tablet. The serenity and grace of Tianmu form a sharp contrast with the awe and fear of the mortals.\n\n第二层与上一层天母云辇位置大致对应偏右处，是天公及其云辇。天公辇上竖雷鼓，鼓上有羽葆。天公扬枹擂鼓。天公辇车前，上下各有三童子戴长筒帻、踏云朵曳电索，如同纤夫。童子前为风神冯夷，长发女身。再向右是一弓形霓虹，霓虹两端为龙头。龙头挂地，虹体成门形。虹有双足，尾盘于上。虹上雨师若女子，戴簪俯卧，捧缶倒倾，象征地上将降落倾盆大雨。虹外左右各有一天兵，正挥动斧凿，劈凿虹龙，寓意霓虹是雨水的渊薮。右边雨师身后，一羽人云端举盆，象征输送雨水。霓虹之下，一人披头散发，五体投地，一双手分执执、筮，奋力凿劈。这表明天降暴雨，是因为人间有人犯下了不可饶恕的罪恶。\n> The second layer, positioned roughly corresponding to the right of the Tianmu chariot above, features Tiangong and his cloud chariot. A thunder drum with feathered ornaments stands on Tiangong's chariot, and Tiangong raises a mallet to strike it. In front of the chariot, three boys above and three below wear long caps, treading on clouds and pulling lightning cables like trackers. Ahead of the boys is Fengyi, the God of Wind, depicted as a long-haired female. Further to the right is an arched rainbow, with dragon heads at both ends. The dragon heads touch the ground, and the rainbow body forms a gate shape. The rainbow has two feet and a coiled tail. Atop the rainbow, the Rain Master, appearing as a woman with a hairpin, lies prone and tilts a jar, symbolizing the impending torrential rain. Outside the rainbow, on both sides, are heavenly soldiers wielding axes and chisels to strike the rainbow dragon, implying that the rainbow is the source of rain. Behind the Rain Master on the right, a winged immortal holds a basin in the clouds, symbolizing the delivery of rainwater. Beneath the rainbow, a person with disheveled hair prostrates on the ground, holding tools in both hands and chiseling vigorously. This indicates that the heavy rain is sent because someone in the human world has committed an unforgivable sin.\n\n第三层，战蚩尤。蚩尤是传说中的古代九黎族首领，以金作兵器，与黄帝战于涿鹿。因为最终败于黄帝，几千年来在被推崇和神化的同时，也不断被异化和妖魔化。画面中右边的神人就是蚩尤。他头顶弓弩，发间盘蛇，脚操弩矢，手持剑戟，熊尾兽面，在战阵中如入无人之境。\n> The third layer depicts the battle with Chiyu. Chiyu was the legendary leader of the ancient Jiuli tribe who fashioned weapons from metal and fought the Yellow Emperor at Zhuolu. Because he was ultimately defeated by the Yellow Emperor, he has been both revered and deified, as well as alienated and demonized over thousands of years. The deity on the right side of the scene is Chiyu. He carries a crossbow on his head, has snakes coiled in his hair, operates crossbow arrows with his feet, and holds a sword and halberd. With a bear's tail and a beastly face, he moves through the battlefield as if it were unoccupied.\n\n第四层，五力士。五力士一人拽牛尾，一人单臂抓野猪，一人倒拔树，一人扛虎，一人负熊，扛虎与负熊者同时抬一只兽。\n> The fourth layer features five strongmen. One pulls a bull's tail, one grabs a wild boar with one arm, one uproots a tree, one carries a tiger, and one carries a bear; the ones carrying the tiger and the bear are also lifting another beast together."
+        },
+        {
+          "page": 3,
+          "title": "",
+          "content": "## 第3页\n\n（续上页）这幅汉画自上至下共分四层：第一层为天母出行；第二层为天公出行；第三层为战蚩尤；第四层为五力士。\n> (Continued from the previous page) This Han dynasty stone relief is divided into four layers from top to bottom: the first layer depicts the outing of the Heavenly Mother; the second layer shows the outing of the Heavenly Lord; the third layer illustrates the battle against Chiyou; and the fourth layer features five strongmen.\n\n年代：东汉（元嘉）\n> Period: Eastern Han (Yuanjia era)\n\n地点：山东嘉祥\n> Location: Jiaxiang, Shandong\n\n规格：148.5cm × 106.5cm\n> Dimensions: 148.5cm × 106.5cm"
+        },
+        {
+          "page": 4,
+          "title": "北斗星君",
+          "content": "## 第4页\n\n### 北斗星君\n\n（续上页）这幅汉画自上至下同样分四层：第一层为天母出行，第二层为天公出行，第三层为风伯与云中君，第四层为北斗星君图。\n> (Continued from the previous page) This Han Dynasty painting is also divided into four layers from top to bottom: the first layer is the procession of the Heavenly Mother; the second layer is the procession of the Heavenly Father; the third layer depicts the God of Wind and the Lord of Clouds; and the fourth layer is the illustration of the Lord of the Big Dipper.\n\n第三层主体画面为上下两层相贯通的云气纹。细看这些云团，或如龙首，或如人面。最右为风伯，戴帻，阔口，显示前面的云团都是他鼓吹出来的。\n> The main scene of the third layer consists of cloud patterns connecting the upper and lower sections. Looking closely at these clouds, some resemble dragon heads, while others look like human faces. On the far right is the God of Wind, wearing a turban and with a wide mouth, showing that the clouds in front of him are blown out by him.\n\n北斗星君，是掌管北斗七星之神。北斗指天枢、天璇、天玑、天权、玉衡、开阳、摇光七星。古人把这七星比作古代舀酒的斗，因其位于天极北方，所以又称北斗。\n> The Lord of the Big Dipper is the deity in charge of the seven stars of the Big Dipper. The Big Dipper refers to the seven stars: Tianshu, Tianxuan, Tianji, Tianquan, Yuheng, Kaiyang, and Yaoguang. Ancient people compared these seven stars to an ancient wine ladle (Dou). Because they are located in the celestial north, they are also called the Northern Dipper (Beidou).\n\n北斗七星在中国古代文化中地位极其重要。人们利用它们辨别方向。从天璇通过天枢向外延伸一条直线，大约延长五倍多，可见一颗和北斗七星差不多亮的星星，这就是北极星。古人据此很容易辨别出方向。\n> The Big Dipper holds an extremely important position in ancient Chinese culture. People used them to identify directions. By extending a straight line from Tianxuan through Tianshu by about five times, one can see a star about as bright as the Big Dipper stars; this is the North Star (Polaris). Ancient people could easily identify directions based on this.\n\n北斗还与四时有关。古人很早就注意到，北斗星在不同的季节和夜晚不同的时间，出现在天空不同的方位，于是根据初昏时斗柄所指的方向来决定季节：指东，天下皆春；指南，天下皆夏；指西，天下皆秋；指北，天下皆冬。\n> The Big Dipper is also related to the four seasons. Ancient people noticed very early that the Big Dipper appears in different positions in the sky during different seasons and at different times of the night. Therefore, the seasons were determined by the direction the handle of the Dipper pointed at dusk: pointing east means spring; pointing south means summer; pointing west means autumn; and pointing north means winter.\n\n在道教观念中，北斗七星为解厄纾困的幸福之神，且每颗星都有不同功能。至今在中原一些地区修建墓穴时，还要在墓室用朱砂点北斗七星。\n> In Taoist belief, the seven stars of the Big Dipper are gods of happiness who relieve distress and hardship, and each star has a different function. Even today, when building tombs in some areas of the Central Plains, the Big Dipper is still marked with cinnabar in the burial chamber.\n\n这里重点介绍一下北斗星君。在这幅汉画的第四层，北斗星斗勺部分有一龙头云车，上面坐的就是北斗星君。他如同灶王爷上天。右边的车马，是他上天前的座驾；星斗下的四人，代表尘寰在向他道别。龙车左边，三个天庭的兔耳使者踩着龙头云朵前来迎接他。\n> Here we focus on the Lord of the Big Dipper. In the fourth layer of this Han painting, there is a dragon-headed cloud chariot in the ladle part of the Big Dipper, and the one sitting on it is the Lord of the Big Dipper. He is like the Kitchen God ascending to heaven. The horses and carriage on the right are his transport before ascending; the four people below the stars represent the mortal world bidding him farewell. To the left of the dragon chariot, three rabbit-eared messengers from heaven are stepping on dragon-headed clouds to welcome him.\n\n北斗星中的摇光星，被认为是给人类带来粮食和万物的星辰，这可能是灶王爷与北斗星君二位一体的原因。从画面上人们对北斗星君的膜拜，似乎可以听到他们的千叮咛万嘱咐：“上天言好事，下界保平安。”\n> The star Yaoguang in the Big Dipper is considered the star that brings grain and all things to mankind, which may be why the Kitchen God and the Lord of the Big Dipper are integrated into one. From the people's worship of the Lord of the Big Dipper in the painting, one can almost hear their repeated exhortations: \"Speak of good deeds in heaven, and ensure peace in the world below.\""
+        },
+        {
+          "page": 5,
+          "title": "北斗星君（局部）",
+          "content": "## 第5页\n\n### 北斗星君（局部）\n> Lord of the Big Dipper (Detail)\n\n（续上页）此图为北斗星君图的局部。\n> (Continued from the previous page) This image is a detail of the Lord of the Big Dipper."
+        }
+      ],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-033",
+      "name": "后石室第五石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-033-320.webp",
+      "modelImageLarge": "/generated/models/artifact-033-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第五石\n> The back stone room, The fifth stone\n\n【第一层】仙人出行。\n> The first layer: fairy travel.\n\n【第二层】伏羲、女娲等神话人物。\n> The second layer: Fuxi, Nuwa and other mythical figures.\n\n【第三层】仙人出行。\n> The third layer: fairy travel.\n\n【第四层】神话人物。（上）\n> The fourth layer: mythological characters. (superior)",
+      "pdfPages": [],
+      "pdfTopic": "仙人出行、伏羲女娲",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-034",
+      "name": "后石室第八石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-034-320.webp",
+      "modelImageLarge": "/generated/models/artifact-034-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第八石\n> The back stone room, The eighth stone\n\n【背面第一层】云龙、羽人、飞鸟等。\n> The first layer on the back: Yunlong, Yuren, Asuka, etc.\n\n【第二层】人物、车马。\n> The second layer: characters.\n\n【第三层】车骑。\n> The third layer: Chariot and rides.",
+      "pdfPages": [],
+      "pdfTopic": "云龙、羽人、车骑",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "第三层",
+        "第二层",
+        "背面第一层"
+      ]
+    },
+    {
+      "id": "artifact-035",
+      "name": "后石室第六石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-035-320.webp",
+      "modelImageLarge": "/generated/models/artifact-035-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第六石【车骑】（下）\n> The back stone room, The sixth stone Chariot and rides (down)",
+      "pdfPages": [],
+      "pdfTopic": "车骑",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "车骑"
+      ]
+    },
+    {
+      "id": "artifact-036",
+      "name": "后石室第十石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-036-320.webp",
+      "modelImageLarge": "/generated/models/artifact-036-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%8D%81%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第十石\n> The back stone room, The tenth stone\n\n【正面】桥上作战。\n> Front: Fighting on the bridge.",
+      "pdfPages": [],
+      "pdfTopic": "桥上作战",
+      "linkedPdf": [],
+      "tags": [
+        "后石室系列",
+        "正面"
+      ]
+    },
+    {
+      "id": "artifact-037",
+      "name": "后石室第四石",
+      "series": "后石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-037-320.webp",
+      "modelImageLarge": "/generated/models/artifact-037-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%90%8E%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.jpg",
+      "infoText": "## 后石室 第四石\n> The back stone room, The fourth stone\n\n【第一层】风云之神出行。\n> The first layer: fairy travel.\n> The first layer: god of Wind and Cloud travels.\n\n【第二层】雷神出行。\n> The second layer: thor travels.\n\n【第三层】云纹。\n> The third layer: moire.\n\n【第四层】北斗星君出行\n> The fourth floor: big dipper travels.",
+      "pdfPages": [
+        4,
+        5
+      ],
+      "pdfTopic": "北斗星君（风云之神、雷神、北斗星君出行）",
+      "linkedPdf": [
+        {
+          "page": 4,
+          "title": "北斗星君",
+          "content": "## 第4页\n\n### 北斗星君\n\n（续上页）这幅汉画自上至下同样分四层：第一层为天母出行，第二层为天公出行，第三层为风伯与云中君，第四层为北斗星君图。\n> (Continued from the previous page) This Han Dynasty painting is also divided into four layers from top to bottom: the first layer is the procession of the Heavenly Mother; the second layer is the procession of the Heavenly Father; the third layer depicts the God of Wind and the Lord of Clouds; and the fourth layer is the illustration of the Lord of the Big Dipper.\n\n第三层主体画面为上下两层相贯通的云气纹。细看这些云团，或如龙首，或如人面。最右为风伯，戴帻，阔口，显示前面的云团都是他鼓吹出来的。\n> The main scene of the third layer consists of cloud patterns connecting the upper and lower sections. Looking closely at these clouds, some resemble dragon heads, while others look like human faces. On the far right is the God of Wind, wearing a turban and with a wide mouth, showing that the clouds in front of him are blown out by him.\n\n北斗星君，是掌管北斗七星之神。北斗指天枢、天璇、天玑、天权、玉衡、开阳、摇光七星。古人把这七星比作古代舀酒的斗，因其位于天极北方，所以又称北斗。\n> The Lord of the Big Dipper is the deity in charge of the seven stars of the Big Dipper. The Big Dipper refers to the seven stars: Tianshu, Tianxuan, Tianji, Tianquan, Yuheng, Kaiyang, and Yaoguang. Ancient people compared these seven stars to an ancient wine ladle (Dou). Because they are located in the celestial north, they are also called the Northern Dipper (Beidou).\n\n北斗七星在中国古代文化中地位极其重要。人们利用它们辨别方向。从天璇通过天枢向外延伸一条直线，大约延长五倍多，可见一颗和北斗七星差不多亮的星星，这就是北极星。古人据此很容易辨别出方向。\n> The Big Dipper holds an extremely important position in ancient Chinese culture. People used them to identify directions. By extending a straight line from Tianxuan through Tianshu by about five times, one can see a star about as bright as the Big Dipper stars; this is the North Star (Polaris). Ancient people could easily identify directions based on this.\n\n北斗还与四时有关。古人很早就注意到，北斗星在不同的季节和夜晚不同的时间，出现在天空不同的方位，于是根据初昏时斗柄所指的方向来决定季节：指东，天下皆春；指南，天下皆夏；指西，天下皆秋；指北，天下皆冬。\n> The Big Dipper is also related to the four seasons. Ancient people noticed very early that the Big Dipper appears in different positions in the sky during different seasons and at different times of the night. Therefore, the seasons were determined by the direction the handle of the Dipper pointed at dusk: pointing east means spring; pointing south means summer; pointing west means autumn; and pointing north means winter.\n\n在道教观念中，北斗七星为解厄纾困的幸福之神，且每颗星都有不同功能。至今在中原一些地区修建墓穴时，还要在墓室用朱砂点北斗七星。\n> In Taoist belief, the seven stars of the Big Dipper are gods of happiness who relieve distress and hardship, and each star has a different function. Even today, when building tombs in some areas of the Central Plains, the Big Dipper is still marked with cinnabar in the burial chamber.\n\n这里重点介绍一下北斗星君。在这幅汉画的第四层，北斗星斗勺部分有一龙头云车，上面坐的就是北斗星君。他如同灶王爷上天。右边的车马，是他上天前的座驾；星斗下的四人，代表尘寰在向他道别。龙车左边，三个天庭的兔耳使者踩着龙头云朵前来迎接他。\n> Here we focus on the Lord of the Big Dipper. In the fourth layer of this Han painting, there is a dragon-headed cloud chariot in the ladle part of the Big Dipper, and the one sitting on it is the Lord of the Big Dipper. He is like the Kitchen God ascending to heaven. The horses and carriage on the right are his transport before ascending; the four people below the stars represent the mortal world bidding him farewell. To the left of the dragon chariot, three rabbit-eared messengers from heaven are stepping on dragon-headed clouds to welcome him.\n\n北斗星中的摇光星，被认为是给人类带来粮食和万物的星辰，这可能是灶王爷与北斗星君二位一体的原因。从画面上人们对北斗星君的膜拜，似乎可以听到他们的千叮咛万嘱咐：“上天言好事，下界保平安。”\n> The star Yaoguang in the Big Dipper is considered the star that brings grain and all things to mankind, which may be why the Kitchen God and the Lord of the Big Dipper are integrated into one. From the people's worship of the Lord of the Big Dipper in the painting, one can almost hear their repeated exhortations: \"Speak of good deeds in heaven, and ensure peace in the world below.\""
+        },
+        {
+          "page": 5,
+          "title": "北斗星君（局部）",
+          "content": "## 第5页\n\n### 北斗星君（局部）\n> Lord of the Big Dipper (Detail)\n\n（续上页）此图为北斗星君图的局部。\n> (Continued from the previous page) This image is a detail of the Lord of the Big Dipper."
+        }
+      ],
+      "tags": [
+        "后石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-038",
+      "name": "孔门弟子-上",
+      "series": "前石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%AD%94%E9%97%A8%E5%BC%9F%E5%AD%90-%E4%B8%8A.png",
+      "modelImageThumb": "/generated/models/artifact-038-320.webp",
+      "modelImageLarge": "/generated/models/artifact-038-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "前石室系列"
+      ]
+    },
+    {
+      "id": "artifact-039",
+      "name": "孔门弟子-下",
+      "series": "前石室系列",
+      "modelImage": "",
+      "modelImageThumb": "",
+      "modelImageLarge": "",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%AD%94%E9%97%A8%E5%BC%9F%E5%AD%90-%E4%B8%8B.jpg",
+      "infoText": "## 前石室 第一石【孔门弟子】(上)\n> The former stone room, The first stone Disciple of Confucianism. (top)",
+      "pdfPages": [
+        13,
+        15,
+        16,
+        17
+      ],
+      "pdfTopic": "孔子见老子、子路顶鸠、孔门弟子候师图",
+      "linkedPdf": [
+        {
+          "page": 13,
+          "title": "孔子见老子",
+          "content": "## 第13页\n### 孔子见老子\n古文献中多有记载孔子问道于老子、孔子拜师于老子之事。\n> Ancient literature contains many records of Confucius inquiring about the Dao from Laozi and Confucius taking Laozi as his teacher.\n\n老子、孔子时代儒道同源，学者互相学习启发，促进了知识和思想的交流与融合。\n> During the era of Laozi and Confucius, Confucianism and Taoism shared the same origin; scholars learned from and inspired each other, promoting the exchange and integration of knowledge and ideas.\n\n这幅汉画中间两个互相揖拜者即为老子和孔子。右边为年长的老子，拄杖，榜题“老子”。老子右边三人为老子随从，捧筒而立，指的是老聃取出东周国家典藏供孔子查考学习。老子对面为孔子，捧雁作为贽礼，榜题“孔子也”。老子、孔子之间有一推车小童，此即项橐。孔子身后一人，冠服捧筒跟随，筒上书写的应是孔子请求老子解答的疑问。左边二马轩车上方榜题“孔子车”，车上坐着驭手，应即随孔子拜见老子的南宫括。\n> In this Han Dynasty painting, the two figures bowing to each other in the center are Laozi and Confucius. On the right is the elder Laozi, leaning on a staff, with the inscription \"Laozi.\" The three people to Laozi's right are his attendants, standing with scrolls, signifying Lao Dan bringing out the Eastern Zhou national archives for Confucius to examine and study. Opposite Laozi is Confucius, holding a wild goose as a ceremonial gift, with the inscription \"Confucius.\" Between Laozi and Confucius is a young boy pushing a cart, who is Xiang Tuo. Behind Confucius is a person in official dress following with a scroll, which likely contains the questions Confucius asked Laozi to answer. Above the two-horse carriage on the left is the inscription \"Confucius's Carriage,\" with a driver seated inside, likely Nangong Kuo, who accompanied Confucius to visit Laozi.\n\n《史记·孔子世家》记：“鲁南宫敬叔言鲁君曰：‘请与孔子适周。’鲁君与之一乘车，两马，一竖子俱，适周问礼，盖见老子云。”\n> The \"Records of the Grand Historian: Hereditary House of Confucius\" records: \"Nangong Jingshu of Lu said to the Lord of Lu: 'I request to go to Zhou with Confucius.' The Lord of Lu gave them a carriage, two horses, and a young servant. They went to Zhou to inquire about the rites, and it is said they met Laozi.\"\n\n这幅汉画应是将《史记·孔子世家》记载的孔子前往洛阳问道于老子和孔子师项橐两个故事合二为一了。\n> This Han Dynasty painting likely combines two stories recorded in the \"Records of the Grand Historian: Hereditary House of Confucius\": Confucius going to Luoyang to inquire about the Dao from Laozi, and Confucius taking the child Xiang Tuo as his teacher."
+        },
+        {
+          "page": 15,
+          "title": "子路顶鸠",
+          "content": "## 第15页\n\n### 子路顶鸠\n\n这幅汉画共有三格，上格是东王公及昆仑诸仙，下格为车马出行，中格为十九位孔门弟子。其中一人头上顶鸠，应为子路。另一人戴牟耳软帻，其余皆戴冠。孔子的这些门徒，一个个身材匀称，相貌周正，好像统一穿着礼服，要去参加重要的拜祭活动。\n> This Han painting consists of three registers: the top register features the Duke of the East and various immortals of Kunlun; the bottom register depicts a chariot procession; and the middle register shows nineteen disciples of Confucius. One of them, with a pigeon on his head, is likely Zilu. Another wears a soft cap with earflaps, while the rest wear formal crowns. These disciples of Confucius are well-proportioned and dignified in appearance, as if dressed in uniform ritual attire for an important sacrificial ceremony.\n\n孔子非常讲究礼。《史记·孔子世家》记孔子“割不正，不食；席不正，不坐；食于有丧者之侧，未尝饱也”。画中孔门弟子衣冠周正，是赞美孔子重视礼教，也是汉代倡导礼教的一个缩影。\n> Confucius was very particular about ritual. The \"Records of the Grand Historian: Hereditary House of Confucius\" notes that he \"would not eat meat that was not cut properly, nor sit on a mat that was not straight; when eating beside someone in mourning, he never ate to fullness.\" The neat attire of the disciples in the painting praises Confucius's emphasis on ritual education and serves as a microcosm of the promotion of ritual in the Han Dynasty.\n\n接下来重点谈谈子路头上的鸠。前面介绍过羔雁。子路顶鸠，可以理解成子路带着看望孔子的礼物。\n> Next, let's focus on the pigeon on Zilu's head. Lambs and geese were mentioned previously as gifts. Zilu wearing a pigeon can be understood as him bringing a gift to visit Confucius.\n\n古有鹖冠之说。鹖是像雉而善斗的鸟，古代武士戴鹖冠，表示英勇不惧战斗。史书记载子路为人耿直，好勇力。他少年时好逞强，常头戴雄鸡式的帽子耍威风。他甚至瞧不起孔子，有动手冒犯孔子的劣迹，可以说是个“问题少年”。孔子循循善诱，慢慢引导子路好学向礼。子路后来穿着儒服带着拜师礼物，主动请求成为孔门弟子。\n> In ancient times, there was the \"He Crown\" (Crossoptilon crown). The He is a pheasant-like bird known for its fighting spirit; ancient warriors wore He crowns to signify bravery and fearlessness in battle. Historical records describe Zilu as upright and fond of physical prowess. In his youth, he liked to show off, often wearing a rooster-style hat to look imposing. He even looked down on Confucius and had a history of physically offending him, making him a \"troubled youth.\" Confucius guided him patiently, gradually leading him toward learning and ritual. Zilu later dressed in Confucian robes, brought apprenticeship gifts, and requested to become a disciple.\n\n孔子因材施教，教导子路成为有勇善断、品德高尚之人。孔子周游列国，子路常跟随左右，保护老师免受羞辱和伤害。孔子内心感激子路，自言“自吾得由，恶言不闻于耳”。汉画中子路每每头顶一只鸟，应该是子路勇敢坚强的形象化表达。\n> Confucius taught according to the student's ability, guiding Zilu to become a brave, decisive, and noble person. When Confucius traveled through various states, Zilu often followed him to protect his teacher from humiliation and harm. Confucius was inwardly grateful to Zilu, saying, \"Since I got You (Zilu), I have not heard an unkind word.\" In Han paintings, Zilu is often depicted with a bird on his head, which is likely a visual representation of his brave and strong character.\n\n据《史记·仲尼弟子列传》，子路后来在卫国做官，卫国内乱，子路被击落冠缨。子路说：“君子死而冠不免。”然后“结缨而死”，被政敌所为肉酱。从一个“冠雄鸡”的顽劣少年到临死还要正衣冠的直臣，子路完成了人生的蜕变和升华，是孔子呕心沥血成功教育的奇迹。子路死，孔子万分悲痛。《礼记》记孔子不忍食用肉酱，见肉酱让人倒掉，借此表达对弟子的哀悼。\n> According to the \"Records of the Grand Historian: Biographies of Confucius's Disciples,\" Zilu later served as an official in the State of Wei. During internal strife in Wei, Zilu's hat string was struck off. Zilu said, \"A gentleman does not remove his crown even in death,\" then \"tied the strings and died,\" after which he was made into minced meat by his political enemies. From a rebellious youth \"crowning himself with a rooster\" to a loyal official who straightened his crown even at the moment of death, Zilu completed a life transformation and sublimation—a miracle of Confucius's dedicated education. Upon Zilu's death, Confucius was deeply grieved. The \"Book of Rites\" records that Confucius could not bear to eat minced meat and would have it discarded upon seeing it, expressing his mourning for his disciple."
+        },
+        {
+          "page": 16,
+          "title": "",
+          "content": "## 第16页\n\n（续上页）这幅汉画共有三格，上格是东王公及昆仑诸仙，中格为十九位孔门弟子，下格为车马出行。\n> (Continued from the previous page) This Han Dynasty stone carving consists of three registers: the top register depicts the King Father of the East (Dongwang Gong) and various immortals of the Kunlun Mountains; the middle register features nineteen disciples of Confucius; and the bottom register shows a procession of chariots and horses.\n\n年代：东汉；产地：山东嘉祥；规格：197.5cm×85.5cm\n> Period: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 197.5cm × 85.5cm"
+        },
+        {
+          "page": 17,
+          "title": "孔门弟子候师图",
+          "content": "## 第17页\n### 孔门弟子候师图\n（续上页）画中尽管有五人成身体或头部损勘，但还是能看得出画中的十三人是孔子门徒，他们等候在孔子家门口，等待孔子醒来，开始一天的课程。\n> (Continued from the previous page) Although five people in the painting have damaged bodies or heads, it is still clear that the thirteen people depicted are disciples of Confucius. They are waiting at the door of Confucius's house, waiting for him to wake up and begin the day's lessons.\n\n这些门徒有高有矮，大多戴冠，有四个戴帻戴巾，显示孔子教学“有教无类”，平等视之。\n> These disciples vary in height; most wear crowns, while four wear headscarves or turbans, demonstrating Confucius's teaching philosophy of \"education for all without discrimination\" and treating everyone equally.\n\n其中有四人手捧简册，在师门打开前的短暂时间里，珍惜寸阴，或默而诵之，或吟哦有声，引得前后的同学来看。\n> Among them, four hold bamboo slips. In the brief time before the teacher's door opens, they cherish every moment, either reciting silently or chanting aloud, attracting the attention of fellow students nearby.\n\n左数第四人头顶一只鸠鸟。武氏祠前石室画像之二有一孔门弟子，头上顶鸠，其前榜题“子路”。由此看来，此画中顶鸠的也应是子路。\n> The fourth person from the left has a pigeon on his head. In the second stone carving of the Front Chamber of the Wu Family Shrines, there is a disciple of Confucius with a pigeon on his head, labeled \"Zilu.\" Therefore, the person with the pigeon in this painting should also be Zilu.\n\n最右边的弟子双袖相拢，显得毕恭毕敬，应是曾参，他学问精进，又谦恭温顺，每天总是最早来到老师家门口。身后的同学好像有什么疑问向他请教，于是他回过头去，耐心讲解。\n> The disciple on the far right has his sleeves folded together, appearing very respectful; he is likely Zeng Shen. He was diligent in his studies, humble, and gentle, always the first to arrive at the teacher's door every day. A classmate behind him seems to be asking a question, so he turns his head to explain patiently."
+        }
+      ],
+      "tags": [
+        "前石室系列",
+        "孔门弟子"
+      ]
+    },
+    {
+      "id": "artifact-040",
+      "name": "左石室第七石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-040-320.webp",
+      "modelImageLarge": "/generated/models/artifact-040-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%83%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第七石\n> The left stone room, The seventh stone\n\n【第一层】故事待考。\n> The first layer: the story to be checked.\n\n【第二层】二桃杀三士。\n> The second layer: two peaches kill three warriors.\n\n【第三层】车骑。（下）\n> The third layer: chariot and rides. (down)",
+      "pdfPages": [
+        26
+      ],
+      "pdfTopic": "二桃杀三士",
+      "linkedPdf": [
+        {
+          "page": 26,
+          "title": "贞夫射书韩朋、二桃杀三士、奉巾迎宾",
+          "content": "## 第26页\n\n### 贞夫射书韩朋、二桃杀三士、奉巾迎宾\n\n（续上页）此汉画分上中下三格。中格为二桃杀三士，下格为老奴奉巾迎客图。\n> (Continued from the previous page) This Han painting is divided into three registers: upper, middle, and lower. The middle register depicts \"Killing Three Warriors with Two Peaches,\" and the lower register depicts \"An Old Servant Receiving Guests with a Towel.\"\n\n### 贞夫射书韩朋\n\n关于上格的内容，朱锡禄《武氏祠汉画像石中的故事》这样描述：“第一层刻人物故事。左边有一房屋，内一人头戴斜顶高冠，面向右坐。屋外有一楼梯，梯下柱间有一人面向屋内跪坐。楼梯上一少年男子肩荷一物似铁锨，上挂一小包裹，正往梯上爬，回头向后看。右方一女子手执弓，欲射此人。女子和扛铁锨的人之间有两个儿童。女子身后有二人站立，其前一人执笏，后一人抬起手。前者一人回头与后面的人说话。空中有飞鸟一只，屋顶上一猴蹲坐，有榜三处，但无题字。”\n> Regarding the content of the upper register, Zhu Xilu's \"Stories in the Stone Carvings of the Wu Family Shrine\" describes it as follows: \"The first level carves a character story. On the left is a house, inside which a person wearing a high, slanting crown sits facing right. Outside the house is a ladder, and between the pillars under the ladder, a person sits kneeling facing the house. On the ladder, a young man carries an object resembling an iron shovel on his shoulder, with a small bundle hanging from it, climbing up the ladder and looking back. To the right, a woman holds a bow, intending to shoot this person. There are two children between the woman and the man carrying the shovel. Two people stand behind the woman; the one in front holds a tablet, and the one behind has a hand raised. The former is looking back, speaking to the person behind. There is a bird in the sky and a monkey squatting on the roof. There are three cartouches, but no inscriptions.\"\n\n关于这幅汉画的内容，专家解释不一。与这幅汉画构图相近的作品，迄今为止，山东地区发现汉画像石至少十三例，河南地区发现汉画像石、汉代壁画各一例，陕西地区发现汉画像石一例，浙江地区发现汉代铜镜三例。在山东地区出产的汉画像石和浙江地区出产的汉代铜镜上，出现“宣王”“信夫”“孺子”“皇后”“侍郎”“立二子”“宋王二子”等榜题。\n> Experts have differing interpretations of the content of this Han painting. To date, at least thirteen examples of Han stone carvings with similar compositions have been found in Shandong, one example each of Han stone carvings and Han murals in Henan, one example of Han stone carvings in Shaanxi, and three examples of Han bronze mirrors in Zhejiang. On the Han stone carvings from Shandong and the bronze mirrors from Zhejiang, inscriptions such as \"Xuan Wang,\" \"Xin Fu,\" \"Ru Zi,\" \"Empress,\" \"Attendant,\" \"Standing Two Sons,\" and \"Two Sons of King Song\" appear.\n\n不少学者认为这些汉画与敦煌遗书《韩朋赋》反映的是同一故事——战国时期，贤士韩朋仕宋，三年不归，妻子贞夫思念丈夫，写信给他。韩朋不慎将信丢失，为宋康王所得。宋康王骗贞夫入宫，立为皇后。贞夫思念丈夫，不改其志。宋康王囚禁韩朋，使筑青陵台。贞夫在青陵台见到韩朋，裂裙裾作书，与韩朋相约共同赴死，用弓箭射到台下。韩朋得妻子信自杀。贞夫求宋康王以礼葬之。葬日，贞夫自投圹中，与韩朋化为青白二石。宋康王将青白石分别埋于道之东西，各生桂树、梧桐，枝叶相交为韩朋树。宋康王令人伐树，树化为双飞鸳鸯，落下一根毛羽变成利剑，割下宋康王头颅。\n> Many scholars believe these Han paintings reflect the same story as the Dunhuang manuscript \"Han Peng Fu\"—during the Warring States period, the virtuous scholar Han Peng served the State of Song and did not return for three years. His wife, Zhenfu, missed her husband and wrote him a letter. Han Peng accidentally lost the letter, which was found by King Kang of Song. King Kang tricked Zhenfu into the palace and made her queen. Zhenfu missed her husband and did not change her resolve. King Kang imprisoned Han Peng and forced him to build the Qingling Terrace. Zhenfu saw Han Peng at the terrace, tore her skirt to write a letter, and agreed with Han Peng to die together, shooting the letter down from the terrace with a bow and arrow. Han Peng committed suicide upon receiving his wife's letter. Zhenfu asked King Kang to bury him with proper rites. On the day of the burial, Zhenfu threw herself into the grave, and she and Han Peng transformed into two blue-white stones. King Kang buried the stones separately on the east and west sides of the road; from each grew cinnamon and phoenix trees, their branches and leaves intertwining to become the \"Han Peng Trees.\" King Kang ordered the trees to be cut down, but they transformed into a pair of flying mandarin ducks, and a falling feather turned into a sharp sword that cut off King Kang's head.\n\n有学者认为，画中射箭的女子就是贞夫（又叫信夫），被射的男子就是她的丈夫韩朋。但多幅画面显示，女子贞夫的弓箭射向了孺子也就是儿童，其中一幅汉画还同时刻画出“孺子”和“宋王二子”，射箭的女子盛气凌人，被射的孺子落荒而逃，有弓女子的造型更像是心狠手辣、必欲除掉前妻之子而后快的蛇蝎后娘，完全看不出贞夫与韩朋之间应有的心领神会和情深意长。\n> Some scholars believe the woman shooting the arrow in the painting is Zhenfu (also called Xinfu), and the man being shot at is her husband Han Peng. However, multiple images show that Zhenfu's arrow is aimed at a \"Ru Zi\" (child). One Han painting even depicts \"Ru Zi\" and \"Two Sons of King Song\" simultaneously. The woman shooting the arrow appears overbearing, while the child being shot at flees in panic. The figure of the woman with the bow looks more like a cruel and ruthless stepmother determined to eliminate the children of a previous wife, showing none of the mutual understanding and deep affection expected between Zhenfu and Han Peng.\n\n这幅汉画的具体含义，有待进一步研究。\n> The specific meaning of this Han painting awaits further study.\n\n### 二桃杀三士\n\n二桃杀三士是汉画像石常见题材。各种二桃杀三士汉画均把晏婴设计成矮人。这与史书记载晏子身矮貌丑有关，此外还寓有批评和褒赞两种深意。\n> \"Killing Three Warriors with Two Peaches\" is a common theme in Han stone carvings. Various Han paintings of this story depict Yan Ying as a dwarf. This relates to historical records of Yanzi's short stature and ugly appearance, and it also carries the dual meanings of criticism and praise.\n\n之所以批评晏子，是因为公孙接、田开疆、古冶子三员猛将战功彪炳，为国之干城。从三士之死也可以看出，尽管他们有个性与人性的缺点，但不失为珍重情谊、坦白磊落的英雄。晏子使用阴谋除掉三士，让人叹息。\n> The reason for criticizing Yanzi is that the three fierce generals—Gongsun Jie, Tian Kaijiang, and Gu Yezi—had illustrious military achievements and were the pillars of the state. Their deaths also show that despite their personality and human flaws, they were heroes who cherished friendship and were frank and upright. Yanzi's use of a conspiracy to eliminate the three warriors is regrettable.\n\n之所以说褒赞，是因为晏子的身材留下不少美谈。汉画像《二桃杀三士》推崇智慧和谋略，批评了有勇无谋之人。\n> The reason for praise is that Yanzi's stature left behind many admirable stories. The Han stone carving \"Killing Three Warriors with Two Peaches\" extols wisdom and strategy while criticizing those who possess courage but lack resourcefulness.\n\n### 奉巾迎宾\n\n下格为车马出行图，二骑，一带伞盖轺车。车上右为戴帻车驭，左为戴进贤冠官人，可证信陵君访贤时自驾车“虚左”是谦恭礼贤的姿态。\n> The lower register is a scene of horse-drawn carriages, with two riders and a light chariot with a canopy. On the chariot, the driver on the right wears a turban, and the official on the left wears a Jin Xian crown, proving that Lord Xinling's practice of \"leaving the left seat vacant\" when visiting sages was a gesture of humility and respect for talent.\n\n本图左边一佝偻老奴双手捧巾于胸前。这种捧持块状物的造型，一般释为捧盾门吏。但此图中老奴所奉持的显然不可能是沉重盾牌，更似巾布之类，示意洗尘揩面。\n> On the left of this image, a hunched old servant holds a towel in front of his chest with both hands. This pose of holding a block-shaped object is generally interpreted as a gatekeeper holding a shield. However, what the old servant holds in this image clearly cannot be a heavy shield; it more closely resembles a cloth or towel, signifying the act of washing up and wiping the face."
+        }
+      ],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-041",
+      "name": "左石室第三石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-041-320.webp",
+      "modelImageLarge": "/generated/models/artifact-041-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B8%89%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第三石\n> The left stone room, The third stone\n\n【左面第一层】乐舞。\n> The first layer on the left: music and dance\n\n【第二层】车骑。\n> The second layer: cars and rides\n\n【第三层】庖厨。\n> The third floor: the kitchen\n\n【右面】泗水升鼎。（下）\n> Surabaya Shengding on the right. (down)",
+      "pdfPages": [
+        24
+      ],
+      "pdfTopic": "凤求凰·泗水捞鼎（含乐舞、庖厨、泗水升鼎）",
+      "linkedPdf": [
+        {
+          "page": 24,
+          "title": "凤求凰·泗水捞鼎",
+          "content": "## 第24页\n\n### 凤求凰·泗水捞鼎\n\n（续上页）此汉画分左右两区。画面左区分上中下三格。上格为凤求凰，中格为车马出行图，下格为庖厨图。这里重点介绍一下凤求凰。\n> (Continued from the previous page) This Han Dynasty stone relief is divided into left and right sections. The left section is divided into three registers: top, middle, and bottom. The top register depicts \"Feng Qiu Huang\" (The Phoenix Seeks His Mate), the middle shows a procession of chariots and horses, and the bottom illustrates a kitchen scene. This description focuses on \"Feng Qiu Huang.\"\n\n据《史记·司马相如列传》《西京杂记》等记载，司马相如宦游归蜀，遇才女卓文君，作《凤求凰》挑之，自弹名琴“绿绮”，感动了卓文君。\n> According to records such as the \"Biographies of Sima Xiangru\" in the *Records of the Grand Historian* and *Miscellaneous Records of the Western Capital*, Sima Xiangru returned to Shu after his official travels and met the talented Zhuo Wenjun. He composed \"Feng Qiu Huang\" to woo her, playing his famous zither \"Luqi,\" which deeply moved her.\n\n司马相如家贫，他们“置酒舍卖酒”，“文君当垆”。后来司马相如另有新欢，卓文君作《白头吟》，表明“愿得一心人，白首不相离”。卓文君年老色衰，司马相如始乱终弃，于是文君作哀怨凄绝的《诀别书》，说：“锦水汤汤，与君长诀！”\n> Sima Xiangru was poor, so they \"set up a wine shop to sell wine,\" with \"Wenjun tending the counter.\" Later, Sima Xiangru found a new love. Zhuo Wenjun wrote \"Song of White Hair,\" expressing the wish to \"find a person of one heart and never part until their hair turns white.\" As Zhuo Wenjun aged and her beauty faded, Sima Xiangru abandoned her. Consequently, she wrote the sorrowful \"Letter of Farewell,\" saying, \"The Jin River flows on and on; I bid you a final farewell!\"\n\n画中表现了卓文君抚琴与司马相如诀别的情节，穿插了司马相如当年的海誓山盟和二人共同走过的艰难历程。他们之间的帛书和酒樽，应该分别代表司马相如倍誓旦旦的《凤求凰》和卓文君当年临邛“当垆”的艰辛。左边的笙箫和笨拙的盘舞，既是舞乐的写实，也暗示司马相如当年身穿犊鼻裤与仆役杂处，尽管辛苦，却很快乐。琴还是那把琴，人却非当年的人。画面右侧卓文君身后，两个女侍手捧一透明的奁匣，既是表明文君收拾行囊与司马相如诀别的决心，同时似乎也是卓文君“一片冰心在玉壶”的象征。\n> The painting depicts the scene of Zhuo Wenjun playing the zither while bidding farewell to Sima Xiangru, interspersed with Sima's past vows and the hardships they shared. The silk scroll and wine vessel between them likely represent Sima's solemn \"Feng Qiu Huang\" and Wenjun's toil \"tending the counter\" in Linqiong. The pipes and the clumsy plate dance on the left are both realistic depictions of music and dance and hints at Sima's past when he wore short pants and mingled with servants—hard work, yet happy. The zither remains the same, but the person is no longer who they were. Behind Zhuo Wenjun on the right, two female attendants hold a transparent casket, symbolizing both her determination to pack her bags and leave Sima, and her \"pure heart in a jade vase.\"\n\n画面右区为秦始皇泗水捞鼎图。上面戴高冠站立桥头挥手俯视的应是秦始皇，他对面的是宰相李斯。二人身后各有侍者执便面掐帛侍奉，说明捞鼎持续时间之久。左右持笏者当为朝中大臣，各有要事禀报，而始皇帝念兹在兹的是捞鼎，一切都抛在脑后了，其中不无批判意味。鼎中跃出龙首咬断系鼎之索，捞鼎者前仰后合甚至四脚朝天，这是泗水捞鼎汉画常见造型，为这一题材的汉画增加了幽默色彩。\n> The right section of the image depicts Qin Shi Huang retrieving a tripod from the Sishui River. The figure standing on the bridge wearing a high crown and waving while looking down is likely Qin Shi Huang, with Prime Minister Li Si opposite him. Attendants behind them hold fans and silk, suggesting the long duration of the retrieval attempt. The figures holding tablets on the left and right are likely high officials with urgent matters to report, yet the First Emperor is obsessed only with the tripod, ignoring everything else—a scene not without critical undertones. A dragon's head leaps from the tripod to bite through the rope, causing the workers to tumble backward or even end up with their feet in the air. This is a common motif in Han Dynasty depictions of the Sishui tripod retrieval, adding a touch of humor to the subject."
+        }
+      ],
+      "tags": [
+        "右面",
+        "左石室系列",
+        "左面第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-042",
+      "name": "左石室第九石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B9%9D%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-042-320.webp",
+      "modelImageLarge": "/generated/models/artifact-042-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%B9%9D%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第九石\n> The left stone room, The ninth stone\n\n【第一层】楼阁燕居。\n> The first floor: Pavilion Yanju.\n\n【第二层】车骑。（上）\n> The second layer: Chariot and rides. (top)",
+      "pdfPages": [],
+      "pdfTopic": "楼阁燕居、车骑",
+      "linkedPdf": [],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-043",
+      "name": "左石室第二石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-043-320.webp",
+      "modelImageLarge": "/generated/models/artifact-043-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%8C%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第二石\n> The left stone room, The second stone\n\n【第一层】东王公和奇禽异兽。\n> The first layer: eastern princes and strange birds and beasts.\n\n【第二层】孔门弟子。\n> The second floor: confucian disciples.\n\n【第三层】车骑。(上)\n> The third layer: chariot and ndes (top)",
+      "pdfPages": [
+        1
+      ],
+      "pdfTopic": "东王公（东王公、孔门弟子、车骑）",
+      "linkedPdf": [
+        {
+          "page": 1,
+          "title": "东王公",
+          "content": "## 第1页\n\n### 东王公\n\n这幅汉画分三层，自上至下分别表现神话题材东王公、历史故事“孔门弟子诵经图”和现实生活题材车马出行。\n> This Han painting is divided into three registers, representing from top to bottom the mythological theme of Dong Wang Gong (Lord King of the East), the historical story of \"Confucius' Disciples Reciting Classics,\" and the real-life theme of a chariot and horse procession.\n\n第三层车马出行图中飞翔着三只燕子。其中一只，燕尾如小儿筒裤的两个裤管。在上层的昆仑仙境里，有五个长着这样无足两腿的羽人。这是飞廉，是开路的神鸟。\n> In the third register's procession scene, three swallows are flying. One of them has a tail like the two legs of a child's trousers. In the upper Kunlun fairyland, there are five feathered beings with such footless legs. These are Feilian, the divine birds that clear the path.\n\n第二层的诵经图里共有十七人。其中七人手捧简册诵读。诵读的方式很不同。一人跪诵；一人站立把经册高高举过头顶仰诵；二人捧册毕恭毕敬诵读；三人捧册经所回过头来，好像在回答身后同学的问题。其余十一人，或与诵经者相谈交流，或指指点点，或交头接耳，既显得成竹在胸，又颇似“疑义相与析”。这既是春秋时孔子谓徒的情景再现，也不啻为汉代大儒传经布道的录影。\n> There are seventeen people in the second register's recitation scene. Seven of them hold bamboo slips and recite. The ways of recitation are quite different: one kneels; one stands holding the scrolls high above the head; two hold the scrolls reverently; and three turn back while holding the scrolls, as if answering questions from classmates behind. The other eleven are either talking with the reciters, pointing, or whispering, appearing both confident and as if \"analyzing doubts together.\" This is both a recreation of Confucius teaching his disciples in the Spring and Autumn period and a recording of great Han scholars preaching the classics.\n\n这里重点介绍一下第一层的内容。第一层正中是创世神东王公。他戴着三朵冠，肩生肉翅。他面目圆润姣好，显示东王公形象脱胎于西王母。\n> This section focuses on the content of the first register. In the center of the first register is the creator god Dong Wang Gong. He wears a three-lobed crown and has fleshy wings on his shoulders. His face is round and handsome, showing that the image of Dong Wang Gong was modeled after Xi Wang Mu (Queen Mother of the West).\n\n东王公左右的羽人飞仙和神禽异兽，可以视为他与西王母的造物。其中有飞蟾两只，马头鸟翼人身的“马人”一个，鸡头的“鸡人”一个，羽人九个，双蛇足羽人四个，人面鸟身神一个，鸟首云身的云雀四只，云身鸟翼人面神一个，双头人面兽两个，鸟三只。\n> The feathered immortals and divine beasts to the left and right of Dong Wang Gong can be seen as creations of him and Xi Wang Mu. Among them are two flying toads, one \"horse-man\" with a horse head and bird wings, one \"chicken-man\" with a chicken head, nine feathered beings, four feathered beings with double snake feet, one deity with a human face and bird body, four skylarks with bird heads and cloud bodies, one deity with a cloud body, bird wings and human face, two double-headed human-faced beasts, and three birds.\n\n最左面，一云神和一只云雀似在抵足而眠，其中寓意着生殖活动。马人和鸡人执谒跪拜，象征东王公创立文明制度。左侧一羽人在向东王公敬献冰糖葫芦样的物品，可能是《山海经》里说的琅玕树结的琅玕和《尚书》里说的球琳琅玕或璆琳琅玕。它也是甲骨文“糸”字的象形，少一个球果成甲骨文“玄”字，多一个球果成甲骨文“索”字。这可能象征东王公开启“众妙之门”或发明文字。右边羽人举着的玉杯是用来盛甘露的。\n> On the far left, a cloud god and a skylark seem to be sleeping foot-to-foot, which implies reproductive activities. The horse-man and chicken-man kneel in greeting, symbolizing Dong Wang Gong's establishment of the civilizational system. On the left, a feathered being offers Dong Wang Gong an item like a candied hawthorn, which may be the Langgan fruit from the Langgan tree mentioned in the \"Classic of Mountains and Seas\" or the Qiulin Langgan mentioned in the \"Book of Documents.\" It is also the pictograph for the character \"糸\" (silk) in oracle bone script; removing one fruit makes it the character \"玄\" (mysterious), and adding one makes it \"索\" (search/rope). This may symbolize Dong Wang Gong opening the \"Gate of All Mysteries\" or inventing writing. The jade cup held by the feathered being on the right is used to hold sweet dew.\n\n画中右侧两尊双头人面兽，兽蹄连着基座，腰身柔韧而雄健，活似汉代的天禄辟邪。\n> On the right side of the painting are two double-headed human-faced beasts with hooves connected to bases. Their bodies are flexible and robust, resembling the Tianlu and Pixiu of the Han Dynasty.\n\n年代：东汉；产地：山东嘉祥；规格：197cm×86.5cm\n> Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 197cm × 86.5cm"
+        }
+      ],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-044",
+      "name": "左石室第五石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-044-320.webp",
+      "modelImageLarge": "/generated/models/artifact-044-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E4%BA%94%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第五石\n> The left stone room, The fifth stone\n\n【第一层】故事待考。\n> The first layer: the story to be tested.\n\n【第二层】赵盾救灵辄。\n> The second layer: Zhao Dun saves the spirit.\n\n【第三层】故事待考。（下）\n> The third layer: the story to be checked (down).",
+      "pdfPages": [
+        32
+      ],
+      "pdfTopic": "赵盾救灵辄（灵辄受恩）",
+      "linkedPdf": [
+        {
+          "page": 32,
+          "title": "杯弓蛇影·灵辄受恩·刘媪梦蛇",
+          "content": "## 第32页\n\n（续上页）仓顶，仓顶皆覆假借青、又似储长谷粒、这一格寓意风调雨顺，五谷丰登。\n> (Continued from the previous page) The roof of the granary is covered with what appears to be green thatch or stored long grains; this register symbolizes favorable weather and a bountiful harvest.\n\n第三格，分为三部分，左边为嘉禾，禾枝上悬挂米脂。这是一种庆丰收的古老习俗，在今日中原地区的世俗中，依然可以看到这种年谷之树。中部为土地崇拜即社神崇拜，画面正中有一个大土堆，应当是社神，也就是土地神。土堆上部有二涡轮，形如巨眼，社神左一官人，戴冠，向右跪地拱耳；官人后立一侍者。（也有学者将这一画面解释为“丁兰刻木事亲”）\n> The third register is divided into three parts. On the left is the \"Auspicious Grain,\" with fat rice ears hanging from the stalks. This is an ancient custom for celebrating a harvest, and such \"annual grain trees\" can still be seen in the folk customs of the Central Plains today. The middle part depicts the worship of the Earth God (She deity); in the center of the scene is a large earthen mound, which should be the Earth God. The upper part of the mound has two whorls shaped like giant eyes. To the left of the deity is an official wearing a crown, kneeling toward the right with hands clasped; an attendant stands behind him. (Some scholars also interpret this scene as \"Ding Lan Carving Wood to Serve His Parents.\")\n\n第三格右边，是尝新谷图。右为一长者，团坐于台上，向左前倾身，伸手伸手；中跪一男子，戴帻，面向长者，右手执斗，左手执算，献汤食于长者；男子身后立一捧匜侍者，匜中当为新谷。此格寓意，应为年谷新熟，献新谷于长者品尝。（也有人将这一画面解释为“邢渠哺父”）\n> On the right of the third register is the \"Tasting the New Grain\" scene. On the right, an elder sits on a platform, leaning forward to the left and reaching out. In the middle, a man wearing a headcloth kneels facing the elder, holding a ladle in his right hand and a counting tool in his left, offering soup and food to the elder. Behind the man stands an attendant holding a basin (yi), which likely contains the new grain. This register symbolizes the ripening of the annual harvest and the offering of new grain to elders for tasting. (Some also interpret this scene as \"Xing Qu Feeding His Father.\")\n\n再看左区。左区最上格有残损，可见人物、酒樽、琴瑟，与“凤求凰”接近。第二、第三格，分别是女主人、男主人接受侍奉的图景。第四格左边是庖厨图，右边是登楼献食。\n> Looking at the left zone, the topmost register is damaged, but figures, wine vessels, and musical instruments (qin and se) are visible, resembling the theme of \"The Phoenix Seeking its Mate.\" The second and third registers depict the mistress and master of the house receiving service, respectively. The fourth register shows a kitchen scene on the left and the offering of food while ascending a building on the right.\n\n一些研究者多将这幅汉画分为左右两区独立研究。鲁迅收藏的这幅汉画为一纸。不过，这幅汉画左右两区在内容上也有密切关联。右区为建木图腾或谷禾、木禾崇拜内容、与之相关联的是社稷崇拜，也就是土地神和谷神崇拜。左区为人世的炊食宴乐内容。整幅汉画反映的是年谷丰收、人民感恩社稷之神、安享太平盛世的图景。\n> Some researchers often study the left and right zones of this Han Dynasty carving independently. The version collected by Lu Xun is a single sheet. However, the contents of the two zones are closely related. The right zone features the Jianmu totem or the worship of grain and wood crops, associated with the worship of the Gods of Soil and Grain (Sheji). The left zone depicts the culinary and banquet scenes of the human world. The entire carving reflects a scene of a bountiful harvest, people expressing gratitude to the deities of the land, and enjoying a peaceful and prosperous era.\n\n### 杯弓蛇影·灵辄受恩·刘媪梦蛇\n> The Shadow of a Bow in a Cup, Ling Zhe Repaying Kindness, and Mother Liu's Dream of a Snake\n\n这幅汉画共三格，从上到下，分别刻画了杯弓蛇影、赵盾救灵辄于首阳山、汉高祖母亲刘媪蛇有娠孕育刘邦的故事。\n> This Han Dynasty stone carving consists of three registers, depicting from top to bottom the stories of \"The Shadow of a Bow in a Cup,\" \"Zhao Dun Rescuing Ling Zhe at Mount Shouyang,\" and \"Mother Liu, the Mother of Emperor Gaozu of Han, Conceiving Liu Bang after Dreaming of a Snake.\"\n\n### 杯弓蛇影\n> The Shadow of a Bow in a Cup\n\n第一格，正中靠下一高脚杯，杯腰缠一蛇。杯左右冠服二人，指指画画，似在商谈。左边并排二人，恭肃右向，捧笏。右边前后二人，前者回头后视，右手执笏，左手在胸前指画；后者捧笏恭立。画面表现的似是杯弓蛇影的故事。\n> In the first register, a goblet is positioned near the bottom center, with a snake coiled around its middle. Two figures in official robes stand to the left and right of the cup, gesturing and appearing to be in discussion. On the left, two figures stand side-by-side facing right in a respectful posture, holding tablets. On the right, two figures are present; the one in front looks back, holding a tablet in the right hand and gesturing with the left across the chest, while the one behind stands respectfully with a tablet. The scene depicts the story of \"The Shadow of a Bow in a Cup.\"\n\n据汉代应劭《风俗通义》，应劭的祖父应郴做汲县令时，请主簿杜宣饮酒。杜宣在饮酒时发现杯中酒有蛇影，心生厌恶，但碍于情面，还是将酒喝下肚去。当日就腹痛如割，从此茶饭不思，病弱不堪，百药难治。后来发现当日杯中蛇影不过是县令家北墙上的弓弩映在酒杯中的影子，一下解了心结，很快就病愈了。\n> According to \"Fengsu Tongyi\" by Ying Shao of the Han Dynasty, when Ying Shao's grandfather, Ying Chen, was the magistrate of Ji County, he invited his registrar, Du Xuan, for a drink. While drinking, Du Xuan noticed the shadow of a snake in his cup and felt a sense of loathing, but out of courtesy, he drank it anyway. That same day, he suffered from agonizing abdominal pain, lost his appetite, and became bedridden, with no medicine proving effective. Later, it was discovered that the \"snake\" in the cup was merely the reflection of a bow hanging on the north wall of the magistrate's house. Once the mental knot was untied, he recovered quickly.\n\n画面蛇杯右侧右臂向上指画者应为县令应郴，蛇杯左侧以手向下朝蛇杯指画的是杜宣，二人似在探讨壁弓映杯、酒有蛇影的成因；蛇杯则谐谑地表达了杯弓蛇影令杜宣虚惊一场的情节。左右之从事，应当是杯弓蛇影这一故事的见证者，他们或恍然大悟，或将信疑，表现了对杯弓蛇影故事的认识过程。\n> The figure to the right of the snake-cup gesturing upward with the right arm is likely the magistrate Ying Chen, while the one to the left gesturing downward toward the cup is Du Xuan. The two seem to be discussing the cause of the bow's reflection and the snake's shadow in the wine. The snake-cup itself humorously illustrates the plot where the shadow caused Du Xuan a false alarm. The attendants on both sides serve as witnesses to the story, appearing either enlightened or skeptical, representing the cognitive process of understanding the \"Shadow of a Bow\" incident.\n\n### 灵辄受恩\n> Ling Zhe Repaying Kindness\n\n第二格，画面正中停驻一单驾轺车，车马左向。车上驭者后顾，车后一侍丈夫执斗温恭面右，其前一戴帻伶仃小人跪地。马前一平冠侍者执笏右向，其与骏马之间地上跪卧一犬，犬首后仰。这幅汉画描绘了赵盾在首阳山路遇落魄潦倒的灵辄，舍食相济的故事。\n> In the second register, a single-horse chariot is parked in the center, facing left. The driver on the chariot looks back, and behind the chariot, an attendant holds a vessel in a respectful manner facing right. In front of him, a small figure wearing a cap kneels on the ground. Before the horse, an attendant in a flat cap holds a tablet facing right, and a dog lies on the ground between him and the horse, its head tilted back. This carving depicts the story of Zhao Dun encountering the destitute Ling Zhe on the road at Mount Shouyang and providing him with food.\n\n据《左传》，晋国大夫赵盾当年在首阳山打猎，在翳桑之地看见三天没有进食、又饿又病的灵辄，就施舍食物给他。灵辄吃了一半，把另一半留起来要带回家给老母吃。赵盾让他吃完，又给他肉食，让他拿回家孝敬老母。多年后，灵辄为晋灵公侍卫，晋\n> According to the \"Zuo Zhuan,\" Zhao Dun, a high official of the State of Jin, was hunting at Mount Shouyang when he saw Ling Zhe at Yisang, who had not eaten for three days and was starving and ill. Zhao Dun gave him food. Ling Zhe ate half and saved the other half to take home to his elderly mother. Zhao Dun insisted he finish the meal and then gave him more meat to take home. Years later, Ling Zhe became a guard for Duke Ling of Jin..."
+        }
+      ],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-045",
+      "name": "左石室第八石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-045-320.webp",
+      "modelImageLarge": "/generated/models/artifact-045-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AB%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第八石\n> The left stone room, The eighth stone\n\n【第一层】自右至左为丁兰刻木奉亲、刑渠哺父、季札挂剑。\n> The first floor: From right to left, Ding Lan carves wood to honor his relatives, Xing Qu to feed his father, and Wei Zha to hang his sword.\n\n【第二层】赵氏孤儿。\n> The second layer: Orphan of the Zhao family.\n\n【第三层】周公辅成王。\n> The third layer: Zhou Gongfu becomes king.\n\n【第四层】车骑。（下）\n> The fourth layer: Chariot and rides. (down)",
+      "pdfPages": [
+        14
+      ],
+      "pdfTopic": "赵氏孤儿（含丁兰刻木、刑渠哺父、季札挂剑）",
+      "linkedPdf": [
+        {
+          "page": 14,
+          "title": "孔子击磬于卫·赵氏孤儿·柳下惠坐怀不乱",
+          "content": "## 第14页\n### 孔子击磬于卫·赵氏孤儿·柳下惠坐怀不乱\n这幅汉画共分两层三区。上层为孔子击磬于卫图；下层左区为程婴与公孙杵臼拯救赵氏孤儿，右区为柳下惠坐怀不乱图。\n> This Han dynasty stone relief is divided into two levels and three sections. The upper level depicts Confucius playing the Qing in Wei; the lower left section shows Cheng Ying and Gongsun Chujiu saving the orphan of the Zhao family, and the lower right section depicts Liu Xiaohui's moral integrity.\n\n### 孔子击磬于卫\n孔子在卫国击磬，满腹愁绪，被门外的农夫听出来。农夫开导孔子，世间事没什么大不了的。这是记录在《论语》里的几个孔子受揶揄奚落故事中的一个。\n> Confucius was playing the lithophone (qing) in the State of Wei, filled with sorrow, which was noticed by a farmer outside. The farmer comforted Confucius, saying that worldly affairs are no big deal. This is one of several stories recorded in the Analects where Confucius was teased or ridiculed.\n\n画面刻画一座架高栋的屋内，孔子跪地执枹击磬，簨簴上有磬九枚。孔子背后榜题“孔子”。他面前是伏地聆听的弟子；昏后的深屋是两个端坐向唇的女子。现场两边虎柱旁各站立一人，似是卫国廷臣。画面左边，是一个拿着饭钵戴帻头的农夫。农夫左边，为三行榜题：“何葆杖人，养性守真。子路从后，问见夫子。答以勤体，煞鸡为黍。仲由拱立，无辞以语。”屋檐上左右两边分别是一只猿猴和一只猫头鹰。\n> The scene depicts a house with high pillars and beams. Confucius kneels and strikes the qing with a mallet. There are nine qing on the frame. Behind Confucius is an inscription \"Confucius.\" Before him are disciples kneeling and listening; in the deep room behind are two women sitting and facing each other. Two figures stand by the tiger-shaped pillars on both sides, appearing to be court officials of Wei. On the left is a farmer holding a food bowl and wearing a headcloth. To the left of the farmer is a three-line inscription: \"The old man with the staff, cultivating nature and maintaining truth. Zilu followed behind and asked to see the Master. He replied with hard work, killing a chicken for millet. Zhongyou stood with hands folded, speechless.\" On the eaves are a monkey and an owl.\n\n晋代皇甫谧《高士传》里有个人叫“荷蕢”，孔子击磬于卫，他“荷蕢而过孔氏之门”。\n> In Huangfu Mi's Biographies of Recluses (Gaoshi Zhuan) of the Jin Dynasty, there is a person named \"He Kui\" (the basket carrier). When Confucius played the qing in Wei, he \"passed by the door of the Confucius family carrying a basket.\"\n\n图像上有孔子击磬，将门外的人理解成荷蕢是没有问题的。但榜题内容分明讲述了荷蓧丈人的故事。在《论语·微子》里，他讽刺孔子“四体不勤，五谷不分”却又“杀鸡为黍”招待子路。\n> The image shows Confucius playing the qing, and it is reasonable to interpret the person outside as He Kui. However, the inscription clearly tells the story of the \"Old Man with the Staff\" (He Diao Zhang Ren). In the \"Weizi\" chapter of the Analects, he ridiculed Confucius for \"not working with his four limbs and not distinguishing the five grains,\" yet he \"killed a chicken and prepared millet\" to host Zilu.\n\n图像上既有荷蕢高谈阔论，又不厌其烦记述荷蓧丈人，表面上看，好像刻画者将二者混为一谈了，实际上其中很可能传递了艺术家真正想表达的思想。\n> The image features both the basket carrier's discourse and the detailed account of the old man with the staff. On the surface, it seems the engraver conflated the two, but in reality, it likely conveys the true message the artist intended to express.\n\n《周礼》详细记载了神圣的祭祀音乐演奏所必需的场地要求：“《云门》之舞，冬日至，于地上之圜丘奏之……《咸池》之舞，夏日至，于泽中之方丘奏之……《九德》之歌，《九韶》之舞，于宗庙之中奏之。”\n> The Rites of Zhou (Zhou Li) details the site requirements for sacred ritual music: \"The Dance of Yunmen is performed on the circular mound on the winter solstice... The Dance of Xianchi is performed on the square mound in the marsh on the summer solstice... The Song of Nine Virtues and the Dance of Jiu Shao are performed in the ancestral temple.\"\n\n回头再看孔子用九磬演奏音乐的场地，就不难理解春秋时期礼崩乐坏的现实给孔子带来的尴尬与痛苦。\n> Looking back at the setting where Confucius used nine qing to perform music, it is easy to understand the embarrassment and pain brought to Confucius by the reality of the \"collapse of rites and music\" during the Spring and Autumn period.\n\n很多时候，孔子作为一代宗师，要面对政治权力的碾压、内心对礼的坚守、弟子的不解和他人的谄媚、责难与非议，其内心痛苦难以言表。但面对责难时，孔子往往就像对荷蕢一样平静地回答：是这样，没什么大不了的。\n> Often, as a grandmaster, Confucius had to face the pressure of political power, his inner adherence to rites, the misunderstanding of disciples, and the flattery, blame, and criticism of others. His inner pain was beyond words. Yet, when facing criticism, Confucius often replied calmly, just as he did to the basket carrier: \"It is so; it is no big deal.\"\n\n### 赵氏孤儿\n春秋时晋国贵族赵朔被奸臣屠岸贾陷害惨遭灭门之祸，赵家遗腹子赵武在家臣公孙杵臼和程婴的佑护及韩厥等善良之人竭力帮助下侥幸脱险，赵武长大成人后杀死屠岸贾，报了血海深仇。\n> During the Spring and Autumn period, the Jin nobleman Zhao Shuo was framed by the treacherous official Tu'an Gu, leading to the massacre of his family. Zhao Shuo's posthumous son, Zhao Wu, narrowly escaped with the protection of retainers Gongsun Chujiu and Cheng Ying, and the help of kind people like Han Jue. After growing up, Zhao Wu killed Tu'an Gu to avenge his family.\n\n汉画截取蒙难的赵朔的妻子庄姬将孤儿托付给公孙杵臼这一瞬间进行刻画，情景悲哀感人。画面中面前榜题“杵臼”者就是公孙杵臼。画面中的女子为蒙难的赵朔妻子，我们看不见她肝肠寸断，却感受到她在太难临头之际对摇篮中的赤子万般不舍。\n> The Han relief captures the moment when Zhao Shuo's wife, Lady Zhuang, entrusts the orphan to Gongsun Chujiu, a tragic and moving scene. The figure inscribed \"Chujiu\" is Gongsun Chujiu. The woman is Zhao Shuo's wife; though we cannot see her heartbreak, we feel her immense reluctance to part with the infant in the cradle amidst the catastrophe.\n\n画面正中双排大字榜题，清楚记录了这段历史：“程婴杵臼，赵朔家臣。下宫之难，赵武始躯。屠领购孤，诈抱他人。白与并殂，婴辅武存。”\n> In the center of the scene is a double-row large-character inscription clearly recording this history: \"Cheng Ying and Chujiu were retainers of Zhao Shuo. During the disaster at the Lower Palace, Zhao Wu's life began. Tu'an offered a reward for the orphan, so they faked another child. Both died together, while Cheng Ying assisted Wu's survival.\"\n\n18世纪法国启蒙思想家、戏剧家伏尔泰将赵氏孤儿的故事改编成五幕戏剧《中国孤儿》。所以“赵氏孤儿”是在西方世界认知度最高的中国故事之一。\n> In the 18th century, the French Enlightenment thinker and dramatist Voltaire adapted the story of the Orphan of Zhao into a five-act play, The Orphan of China. Thus, \"The Orphan of the Zhao Family\" is one of the Chinese stories with the highest recognition in the Western world.\n\n### 柳下惠坐怀不乱\n柳下惠姓展，名获，字禽，春秋时鲁国人，是一个品德高尚的隐士。他最为人称道的是“坐怀不乱”的故事。\n> Liu Xiaohui, surnamed Zhan, named Huo, with the courtesy name Qin, was a man from the State of Lu during the Spring and Autumn period and a hermit of noble character. He is most famous for the story of \"remaining unmoved with a woman in his lap.\"\n\n有一次柳下惠来不及在天黑前进城，就在城门下夜宿，一位年轻貌美女子也来投宿。柳下惠见那女子衣服单薄，怕她冻死，就用自己的棉衣把她裹在怀里，一直到天亮，根本没有淫乱的想法和行为。\n> Once, Liu Xiaohui could not enter the city before dark and stayed overnight under the city gate. A young and beautiful woman also came for shelter. Seeing her thin clothing and fearing she would freeze to death, Liu Xiaohui wrapped her in his cotton robe and held her in his arms until dawn, without any improper thoughts or actions.\n\n画面上，一株枝叶萧疏的树下，柳下惠拥女子在怀而安之若素。其前榜题“柳惠”；其后杆上晾着女子的湿衣；树上窥视的鸟雀和右上的黑熊，既似烘托，又似见证。\n> In the scene, under a tree with sparse leaves, Liu Xiaohui holds the woman in his arms with composure. Before him is the inscription \"Liu Hui\"; behind him, the woman's wet clothes hang on a pole; the birds peeking from the tree and the black bear in the upper right serve as both atmosphere and witnesses."
+        }
+      ],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-046",
+      "name": "左石室第六石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-046-320.webp",
+      "modelImageLarge": "/generated/models/artifact-046-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%85%AD%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第六石【孔门弟子】（上）\n> The left stone room, the sixth stone Disciple of Confucianism. (top)",
+      "pdfPages": [
+        15,
+        16,
+        17
+      ],
+      "pdfTopic": "孔门弟子",
+      "linkedPdf": [
+        {
+          "page": 15,
+          "title": "子路顶鸠",
+          "content": "## 第15页\n\n### 子路顶鸠\n\n这幅汉画共有三格，上格是东王公及昆仑诸仙，下格为车马出行，中格为十九位孔门弟子。其中一人头上顶鸠，应为子路。另一人戴牟耳软帻，其余皆戴冠。孔子的这些门徒，一个个身材匀称，相貌周正，好像统一穿着礼服，要去参加重要的拜祭活动。\n> This Han painting consists of three registers: the top register features the Duke of the East and various immortals of Kunlun; the bottom register depicts a chariot procession; and the middle register shows nineteen disciples of Confucius. One of them, with a pigeon on his head, is likely Zilu. Another wears a soft cap with earflaps, while the rest wear formal crowns. These disciples of Confucius are well-proportioned and dignified in appearance, as if dressed in uniform ritual attire for an important sacrificial ceremony.\n\n孔子非常讲究礼。《史记·孔子世家》记孔子“割不正，不食；席不正，不坐；食于有丧者之侧，未尝饱也”。画中孔门弟子衣冠周正，是赞美孔子重视礼教，也是汉代倡导礼教的一个缩影。\n> Confucius was very particular about ritual. The \"Records of the Grand Historian: Hereditary House of Confucius\" notes that he \"would not eat meat that was not cut properly, nor sit on a mat that was not straight; when eating beside someone in mourning, he never ate to fullness.\" The neat attire of the disciples in the painting praises Confucius's emphasis on ritual education and serves as a microcosm of the promotion of ritual in the Han Dynasty.\n\n接下来重点谈谈子路头上的鸠。前面介绍过羔雁。子路顶鸠，可以理解成子路带着看望孔子的礼物。\n> Next, let's focus on the pigeon on Zilu's head. Lambs and geese were mentioned previously as gifts. Zilu wearing a pigeon can be understood as him bringing a gift to visit Confucius.\n\n古有鹖冠之说。鹖是像雉而善斗的鸟，古代武士戴鹖冠，表示英勇不惧战斗。史书记载子路为人耿直，好勇力。他少年时好逞强，常头戴雄鸡式的帽子耍威风。他甚至瞧不起孔子，有动手冒犯孔子的劣迹，可以说是个“问题少年”。孔子循循善诱，慢慢引导子路好学向礼。子路后来穿着儒服带着拜师礼物，主动请求成为孔门弟子。\n> In ancient times, there was the \"He Crown\" (Crossoptilon crown). The He is a pheasant-like bird known for its fighting spirit; ancient warriors wore He crowns to signify bravery and fearlessness in battle. Historical records describe Zilu as upright and fond of physical prowess. In his youth, he liked to show off, often wearing a rooster-style hat to look imposing. He even looked down on Confucius and had a history of physically offending him, making him a \"troubled youth.\" Confucius guided him patiently, gradually leading him toward learning and ritual. Zilu later dressed in Confucian robes, brought apprenticeship gifts, and requested to become a disciple.\n\n孔子因材施教，教导子路成为有勇善断、品德高尚之人。孔子周游列国，子路常跟随左右，保护老师免受羞辱和伤害。孔子内心感激子路，自言“自吾得由，恶言不闻于耳”。汉画中子路每每头顶一只鸟，应该是子路勇敢坚强的形象化表达。\n> Confucius taught according to the student's ability, guiding Zilu to become a brave, decisive, and noble person. When Confucius traveled through various states, Zilu often followed him to protect his teacher from humiliation and harm. Confucius was inwardly grateful to Zilu, saying, \"Since I got You (Zilu), I have not heard an unkind word.\" In Han paintings, Zilu is often depicted with a bird on his head, which is likely a visual representation of his brave and strong character.\n\n据《史记·仲尼弟子列传》，子路后来在卫国做官，卫国内乱，子路被击落冠缨。子路说：“君子死而冠不免。”然后“结缨而死”，被政敌所为肉酱。从一个“冠雄鸡”的顽劣少年到临死还要正衣冠的直臣，子路完成了人生的蜕变和升华，是孔子呕心沥血成功教育的奇迹。子路死，孔子万分悲痛。《礼记》记孔子不忍食用肉酱，见肉酱让人倒掉，借此表达对弟子的哀悼。\n> According to the \"Records of the Grand Historian: Biographies of Confucius's Disciples,\" Zilu later served as an official in the State of Wei. During internal strife in Wei, Zilu's hat string was struck off. Zilu said, \"A gentleman does not remove his crown even in death,\" then \"tied the strings and died,\" after which he was made into minced meat by his political enemies. From a rebellious youth \"crowning himself with a rooster\" to a loyal official who straightened his crown even at the moment of death, Zilu completed a life transformation and sublimation—a miracle of Confucius's dedicated education. Upon Zilu's death, Confucius was deeply grieved. The \"Book of Rites\" records that Confucius could not bear to eat minced meat and would have it discarded upon seeing it, expressing his mourning for his disciple."
+        },
+        {
+          "page": 16,
+          "title": "",
+          "content": "## 第16页\n\n（续上页）这幅汉画共有三格，上格是东王公及昆仑诸仙，中格为十九位孔门弟子，下格为车马出行。\n> (Continued from the previous page) This Han Dynasty stone carving consists of three registers: the top register depicts the King Father of the East (Dongwang Gong) and various immortals of the Kunlun Mountains; the middle register features nineteen disciples of Confucius; and the bottom register shows a procession of chariots and horses.\n\n年代：东汉；产地：山东嘉祥；规格：197.5cm×85.5cm\n> Period: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 197.5cm × 85.5cm"
+        },
+        {
+          "page": 17,
+          "title": "孔门弟子候师图",
+          "content": "## 第17页\n### 孔门弟子候师图\n（续上页）画中尽管有五人成身体或头部损勘，但还是能看得出画中的十三人是孔子门徒，他们等候在孔子家门口，等待孔子醒来，开始一天的课程。\n> (Continued from the previous page) Although five people in the painting have damaged bodies or heads, it is still clear that the thirteen people depicted are disciples of Confucius. They are waiting at the door of Confucius's house, waiting for him to wake up and begin the day's lessons.\n\n这些门徒有高有矮，大多戴冠，有四个戴帻戴巾，显示孔子教学“有教无类”，平等视之。\n> These disciples vary in height; most wear crowns, while four wear headscarves or turbans, demonstrating Confucius's teaching philosophy of \"education for all without discrimination\" and treating everyone equally.\n\n其中有四人手捧简册，在师门打开前的短暂时间里，珍惜寸阴，或默而诵之，或吟哦有声，引得前后的同学来看。\n> Among them, four hold bamboo slips. In the brief time before the teacher's door opens, they cherish every moment, either reciting silently or chanting aloud, attracting the attention of fellow students nearby.\n\n左数第四人头顶一只鸠鸟。武氏祠前石室画像之二有一孔门弟子，头上顶鸠，其前榜题“子路”。由此看来，此画中顶鸠的也应是子路。\n> The fourth person from the left has a pigeon on his head. In the second stone carving of the Front Chamber of the Wu Family Shrines, there is a disciple of Confucius with a pigeon on his head, labeled \"Zilu.\" Therefore, the person with the pigeon in this painting should also be Zilu.\n\n最右边的弟子双袖相拢，显得毕恭毕敬，应是曾参，他学问精进，又谦恭温顺，每天总是最早来到老师家门口。身后的同学好像有什么疑问向他请教，于是他回过头去，耐心讲解。\n> The disciple on the far right has his sleeves folded together, appearing very respectful; he is likely Zeng Shen. He was diligent in his studies, humble, and gentle, always the first to arrive at the teacher's door every day. A classmate behind him seems to be asking a question, so he turns his head to explain patiently."
+        }
+      ],
+      "tags": [
+        "孔门弟子",
+        "左石室系列"
+      ]
+    },
+    {
+      "id": "artifact-047",
+      "name": "左石室第四石",
+      "series": "左石室系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-047-320.webp",
+      "modelImageLarge": "/generated/models/artifact-047-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E5%B7%A6%E7%9F%B3%E5%AE%A4%E7%AC%AC%E5%9B%9B%E7%9F%B3.jpg",
+      "infoText": "## 左石室 第四石\n> The left stone room, the fourth stone\n\n【第一层】管仲射小白。\n> The first layer: Guan Zhong shoots Xiaobai.\n\n【第二层】荆轲刺秦王。\n> The second layer: Jing Ke assassinates the King of Qin.\n\n【第三层】伏羲、女娲。（上）\n> The third layer: Fuxi and Nuwa. (top)",
+      "pdfPages": [
+        29,
+        30,
+        34
+      ],
+      "pdfTopic": "管仲射小白、荆轲刺秦王、伏羲女娲",
+      "linkedPdf": [
+        {
+          "page": 29,
+          "title": "荆轲刺秦",
+          "content": "## 第29页\n\n### 荆轲刺秦\n（续上页）这幅汉画分左右两区，中间以竖格区隔。左右两区的下边二格皆为车马出行图，榜题有口吏车、行亭车等。左右区最上格为云龙纹，亦称草龙纹。左区第二格内容可能为“赵氏孤儿”，右区第二格为荆轲刺秦图。\n> (Continued from the previous page) This Han painting is divided into left and right sections, separated by a vertical grid. The bottom two registers of both sections depict processions of chariots and horses, with inscriptions such as \"Official's Chariot\" and \"Pavilion Chariot.\" The top register of both sections features cloud and dragon patterns, also known as \"grass dragon\" patterns. The content of the second register in the left section may be \"The Orphan of Zhao,\" while the second register in the right section is \"Jing Ke's Assassination of the King of Qin.\"\n\n“赵氏孤儿”，表现孤儿的母亲晋国公主为保存赵家的唯一血脉，忍痛将刚出生不久的孤儿托付与人的情节。\n> \"The Orphan of Zhao\" depicts the scene where the orphan's mother, the Princess of the State of Jin, endures the pain of entrusting her newborn infant to others to preserve the sole bloodline of the Zhao family.\n\n我们重点来看荆轲刺秦图。武梁祠另有两幅荆轲刺秦图。\n> Let us focus on the \"Jing Ke's Assassination of the King of Qin\" illustration. There are two other depictions of this scene in the Wu Liang Shrine.\n\n第一幅，位于专诸刺吴王图的左上方。画上，荆轲右臂扬起，匕首刺在柱上；秦王张皇失措，躲在柱后，一手伸向后背，欲拔背上宝剑。荆轲助手秦舞阳匍匐于地，不敢抬头。荆轲带来的盛樊於期人头的箱盖已打开，出露出来。榜题有“荆轲”“秦王”“樊於期头”“秦武阳”等。\n> The first one is located at the top left of the \"Zhuan Zhu Assassinating the King of Wu\" illustration. In the painting, Jing Ke's right arm is raised, and his dagger is stuck in a pillar; the King of Qin is in a panic, hiding behind the pillar, reaching one hand behind his back to draw his sword. Jing Ke's assistant, Qin Wuyang, is prostrate on the ground, not daring to look up. The lid of the box containing Fan Yuqi's head, brought by Jing Ke, has been opened, revealing the head. There are inscriptions such as \"Jing Ke,\" \"King of Qin,\" \"Fan Yuqi's Head,\" and \"Qin Wuyang.\"\n\n第二幅，在武氏祠左石室画像之五，“管仲射主”下。画面中为立柱，上有斗拱，匕首自左向右贯穿立柱，匕首尾部飘带飞向左下，极有动感。左边一戴帻穿短裤男子一跃而起，双臂舒展，面向柱右，极有气势，当为荆轲。其身后一戴冠者，跨步向左，当为秦庭官佐。柱右，地上箱盖半开，露出樊於期人头。箱右地上，仰面跌躺一人，当为荆轲伙伴秦舞阳。左上，一人蛾冠袍服，右行左顾，左臂高举，右臂横伸，右袖被斩断，斜落于地；其袍服下端向左下斜曳，显出仓皇奔逃的动态，此人当为秦王。秦王右边，一武士左剑右盾，向左奔赴，当为秦庭卫士。画面无榜题。整个画面中秦庭官佐与荆轲在一侧，秦舞阳与秦王在一侧，显示荆轲绕柱追击秦王，极具戏剧性和视觉冲击力。\n> The second one is located under \"Guan Zhong Shooting the Prince\" in the fifth image of the left stone chamber of the Wu Family Shrine. The scene features a standing pillar with bracket sets. A dagger pierces the pillar from left to right, with the ribbon at its hilt flying towards the bottom left, creating a strong sense of motion. On the left, a man wearing a headcloth and short trousers leaps up, arms outstretched, facing the right of the pillar with great momentum; he is likely Jing Ke. Behind him, a figure wearing a crown strides to the left, likely an official of the Qin court. To the right of the pillar, a box lid lies half-open on the ground, revealing Fan Yuqi's head. To the right of the box, a person lies flat on their back, likely Jing Ke's companion, Qin Wuyang. At the top left, a person in a high hat and robes walks to the right while looking back, left arm raised and right arm extended; the right sleeve is severed and falling to the ground. The lower part of the robe drags towards the bottom left, showing a panicked flight; this person is likely the King of Qin. To the right of the King of Qin, a warrior with a sword in his left hand and a shield in his right rushes to the left, likely a guard of the Qin court. There are no inscriptions in this image. In the entire scene, the Qin official and Jing Ke are on one side, while Qin Wuyang and the King of Qin are on the other, showing Jing Ke chasing the King of Qin around the pillar, which is highly dramatic and visually impactful.\n\n本图为第三幅荆轲刺秦图。\n> This illustration is the third depiction of \"Jing Ke's Assassination of the King of Qin.\"\n\n图中间为立柱，柱上端有斗拱，一匕首自左向右贯穿中柱，飘带右飞。柱右地上，箱盖半开，露出樊於期人头。箱右一戴帻宽袍魁伟男子，自右向左跨步向前，手臂向左上方高举，似刚刚投出匕首，其挥手处有榜题“荆轲”。荆轲前面，秦舞阳五体投地，其头顶上方榜题“秦武阳”。荆轲右后方，一武士向左挥剑扬盾，为秦庭卫士。荆\n> In the center of the image is a standing pillar with bracket sets at the top. A dagger pierces the central pillar from left to right, with its ribbon flying to the right. On the ground to the right of the pillar, a box lid is half-open, revealing Fan Yuqi's head. To the right of the box, a tall, sturdy man in a headcloth and wide robes strides from right to left, his arm raised high towards the top left as if he has just thrown the dagger. Near his hand is the inscription \"Jing Ke.\" In front of Jing Ke, Qin Wuyang is prostrate on the ground, with the inscription \"Qin Wuyang\" above his head. To the right and behind Jing Ke, a warrior brandishes a sword and shield to the left, serving as a guard of the Qin court. Jin..."
+        },
+        {
+          "page": 30,
+          "title": "",
+          "content": "## 第30页\n\n（续上页）轲后面，一平冠男子一手抓持荆轲，一面向右边武士招引。柱左，石上部损泐，但仍可看出，其中一扬臂断袖、左弃右顾、衣帻后曳之男子，当为秦王。其前把戟向左仆地者为秦宫大臣。而朝地扑倒之廷臣上方石泐，仍可看出为一面朝上跌倒之人，当亦为秦庭臣僚。秦王右后方，一秦宫武士扬盾跌地，而露怯色。秦王左臂上方石泐，依稀可见榜题残字“也”字，据《金石聚》，“也”字上有“此秦王”三字，合为“此秦王也”。\n> (Continued from the previous page) Behind Jing Ke, a man wearing a flat crown holds Jing Ke with one hand while beckoning to the warriors on the right. To the left of the pillar, although the upper part of the stone is damaged, one can still discern a man with raised arms and a torn sleeve, looking back to the right with his headgear trailing behind; he is likely the King of Qin. In front of him, a Qin court official holding a halberd has fallen to the ground facing left. Above the prostrate official, despite the stone damage, another person falling face-up can be seen, likely another court official. To the rear right of the King of Qin, a Qin palace warrior drops his shield and falls, showing a look of fear. Above the King of Qin's left arm, the stone is damaged, but a residual character \"ye\" (也) from an inscription is faintly visible. According to the *Jin Shi Ju*, there were three characters \"Ci Qin Wang\" (此秦王) above \"ye\", forming the phrase \"This is the King of Qin.\"\n\n柱左地面，为虚设之荐席，其旁为秦王来不及穿上的双履。这幅汉画里人物众多，追击奔逃情景更为惊心动魄，格斗屠杀场面更为激烈，懦夫筛糠，弱者不堪嘶吼；帝王失色，烈士气贯九霄，堪称一部英雄喋血史，一曲石上《大风歌》。\n> On the ground to the left of the pillar is an empty mat, beside which are the King of Qin's shoes that he had no time to put on. This Han dynasty painting features numerous characters, with the scenes of pursuit and flight being even more soul-stirring and the combat and slaughter more intense. Cowards tremble, and the weak cannot stop screaming; the monarch loses his composure, while the martyr's spirit pierces the heavens. It can be called a heroic history of blood and sacrifice, a \"Song of the Great Wind\" carved in stone.\n\n年代：东汉；产地：山东嘉祥；规格：160cm×63.5cm\n> Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 160cm × 63.5cm"
+        },
+        {
+          "page": 34,
+          "title": "管仲射主",
+          "content": "## 第34页\n### 管仲射主\n这幅汉画共分三格。第一、第二格分别刻绘管仲射主、荆轲刺秦故事，第三格为伏羲女娲交尾图。\n> This Han Dynasty stone relief is divided into three registers. The first and second registers depict the stories of \"Guan Zhong Shooting the Prince\" and \"Jing Ke's Attempt on the King of Qin,\" respectively. The third register shows Fuxi and Nüwa with intertwined tails.\n\n第一格左前，一冠服者仰倒于地，膝上中一箭。其左，一人持伞盖遮护中箭者。右边一人左手持弓，右掌前伸，似刚射出利箭。最右二人执笏恭立。这一格表现的是管仲射公子小白的故事。中箭者为公子小白，执伞盖者为鲍叔，执弓者为管仲。\n> In the front left of the first register, a man in official robes and a cap has fallen backward, an arrow striking his knee. To his left, a person holds a parasol to protect the wounded man. On the right, a man holds a bow in his left hand with his right palm extended, as if he has just released an arrow. On the far right, two people stand respectfully holding tablets. This register depicts the story of Guan Zhong shooting Prince Xiaobai. The one struck by the arrow is Prince Xiaobai, the one holding the parasol is Bao Shu, and the one holding the bow is Guan Zhong.\n\n管仲是春秋时著名的经济学家、哲学家、政治家、军事家。齐桓公时，管仲为相，辅佐桓公大兴改革，兴利除害，富国强兵，成就了春秋五霸之首。\n> Guan Zhong was a famous economist, philosopher, statesman, and military strategist of the Spring and Autumn period. During the reign of Duke Huan of Qi, Guan Zhong served as chancellor, assisting the Duke in implementing major reforms, promoting benefits and eliminating harms, and enriching the country and strengthening the military, making the Duke the first of the Five Hegemons.\n\n据《国语》记载，管仲当初辅佐公子纠，与公子小白为敌。管仲曾箭射小白，意图除掉小白。公子小白即位，这就是齐桓公。他听从贤臣鲍叔的建议，不计前嫌，重用管仲。\n> According to the *Guoyu* (Discourses of the States), Guan Zhong initially served Prince Jiu and was an enemy of Prince Xiaobai. Guan Zhong once shot an arrow at Xiaobai, intending to eliminate him. When Prince Xiaobai ascended the throne as Duke Huan of Qi, he followed the advice of his virtuous official Bao Shu, set aside past grievances, and appointed Guan Zhong to a high position.\n\n画面再现了管仲怒射公子小白、小白受伤、鲍叔救主的一幕。齐桓公不计前嫌、知人善任，鲍叔胸怀宽广、举贤荐能，管仲巨擘高才、治国有方，他们的故事都是中国历史上的美谈。爱与恨，恩与仇，敌与友，臣与君，一己与家国，恩仇与社稷，能臣与明主，古代才士所有的矛盾与纠结、颠沛与梦想、光荣与辉煌，都集中在管仲身上。汉代艺术家截取管仲射小白这一瞬间浓墨重彩地刀绘斧刻，实在是寄意遥深，韵味无穷。\n> The scene recreates the moment Guan Zhong shot Prince Xiaobai, Xiaobai being wounded, and Bao Shu saving his master. Duke Huan's magnanimity and talent for recognizing merit, Bao Shu's broad-mindedness and recommendation of the worthy, and Guan Zhong's immense talent and governance are all celebrated stories in Chinese history. Love and hate, gratitude and revenge, enemies and friends, ministers and monarchs, the individual and the state—all the contradictions, struggles, hardships, dreams, glory, and brilliance of ancient scholars are concentrated in Guan Zhong. The Han Dynasty artists captured the moment Guan Zhong shot Xiaobai with bold and profound carvings, conveying deep meaning and endless charm.\n\n年代：东汉；产地：山东嘉祥；规格：67cm×79cm\n> Period: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 67cm × 79cm"
+        }
+      ],
+      "tags": [
+        "左石室系列",
+        "第一层",
+        "第三层",
+        "第二层"
+      ]
+    },
+    {
+      "id": "artifact-048",
+      "name": "带孔方尖碑",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E5%B8%A6%E5%AD%94%E6%96%B9%E5%B0%96%E7%A2%91.png",
+      "modelImageThumb": "/generated/models/artifact-048-320.webp",
+      "modelImageLarge": "/generated/models/artifact-048-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-049",
+      "name": "武梁祠东壁画像",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E4%B8%9C%E5%A3%81%E7%94%BB%E5%83%8F.png",
+      "modelImageThumb": "/generated/models/artifact-049-320.webp",
+      "modelImageLarge": "/generated/models/artifact-049-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E4%B8%9C%E5%A3%81%E7%94%BB%E5%83%8F.jpg",
+      "infoText": "## 武梁祠 第二石【武梁祠东壁画像】\n> Wuliang Temple, The second stone (portrait on the east wall of Wuliang Temple)\n\n【第一层】东王公、仙人和奇禽异兽。\n> The first layer: Dong Wang Gong, immortals and strange beasts.\n\n【第二层】自右至左为使者、梁节姑姊、齐义继母、京师节女的故事。\n> The second layer: From right to left are the stories of the envoy, Liang Jie, Qi Yi's stepmother, and the daughter of Jingshi Jie.\n\n【第三层】自右至左为三州孝人义浆羊公、魏汤、赵口口、孝孙的故事。\n> The third layer: From right to left, there are stories of the Yanggong, Wei Tang, Zhao Koukou and Xiaosun, the filial son Sanzhou.\n\n【第四层】自右至左为要离刺庆忌、豫让刺赵襄子、聂政刺韩王，钟离春说齐王的故事。\n> The fourth floor: From right to left, Yaoli assassinates Qingji, assassinates Zhao Xiangzi, Nie Zheng assassinates King Han, and Lichun tells the story of King Qi.\n\n【第五层】庖厨、车骑。\n> The fifth floor: cooks, chariots and riders.",
+      "pdfPages": [
+        6,
+        7
+      ],
+      "pdfTopic": "义乌感孝·要离刺庆忌·钟离春说齐王·武梁自况",
+      "linkedPdf": [
+        {
+          "page": 6,
+          "title": "义乌感孝·要离刺庆忌·钟离春说齐王·武梁自况",
+          "content": "## 第6页\n\n### 义乌感孝·要离刺庆忌·钟离春说齐王·武梁自况\n> Filial Piety of the Crows, Yao Li Assassinating Qing Ji, Zhongli Chun Advising the King of Qi, and Wu Liang's Self-Representation\n\n这幅汉画一共分五层。第一层是东王公。第二层自右至左，是四个烈女故事：陵母伏剑、梁节姑姊、齐义继母和京师节女。第三层自右至左，是六个义烈故事，分别是三州孝人、义浆羊公、魏汤报仇、义乌感孝、赵徇哺父和孝孙原谷。第四层是三个刺客英雄和一个贤女的合传，自右至左，分别是要离刺庆忌、豫让刺赵襄子、聂政刺韩王和钟离春说齐王。第五层右半部是庖厨图，左半部是官吏访贤图。这幅汉画上的内容非常丰富。这里重点介绍四个故事。\n> This Han Dynasty stone relief is divided into five registers. The first register depicts the Lord of the East. The second register, from right to left, features four stories of virtuous women: Mother of Ling Suiciding with a Sword, The Chaste Aunt of Liang, The Righteous Stepmother of Qi, and The Chaste Woman of the Capital. The third register, from right to left, contains six stories of filial piety and righteousness: The Filial Person of Sanzhou, Lord Yang of the Righteous Drink, Wei Tang’s Revenge, Filial Piety of the Crows, Zhao Xun Feeding His Father, and the Filial Grandson Yuan Gu. The fourth register is a collective biography of three assassin heroes and one virtuous woman; from right to left, they are Yao Li Assassinating Qing Ji, Yu Rang Assassinating Zhao Xiangzi, Nie Zheng Assassinating the King of Han, and Zhongli Chun Advising the King of Qi. The right half of the fifth register is a kitchen scene, and the left half depicts officials visiting a worthy man. The content of this relief is exceptionally rich. Four stories are highlighted here.\n\n### 义乌感孝\n> Filial Piety of the Crows\n\n故事见于日本京都大学图书馆藏《孝子传》。说的是西汉末年东阳县有个叫颜乌的孝子，父死后筑墓葬父，感动乌鸦数千，衔土衔石帮颜乌筑坟，颜乌父亲的坟墓很快修筑好了。画中一棵大树，树上一只乌鸦，其旁榜题“孝鸟”。\n> This story is found in the *Biographies of Filial Sons* (Xiaozi Zhuan) kept in the Kyoto University Library. It tells of Yan Wu, a filial son from Dongyang County during the late Western Han Dynasty. After his father died, he built a tomb to bury him. His devotion moved thousands of crows, which carried earth and stones in their beaks to help him build the mound, and the tomb was soon completed. In the relief, there is a large tree with a crow on it, accompanied by the inscription \"Filial Bird.\"\n\n### 要离刺庆忌\n> Yao Li Assassinating Qing Ji\n\n这是春秋时刻客要离奉吴王阖闾之命，以苦肉计获得庆忌信任，将其刺杀的历史故事。庆忌是吴王僚的儿子，他出身将门，自幼习武，力量过人，勇猛无敌。为帮助吴王阖闾夺得王位，伍子胥安排刺客专诸刺杀了吴王僚。当时公子庆忌正在外带兵，听到噩耗，整顿兵马，准备杀回国为父报仇。伍子胥又安排刺客要离刺杀庆忌。要离以捕鱼为生，身材瘦小却足智多谋。要离用苦肉计，先使阖闾砍掉自己的右手，后杀死自己的妻子。庆忌问得要离的不幸遭遇，对他深信不疑，委以重任。数月后，庆忌和要离乘一舟，要离寻机刺杀庆忌。庆忌死前明白了要离的真正目的，感叹天下居然有要离这样的勇士。庆忌身边的卫士冲上来要杀要离，庆忌制止说：“这个人是天下少有的勇士，我们怎么可以在一天之内杀死天下两个勇士呢！”庆忌临死前命人将要离放回吴国。要离回国后，吴王阖闾要大加封赏，要离坚持不受，说：“我杀庆忌，是为了吴国安宁和百姓安居乐业，”说完拔剑自刎。\n> This is a historical story from the Spring and Autumn period about the assassin Yao Li, who, under the orders of King Helü of Wu, used a \"self-injury ruse\" to gain the trust of Qing Ji and assassinate him. Qing Ji was the son of King Liao of Wu. Born into a military family, he had practiced martial arts since childhood and possessed extraordinary strength and peerless bravery. To help King Helü seize the throne, Wu Zixu arranged for the assassin Zhuan Zhu to kill King Liao. At that time, Prince Qing Ji was leading troops abroad; upon hearing the news, he organized his forces to return and avenge his father. Wu Zixu then arranged for Yao Li to assassinate Qing Ji. Yao Li was a fisherman by trade, small in stature but highly resourceful. He employed a self-injury tactic, first having Helü cut off his right hand and then kill his wife. Hearing of Yao Li's misfortunes, Qing Ji trusted him completely and gave him important responsibilities. Months later, while Qing Ji and Yao Li were on the same boat, Yao Li found an opportunity to strike. Before dying, Qing Ji realized Yao Li's true purpose and marveled that such a brave man existed. When his guards rushed to kill Yao Li, Qing Ji stopped them, saying, \"This man is a rare hero; how can we kill two of the world's greatest heroes in a single day?\" Before he expired, he ordered that Yao Li be allowed to return to Wu. Upon his return, King Helü offered him great rewards, but Yao Li refused, saying, \"I killed Qing Ji for the peace of Wu and the well-being of its people.\" He then drew his sword and committed suicide.\n\n要离刺庆忌的故事显示了刺客英雄故事的复杂性。画中舟上戴高冠者为庆忌，其上榜题“王庆忌”。左右执戟者为庆忌卫士，舟下江中为要离。画面截取的是要离刺杀成功，庆忌尚未气绝前，抓住要离的头溺于水中，在船帮上摔打的情形。\n> The story of Yao Li assassinating Qing Ji illustrates the complexity of assassin-hero narratives. In the relief, the figure on the boat wearing a high crown is Qing Ji, labeled \"King Qing Ji.\" The halberd-bearers to his left and right are his guards, while Yao Li is in the river below the boat. The scene captures the moment after the successful assassination, before Qing Ji has breathed his last, as he grabs Yao Li by the head to drown him in the water and strikes him against the side of the boat.\n\n### 钟离春说齐王\n> Zhongli Chun Advising the King of Qi\n\n战国时齐宣王日日歌舞，夜夜欢声。丑女钟离春自请见齐宣王，陈述齐国的四个危难，为齐宣王采纳。齐宣王立她为王后，根据她的意见，拆渐台、罢女乐、退谄谀、进直言、选兵马、实府库，齐国大治，成为六国之佼佼者。画中戴高冠者是齐宣王，其前榜题“宣王”。戴花冠者为钟离春，其后榜题“无盐丑女钟离春”。这幅汉画刻画的是钟离春不卑不亢谏言宣王，宣王从谏如流、待无盐女如宾的情形。\n> During the Warring States period, King Xuan of Qi spent his days and nights in revelry. The unattractive woman Zhongli Chun requested an audience and presented four perils facing the state, which the King accepted. He made her his queen and, following her advice, demolished the pleasure terraces, dismissed the female musicians, expelled flatterers, welcomed honest criticism, selected troops, and replenished the treasury. Consequently, Qi became well-governed and a leader among the six states. In the relief, the figure in the high crown is King Xuan, labeled \"King Xuan.\" The one wearing a floral crown is Zhongli Chun, labeled \"The Ugly Woman of Wuyan, Zhongli Chun.\" This carving depicts Zhongli Chun offering her counsel with dignity, and the King listening intently and treating her as an honored guest.\n\n### 武梁自况\n> Wu Liang's Self-Representation\n\n第五层右半部为庖厨图。与一般庖厨的自然主义写实风格不同，画面中出现了督厨的一男一女。其中男督厨者指手画脚，颐指气使。桔槔上悬挂一只宰杀过的狗，屠夫正在剥狗皮。右下硕大的灶上有巨甑，为蒸馏之厨具。灶上向右伸出的筒实为灶突，也就是烟囱。督厨和巨大的釜甑表明，此间的庖厨断非寻常人家日常饮食之事的简单描摹。\n> The right half of the fifth register is a kitchen scene. Unlike the typical naturalistic style of such scenes, this one features a man and a woman supervising the kitchen. The male supervisor is gesturing and acting bossy. A slaughtered dog hangs from a well-sweep (shadoof), and a butcher is skinning it. On the large stove in the lower right is a massive steamer (zeng), a vessel for steaming. The tube extending to the right from the stove is the flue, or chimney. The presence of supervisors and the enormous cooking vessels indicates that this kitchen is not a simple depiction of an ordinary household's daily meals.\n\n左半是官吏访贤图。画中右边一牛拉车，车前损泐，车上榜题“处士”，可知牛后车前坐有一人，当为乡野高士。左边一官员下马车跪拜高士，其上榜题“县功曹”。画面是东汉时重视逸老、礼贤下士的社会风尚的写照。这幅汉画出自武梁祠。据南宋洪适著录的武梁碑碑文，武梁是一位致力于传道授业的君子。著名汉画研究学者巫鸿认为这方画像石是武梁最后一块画像石，画中的“处士”，是武梁自况，画面是“州郡请召”，武梁“辞疾不就”的写照。\n> The left half depicts officials visiting a worthy man. On the right, an ox pulls a carriage; though the front is damaged, the inscription \"Chushi\" (Scholar in Retirement) remains, indicating that the person seated behind the ox and in front of the carriage is a recluse scholar. On the left, an official has stepped down from his carriage to bow before the scholar, labeled \"County Merit Recorder\" (Xian Gongcao). The scene reflects the Eastern Han social custom of honoring the elderly and respecting the virtuous. This relief comes from the Wu Liang Shrine. According to the inscription on the Wu Liang Stele recorded by Hong Shi of the Southern Song Dynasty, Wu Liang was a gentleman dedicated to teaching. The renowned Han art scholar Wu Hung believes this stone was the last one in the shrine and that the \"Chushi\" is a self-representation of Wu Liang, depicting him declining a summons from the provincial or commandery authorities on the grounds of illness."
+        },
+        {
+          "page": 7,
+          "title": "义鸟感孝·要离刺庆忌·钟离春谏齐王·武梁自题像（局部）",
+          "content": "## 第7页\n\n### 义鸟感孝·要离刺庆忌·钟离春谏齐王·武梁自题像（局部）\n> Filial Piety of the Crows, Yao Li Assassinating Qing Ji, Zhongli Chun Advising the King of Qi, and Wu Liang's Self-Representation (Detail)\n\n（续上页）年代：东汉；产地：山东嘉祥；规格：137.5cm x 154cm\n> (Continued from the previous page) Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 137.5cm x 154cm"
+        }
+      ],
+      "tags": [
+        "武梁祠东壁画像",
+        "武梁祠系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第五层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-050",
+      "name": "武梁祠后壁画像",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E5%90%8E%E5%A3%81%E7%94%BB%E5%83%8F.png",
+      "modelImageThumb": "/generated/models/artifact-050-320.webp",
+      "modelImageLarge": "/generated/models/artifact-050-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E5%90%8E%E5%A3%81%E7%94%BB%E5%83%8F.jpg",
+      "infoText": "## 武梁祠 第一石【武梁祠后壁画像】\n> Wuliang Temple, The first stone (portrait on the back wall of Wuliang Temple)\n\n【第一层】自右至左为梁高行拒聘、鲁秋胡戏妻、鲁义姑姊舍儿、楚昭贞姜待符的故事。\n> The first floor: from right to left are the stories of Liang Gaoxing's refusal to hire, Lu Qiuhu's tease his wife, Lu Yi's aunt abandon her son, Chu Zhao and Zhen Jiang wait for token.\n\n【第二层】自右至左为韩柏榆伤亲、刑渠哺父、董永卖身侍父、朱明、李善保小主、金日磾见阙氏像的故事。\n> The second floor: From right to left, there are stories of Han Baiyu hurting his relatives, Xing Qu nurture his father, Dong Yong selling himself to serve his father, Zhu Ming, Li Shan protect his owner, Jin Ridi seeing the statue of Yan family.\n\n【第三层】中为楼阁燕居，右为蔺相如完璧归赵、范雎辱魏须贾的故事，左边故事待考。\n> The third floor: in the middle is the pavilion Yanju, on the right is the story of Lin Xiangru returning the jade bi to Zhao and Fan Sui insulting Wei Xujia, and the story on the left is waiting to be checked.\n\n【第四层】车骑。\n> The fourth layer: chariots and rides.",
+      "pdfPages": [
+        9,
+        10,
+        11
+      ],
+      "pdfTopic": "梁高行·伯榆孝亲·李善保幼主·穆天子拜会西王母",
+      "linkedPdf": [
+        {
+          "page": 9,
+          "title": "梁高行·伯榆孝亲·李善保幼主·穆天子拜会西王母",
+          "content": "## 第9页\n\n### 梁高行·伯榆孝亲·李善保幼主·穆天子拜会西王母\n这幅汉画是武梁祠后壁画像。画面从上到下分四层。\n> This Han Dynasty stone carving is from the back wall of the Wu Liang Shrine. The image is divided into four layers from top to bottom.\n\n第一层为四个节妇故事。自右至左，分别为梁高行、秋胡戏妻、鲁国姑母救侄舍儿和贞姜待符。\n> The first layer consists of four stories of virtuous women. From right to left, they are Liang Gaoxing, Qiu Hu Teasing his Wife, the Aunt of Lu Saving her Nephew and Abandoning her Son, and Zhen Jiang Waiting for the Token.\n\n第二层是六个亲孝故事，自右至左，分别是伯榆孝亲、邢渠哺父、董永卖身葬父、章孝母与朱明爱弟、李善保幼主和金日磾泣拜母像。\n> The second layer features six stories of filial piety. From right to left, they are Boyu's Filial Piety, Xing Qu Feeding his Father, Dong Yong Selling Himself to Bury his Father, Zhang Xiao's Filial Piety to his Mother and Zhu Ming's Love for his Brother, Li Shan Protecting the Young Master, and Jin Ridi Weeping and Bowing before his Mother's Portrait.\n\n第三层是三个故事，分别是蔺相如完璧归赵、范雎戏魏齐和穆天子拜会西王母。下面重点介绍梁高行、伯榆孝亲、李善保幼主和穆天子拜会西王母四个故事。\n> The third layer contains three stories: Lin Xiangru Returning the Jade Intact to Zhao, Fan Sui Teasing Wei Qi, and King Mu Visiting the Queen Mother of the West. Below, we will focus on the four stories: Liang Gaoxing, Boyu's Filial Piety, Li Shan Protecting the Young Master, and King Mu Visiting the Queen Mother of the West.\n\n### 梁高行\n春秋时梁国有个年轻的漂亮寡妇，德行也美。梁国的达官显贵倾慕她的美貌，争相追求，但一个个愧丧而回。梁王也派使者带着黄金、玉冠向寡妇聘求。寡妇严厉斥责梁王好色，并向使者讲女子“节礼”，最后以刀割鼻，自毁面容，以断是非之人的非分之想。梁王美其高贵气节，赐名梁高行。\n> During the Spring and Autumn period, there was a young and beautiful widow in the State of Liang who also possessed great virtue. High officials and nobles admired her beauty and vied to pursue her, but all returned in shame. The King of Liang also sent an envoy with gold and a jade crown to propose marriage. The widow sternly criticized the King's lust and lectured the envoy on women's \"rituals of chastity.\" Finally, she cut off her nose with a knife, disfiguring herself to end the improper desires of meddlesome people. The King of Liang admired her noble integrity and bestowed upon her the name \"Liang Gaoxing\" (Liang of High Conduct).\n\n画中左边下车持旌节者为梁王使节，榜题“使者”。其右一人跪地，榜题“奉金者”，为求婚的富贵子弟。接下来是梁高行，戴花冠，右手持镜，左手持刀，正要对镜割鼻，榜题“梁高行”。最右一男子持便面照拂梁高行，为献殷勤的纨绔子弟。\n> In the painting, the person on the left alighting from a carriage and holding a ceremonial staff is the envoy of the King of Liang, labeled \"Envoy.\" To his right, a person kneeling is labeled \"Gold Bearer,\" representing a wealthy suitor. Next is Liang Gaoxing, wearing a floral crown, holding a mirror in her right hand and a knife in her left, about to cut her nose while looking in the mirror, labeled \"Liang Gaoxing.\" On the far right, a man holding a fan to shade Liang Gaoxing is a dandy trying to curry favor.\n\n### 伯榆孝亲\n西汉时有个韩伯榆，父母在他年少时对他严加管教。一次母亲杖打伯榆，伯榆悲哭。原因是过去挨打时很疼，这次感觉不到疼，伯榆感到母亲年老力衰，因此生悲。\n> During the Western Han Dynasty, there was a man named Han Boyu whose parents disciplined him strictly in his youth. Once, when his mother struck him with a cane, Boyu wept bitterly. The reason was that in the past, the beatings were painful, but this time he felt no pain. Boyu realized his mother was old and frail, which caused his grief.\n\n画中左边持杖站立的老妪为韩伯榆母亲，榜题“榆母”。右边跪地双手掩面而泣的是韩伯榆。榜题“伯榆伤亲年老，气力稍衰。笞之不痛，心怀楚悲”。榜上位置到“楚”字已写满，“悲”字刻在伯榆肩上。\n> In the painting, the old woman standing with a staff on the left is Han Boyu's mother, labeled \"Boyu's Mother.\" On the right, kneeling and weeping with hands covering his face, is Han Boyu. The inscription reads: \"Boyu is grieved that his parent is old and her strength has slightly declined. Being caned without pain, his heart is filled with sorrow.\" The space on the label was filled up to the character \"Chu,\" so the character \"Bei\" (grief) was carved on Boyu's shoulder."
+        },
+        {
+          "page": 10,
+          "title": "李善保幼主",
+          "content": "## 第10页\n\n（续上页）\n\n### 李善保幼主\n东汉初年，淯阳一带瘟疫流行，富户李元一家人相继病死，只有一个孤儿李续生下才几十天，既继承了千万家产，奴婢们私下商量，想把李续杀死，分了这些财产。仆人李善可怜李氏，又无力制止，便暗地里抱李续逃跑，隐蔽在山阳瑕丘界中，抚养李续长大，李续虽然年幼，李善待他无异主仆，有事跪着请示禀告。李续十岁时，李善带他回本县，向长吏控告诸奴婢的罪恶，长吏把他们收捕杀了。瑕丘令钟离意上书推荐李善的事迹，光武帝诏令授李善和李续为太子舍人。李善后来升任日南太守，又改任九江太守，李续官至河间相。\n> In the early Eastern Han Dynasty, a plague broke out in the Yuyang area. The wealthy Li Yuan and his family died one after another, leaving only an orphan, Li Xu, who was just a few dozen days old. Having inherited a vast fortune, the servants conspired to kill Li Xu and divide the property. A servant named Li Shan took pity on the Li family but was unable to stop them, so he secretly fled with Li Xu and hid in the Xiaqiu area of Shanyang. He raised Li Xu, and although Li Xu was young, Li Shan treated him with the respect due to a master, kneeling to report matters to him. When Li Xu was ten years old, Li Shan took him back to their home county and reported the crimes of the servants to the local officials, who then arrested and executed them. Zhongli Yi, the magistrate of Xiaqiu, submitted a memorial recommending Li Shan's deeds. Emperor Guangwu issued an edict appointing both Li Shan and Li Xu as members of the Crown Prince's retinue. Li Shan later rose to become the Governor of Rinan and then the Governor of Jiujiang, while Li Xu reached the position of Chancellor of Hejian.\n\n画面中间大面积缺损，大致可以看到，右边有一女仆弯腰从木盆中捞一小儿，根据傍题“李氏遗孤”，知小儿即李续。根据《后汉书》和画意判断，女仆意图抛弃或加害孤儿。左边一人跪地拱手哀求，榜题“忠孝李善”，字迹已浸漶。\n> There is a large area of damage in the center of the picture. Roughly, one can see a maid on the right bending over to pick up a small child from a wooden basin. According to the inscription \"The Orphan of the Li Family,\" the child is Li Xu. Judging from the \"Book of the Later Han\" and the intent of the painting, the maid intended to abandon or harm the orphan. On the left, a person kneels with hands clasped in plea, with the inscription \"Loyal and Filial Li Shan,\" though the characters are blurred.\n\n### 穆天子拜会西王母\n第三层，除了右上是蔺相如完璧归赵和范雎戏魏收外，其余部分为穆天子拜会西王母。这一部分可以作为连环画来欣赏。\n> On the third level, except for the upper right which depicts Lin Xiangru returning the jade intact to Zhao and Fan Ju mocking Wei Shou, the rest depicts King Mu visiting the Queen Mother of the West. This part can be appreciated as a narrative sequence.\n\n(1) 纯情天子\n> (1) The Devoted Emperor\n\n右下为天子的出行卤簿。最右车中执便面者为天子，显示他前往昆仑山约会西王母时的忐忑心情。\n> The bottom right shows the Emperor's ceremonial procession. The person holding a ceremonial fan in the rightmost carriage is the Emperor, showing his nervous anticipation as he travels to Mount Kunlun to meet the Queen Mother of the West.\n\n(2) 驻马扶桑\n> (2) Stopping the Horse at the Fusang Tree\n\n扶桑树也叫建木、连理树，是昆仑的象征，也是爱情的象征。树下车驻细解，表明抵达昆仑。扶桑树右上有人射鸟，这应该是昆仑山上西王母身边的仙人闲适幸福生活的写照。\n> The Fusang tree is also called the Jianmu or the Intertwined Tree; it is a symbol of Kunlun and also a symbol of love. The carriage stopping under the tree indicates arrival at Kunlun. On the upper right of the Fusang tree, someone is shooting a bird, which should be a depiction of the leisurely and happy life of the immortals beside the Queen Mother of the West on Mount Kunlun.\n\n(3) 使者相迎\n> (3) Welcomed by Envoys\n\n左上有西王母的使者拜迎天子，天子身后有侍者持便面、捐丝帛，侍从持便面既示意遮羞，也显示天子的矜持。中间三个戴冠者应皆为天子，是天子下车后接受迎迓的分镜头。\n> On the upper left, an envoy of the Queen Mother of the West welcomes the Emperor. Behind the Emperor, attendants hold ceremonial fans and silk. The attendants holding fans both shield him from view and display the Emperor's reserve. The three crowned figures in the middle should all be the Emperor, representing different frames of him being welcomed after alighting from the carriage.\n\n(4) 昆仑相会\n> (4) Meeting at Kunlun\n\n中间画面分上下两层。下层显示天子在正式拜会西王母时由王母身边的高贵官员以礼相待，画面中已经出现献茶的戴花胜女侍。上层为西王母在一干女侯拥服侍下正襟危坐，右侧有女侍跪地禀报，似乎在说：“穆天子来了！”\n> The central image is divided into two levels. The lower level shows the Emperor being treated with courtesy by noble officials beside the Queen Mother during the formal meeting; a maid wearing a flower ornament is already shown offering tea. The upper level shows the Queen Mother of the West sitting upright, attended by a group of female officials, with a maid kneeling on the right to report, seemingly saying: \"King Mu has arrived!\""
+        },
+        {
+          "page": 11,
+          "title": "",
+          "content": "## 第11页\n\n（续上页）\n> (Continued from the previous page)\n\n年代：东汉，产地：山东嘉祥，规格：211cm×118.5cm\n> Period: Eastern Han Dynasty; Origin: Jiaxiang, Shandong; Dimensions: 211cm × 118.5cm"
+        }
+      ],
+      "tags": [
+        "武梁祠后壁画像",
+        "武梁祠系列",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-051",
+      "name": "武梁祠西壁画像",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E8%A5%BF%E5%A3%81%E7%94%BB%E5%83%8F.png",
+      "modelImageThumb": "/generated/models/artifact-051-320.webp",
+      "modelImageLarge": "/generated/models/artifact-051-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E8%A5%BF%E5%A3%81%E7%94%BB%E5%83%8F.jpg",
+      "infoText": "## 武梁祠 第三石【武梁祠西壁画像】\n> Wuliang Temple, The Third Stone (Portraits on the west wall of Wuliang Temple)\n\n【第一层】西王母和奇禽异兽。\n> The first layer: Xi Wang Mu and strange birds and beasts.\n\n【第二层】自右至左伏羲女娲、祝融、神农、黄帝、颛顼、帝喾、尧、舜、禹、桀等古代传说中的帝王图像。\n> The second layer: From right to left, images of emperors in ancient legends such as Fuxi, Nuwa, Zhurong, Shennong, Huangdi, Zhuanxu, Diku, Yao, Shun, Yu, and Jie.\n\n【第三层】自右至左曾母投杼、闵子骞失棰、老莱子娱亲，丁兰刻木奉亲的故事。\n> The third floor: From right to left, the stories of Zengmu throwing her bamboo stick, Min Ziqian losing her bamboo stick, Lao Laizi entertaining her relatives, and Ding Lan engraving wood to serve her relatives.\n\n【第四层】自右至左为曹子劫桓、专诸刺吴王、荆轲刺秦王的故事。\n> The fourth layer: From right to left, there are stories of Cao Zi coerce Duke Huan of Qi, Zhuan Zhu assassinating King Wu, and Jing Ke assassinating King Qin.\n\n【第五层】车骑。\n> The fifth layer: chariots and rides.",
+      "pdfPages": [
+        8
+      ],
+      "pdfTopic": "先王本纪（伏羲女娲、三皇五帝、夏桀）",
+      "linkedPdf": [
+        {
+          "page": 8,
+          "title": "先王本纪",
+          "content": "## 第8页\n### 先王本纪\n这幅汉画从上到下共五层。第一层为西王母。画中的云纹，表示西王母端坐在云天之上的昆仑神山。根据她头顶的花冠和原石在武梁祠西壁综合判断，画中的神祇是西王母而非东王公。同理，确定东王公的身份，也是凭借他头顶的三山冠和原石在武梁祠东壁得出结论。抛开头饰和原石所处位置，几乎无法分清东王公和西王母。\n> This Han dynasty relief consists of five layers from top to bottom. The first layer depicts the Queen Mother of the West. The cloud patterns in the painting indicate that she is seated atop the mythical Mount Kunlun in the heavens. Based on the floral crown on her head and the original stone's position on the west wall of the Wu Liang Shrine, it is determined that the deity is the Queen Mother of the West rather than the King Father of the East. Similarly, the identity of the King Father of the East is confirmed by the three-mountain crown on his head and the stone's location on the east wall of the shrine. Without considering the headgear and the original positions of the stones, it would be nearly impossible to distinguish between the two.\n\n第三、四、五层分别是孝子故事、侠义故事和车马出行。\n> The third, fourth, and fifth layers depict stories of filial piety, tales of chivalry, and processions of chariots and horses, respectively.\n\n下面重点介绍第二层的内容。第二层共十格，是伏羲女娲和三皇五帝及夏桀画像。右边第一格为伏羲女娲执规矩交尾图。女娲伏羲人面蛇身，蛇体上布满鳞纹。中间有一小人，拉扯着伏羲女娲的衣襟。小人双腿无足如蛇尾，明显是伏羲女娲仿照自己造出的孩子。\n> The following focuses on the content of the second layer. This layer contains ten compartments, featuring portraits of Fuxi and Nüwa, the Three Sovereigns and Five Emperors, and Xia Jie. The first compartment on the right shows Fuxi and Nüwa holding a compass and a square with their tails intertwined. Fuxi and Nüwa have human faces and serpentine bodies covered in scales. In the center is a small figure pulling at their robes. The small figure has no feet and a snake-like tail, clearly a child created by Fuxi and Nüwa in their own image.\n\n其余九格，自右向左分别是祝融、神农、黄帝、颛顼、帝喾、尧、舜、禹、桀。每格左边有榜题。\n> The remaining nine compartments, from right to left, depict Zhurong, Shennong, the Yellow Emperor (Huangdi), Zhuanxu, Emperor Ku (Diku), Yao, Shun, Yu, and Jie. Each compartment has an inscription to its left.\n\n伏羲女娲十六字榜题：“伏羲仓精，初造王业，画卦结绳，以理海内，”\n> The sixteen-character inscription for Fuxi and Nüwa: \"Fuxi, of divine essence, first established the royal enterprise; he drew the trigrams and knotted cords to govern the realm.\"\n\n祝融十五字榜题：“祝融氏无所造为，未有耆欲，刑罚未施，”\n> The fifteen-character inscription for Zhurong: \"The Zhurong clan created nothing; they had no old desires, and punishments were not yet applied.\"\n\n神农十五字榜题：“神农氏因宜教田，辟土种谷，以赈（赈）万民，”\n> The fifteen-character inscription for Shennong: \"The Shennong clan taught farming according to the land, clearing soil and planting grain to provide for the myriad people.\"\n\n黄帝十六字榜题：“黄帝多所改作。造兵治田，垂衣裳，立宫宅，”\n> The sixteen-character inscription for the Yellow Emperor: \"The Yellow Emperor made many innovations. He created weapons, managed the fields, introduced clothing, and established palaces and dwellings.\"\n\n颛顼十五字榜题：“帝颛顼高阳者，黄帝之孙，而昌意之子。”\n> The fifteen-character inscription for Zhuanxu: \"Emperor Zhuanxu Gaoyang was the grandson of the Yellow Emperor and the son of Changyi.\"\n\n帝喾十一字榜题：“帝喾高辛者，黄帝之曾孙也。”\n> The eleven-character inscription for Emperor Ku: \"Emperor Ku Gaoxin was the great-grandson of the Yellow Emperor.\"\n\n帝尧二十七字榜题：“帝尧放勋，其仁如天，其知如神，就之如日，望之如云。”\n> The twenty-seven-character inscription for Emperor Yao: \"Emperor Yao Fangxun; his benevolence was like heaven, his wisdom like a god; approaching him was like the sun, looking up to him was like the clouds.\"\n\n帝舜十三字榜题：“帝舜名重华，耕于历山，外养三年。”\n> The thirteen-character inscription for Emperor Shun: \"Emperor Shun, named Zhonghua, farmed at Mount Li and supported his family for three years.\"\n\n帝禹十八字榜题：“夏禹长于地理，脉泉知阴，随时设防，退为肉刑。”刑字为形的通假，“退为肉刑”是说大禹治水茹苦含辛，“三过家门而不入”，腿毛褪掉，露出肉形。\n> The eighteen-character inscription for Emperor Yu: \"Yu of Xia was skilled in geography, understood the veins of springs and the nature of Yin; he set up defenses according to the seasons and 'retired to the form of flesh' (tui wei rou xing).\" The character \"xing\" (punishment) is a loan for \"xing\" (form); \"retired to the form of flesh\" refers to Yu's extreme hardships while controlling the floods, \"passing his home three times without entering,\" until the hair on his legs wore away, exposing the flesh.\n\n本层左侧最后一人戴通天冠，荷戟，胯下骑二女子，榜题“夏桀”。这是此画中唯一一个反面形象。通天冠区别于前面先贤的平冠和劳动者形象，强调了夏桀的权力；干戈强调骑兵蹂躏；女子造型强调他的荒淫无耻。根据《竹书纪年》，两个女子分别是琬、琰。\n> The last figure on the left of this layer wears a \"Tongtian\" crown, carries a halberd, and sits upon two women; the inscription reads \"Xia Jie.\" This is the only negative figure in the painting. The Tongtian crown distinguishes him from the flat crowns of the sages and the images of laborers, emphasizing Xia Jie's power; the weapons emphasize military devastation; and the depiction of the women highlights his debauchery and shamelessness. According to the Bamboo Annals, the two women are Wan and Yan.\n\n通过这一层所刻画的十一个形象可知，汉画的创作者把伏羲、女娲看成开辟人伦的始祖，属于神；三皇为祝融、神农、黄帝；五帝为颛顼、帝喾、尧、舜、禹；夏桀为帝王中的败类。\n> From the eleven figures depicted in this layer, it is evident that the creators of these Han paintings regarded Fuxi and Nüwa as the ancestors who established human relations, belonging to the realm of gods; the Three Sovereigns were Zhurong, Shennong, and the Yellow Emperor; the Five Emperors were Zhuanxu, Emperor Ku, Yao, Shun, and Yu; and Xia Jie was the degenerate among emperors.\n\n汉代在皇宫大殿前西阁设画室，雕画尧、舜、禹、汤、桀、纣等古帝王像，供近臣和子孙观摩，以达到“恶以戒世，善以垂后”的教育目的。武梁祠的这组画像，正是这种汉代宫廷艺术在民间的缩影。\n> During the Han dynasty, painting studios were established in the western pavilions before the main imperial palace halls to carve and paint portraits of ancient emperors such as Yao, Shun, Yu, Tang, Jie, and Zhou. These were for officials and descendants to observe, serving the educational purpose of \"using evil as a warning to the world and goodness as a legacy for posterity.\" This group of portraits in the Wu Liang Shrine is a miniature of such Han court art reflected in the folk tradition."
+        }
+      ],
+      "tags": [
+        "武梁祠系列",
+        "武梁祠西壁画像",
+        "第一层",
+        "第三层",
+        "第二层",
+        "第五层",
+        "第四层"
+      ]
+    },
+    {
+      "id": "artifact-052",
+      "name": "武梁祠门框",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E9%97%A8%E6%A1%86.png",
+      "modelImageThumb": "/generated/models/artifact-052-320.webp",
+      "modelImageLarge": "/generated/models/artifact-052-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%A2%81%E7%A5%A0%E9%97%A8%E6%A1%86.jpg",
+      "infoText": "## 武梁祠门框石上书“武家林”三字\n> Word \"Wujialin\" is written on the stone of the door frame of Wuliang Temple.",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "武梁祠系列"
+      ]
+    },
+    {
+      "id": "artifact-053",
+      "name": "武氏墓群石刻简介",
+      "series": "其他展品",
+      "modelImage": "",
+      "modelImageThumb": "",
+      "modelImageLarge": "",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E7%AE%80%E4%BB%8B.jpg",
+      "infoText": "## 武氏墓群石刻简介\n\n武氏墓群石刻，是东汉桓、灵时期（公元147—189年）武氏家族墓地一组比较完整且具有代表性的石刻建筑群体。1961年国务院公布为第一批全国重点文物保护单位。\n> The stone carvings of the Wu family tombs are a relatively complete and representative group of stone structures from the Wu family cemetery during the reigns of Emperors Huan and Ling of the Eastern Han Dynasty (147–189 AD). In 1961, the State Council announced them as part of the first batch of Major Historical and Cultural Site Protected at the National Level.\n\n武氏墓群石刻，保存有双阙、一对石狮、两方汉碑、武氏祠画像石四十六块。据石阙铭和武氏碑文记载，已知的武氏家族成员共有十一人，其中出仕为官者四人：武梁，官至从事；其弟武开明，官至吴郡府丞；武开明长子武班，官至敦煌长史；次子武荣，官至执金吾丞。由此可见，武氏一家世代为官，是显赫一方的官僚贵族。\n> The stone carvings of the Wu family tombs include a pair of gate towers (que), a pair of stone lions, two Han Dynasty steles, and forty-six pictorial stones from the Wu family shrines. According to the inscriptions on the stone towers and steles, there are eleven known members of the Wu family, four of whom served as officials: Wu Liang, who served as an Attendant Officer (Congshi); his younger brother Wu Kaiming, who served as the Assistant Governor (Fucheng) of Wu Commandery; Wu Kaiming's eldest son Wu Ban, who served as the Chief of Staff (Zhangshi) of Dunhuang; and the second son Wu Rong, who served as the Assistant to the Minister of Justice (Zhijinwu Cheng). This shows that the Wu family served as officials for generations and was a prominent local bureaucratic aristocratic family.\n\n武氏墓群石刻画像，取材广泛，内容丰富，造型生动，雕刻精湛，是汉代石刻艺术的代表之作，是我国古代劳动人民创造的璀璨的历史文化瑰宝，是研究汉代政治、经济、文化、艺术等领域不可多得的珍贵资料，在我国乃至世界美术史上占有重要地位，被联合国教科文组织视为全世界人类共同的历史文化遗产。\n> The pictorial stone carvings of the Wu family tombs cover a wide range of subjects with rich content, vivid forms, and exquisite craftsmanship. They are representative works of Han Dynasty stone carving art and a brilliant historical and cultural treasure created by the working people of ancient China. They provide rare and precious materials for studying the politics, economy, culture, and art of the Han Dynasty. They hold an important position in the history of Chinese and world art and are regarded by UNESCO as a common historical and cultural heritage of all mankind.\n\n武氏墓群石刻的部分内容，在宋代已有发现。最早著录的有欧阳修的《集古录》、赵明诚的《金石录》和洪适的《隶释》等。清乾隆五十一年（1786年），济宁运河同知金石学家黄易等人对武氏墓群石刻陆续进行了发掘，并建房保护，从而引起了金石界的重视和轰动。\n> Some contents of the stone carvings of the Wu family tombs were discovered as early as the Song Dynasty. The earliest records include Ouyang Xiu's \"Collection of Ancient Inscriptions\" (Jigu Lu), Zhao Mingcheng's \"Records of Metal and Stone\" (Jinshi Lu), and Hong Kuo's \"Explanations of Clerical Script\" (Lishi). In the 51st year of the Qianlong reign of the Qing Dynasty (1786), Huang Yi, a paleographer and the Assistant Prefect of the Jining Canal, and others successively excavated the stone carvings of the Wu family tombs and built houses to protect them, which caused a sensation and drew attention from the field of epigraphy.\n\n新中国成立以后，党和政府十分重视对武氏墓群石刻的保护，建立了文物管理所进行保护管理。1964年，将双阙、双狮原位提升并建阙室保护，将原存放于清代保护房中的武氏祠画像石搬入陈列。1981年，在院内清理出两座石室双墓和一座祭坛。随后，又发现汉墓一座。1984年，修建西陈列长廊7间，把收集的县内60余块汉画像石搬入陈列保护。2003年，嘉祥县文物管理局委托山东省文保中心编制了《武氏墓群石刻保护规划》，并由国家文物局立项。2004年，将武氏祠画像石搬入新建的陈列室封护陈列。\n> Since the founding of the People's Republic of China, the Party and the government have attached great importance to the protection of the stone carvings of the Wu family tombs, establishing a cultural relics management office for their preservation and management. In 1964, the original pair of gate towers and stone lions were elevated in situ, and a protective chamber was built for them. The pictorial stones of the Wu family shrines, previously stored in Qing Dynasty protective houses, were moved into the exhibition hall. In 1981, two stone-chamber twin tombs and an altar were cleared within the courtyard. Subsequently, another Han tomb was discovered. In 1984, a seven-room western exhibition corridor was built, and more than 60 Han pictorial stones collected from within the county were moved there for display and protection. In 2003, the Jiaxiang County Cultural Relics Bureau commissioned the Shandong Provincial Cultural Relics Protection Center to compile the \"Protection Plan for the Stone Carvings of the Wu Family Tombs,\" which was approved by the State Administration of Cultural Heritage. In 2004, the pictorial stones of the Wu family shrines were moved into a newly built exhibition room for sealed protection and display.",
+      "pdfPages": [
+        19
+      ],
+      "pdfTopic": "九十三字铭（含武氏家族背景）",
+      "linkedPdf": [
+        {
+          "page": 19,
+          "title": "项橐难孔、神荼郁垒、九十三字铭",
+          "content": "## 第19页\n\n### 项橐难孔、神荼郁垒、九十三字铭\n> ### Xiang Tuo Challenging Confucius, Shentu and Yulei, and the 93-Character Inscription\n\n（续上页）这是武氏祠一尊汉阙上的一幅画，自上至下分为三区，内容分别是项橐难孔、神荼郁垒、文字题刻“九十三字铭”。\n> (Continued from the previous page) This is a depiction on a Han dynasty stone pillar (Que) from the Wu Family Shrine. It is divided into three sections from top to bottom: Xiang Tuo Challenging Confucius, Shentu and Yulei, and the \"93-Character Inscription.\"\n\n### 项橐难孔\n> ### Xiang Tuo Challenging Confucius\n\n第一区，分上下两部分。上部有单骑、单驾轺车自右向左行驶。下部有四人。右边一长一幼相对。其中右为一垂髫少年，左手玩推铁环游戏，右手似在指画。长者袍服，持笏恭立。冠部有损泐，似平顶冠。左边二人戴兔耳冠，大腹便便，相向站立，手有所指画。\n> The first section is divided into upper and lower parts. The upper part shows a single rider and a single-horse carriage traveling from right to left. The lower part features four figures. On the right, an elder and a youth face each other. The youth on the right has hair hanging down, playing with a hoop in his left hand and seemingly pointing with his right. The elder wears official robes and stands respectfully holding a tablet. His cap is worn, resembling a flat-topped crown. On the left, two figures wearing rabbit-ear caps and having protruding bellies stand facing each other, gesturing with their hands.\n\n据说，孔子周游列国，遇到聪慧的幼童项橐。许多孔子百思莫解的问题，项橐一语道破；而项橐提出的很多问题，孔子却张口结舌，答不上来。于是孔子虚心拜项橐为师，向他学习。\n> It is said that while Confucius was traveling through various states, he encountered the brilliant child Xiang Tuo. Xiang Tuo easily solved many problems that Confucius found baffling, while Confucius was left speechless by many of the questions Xiang Tuo posed. Consequently, Confucius humbly took Xiang Tuo as his teacher to learn from him.\n\n画面中执笏的长者就是孔子，稚子就是项橐。项橐一边玩耍，一边指画讲论，孔子洗耳恭听。画中两个戴兔耳冠者应是孔子门徒，他们好像在探讨项橐与孔子交流的问题。上边的车马，是孔子与门徒周游列国的象征。\n> The elder holding the tablet in the picture is Confucius, and the child is Xiang Tuo. Xiang Tuo is playing while pointing and lecturing, and Confucius is listening intently. The two figures with rabbit-ear caps are likely disciples of Confucius, appearing to discuss the exchange between Xiang Tuo and Confucius. The carriage and horses above symbolize Confucius and his disciples traveling through the states.\n\n项橐，春秋时项国神童。《战国策·秦策》说“项橐生七岁而为孔子师”。《列子》中的《两小儿辩日》虽然没有提到项橐的名字，但后来的研究者多把其中一小儿定为项橐。这幅汉画中项橐玩耍的铁环，可能就和辩日话题有关。\n> Xiang Tuo was a child prodigy from the State of Xiang during the Spring and Autumn period. The *Strategies of the Warring States* mentions that \"Xiang Tuo became the teacher of Confucius at the age of seven.\" Although \"Two Children Debating the Sun\" in *Liezi* does not mention Xiang Tuo by name, later researchers often identified one of the children as him. The iron hoop Xiang Tuo plays with in this Han painting might be related to the topic of debating the sun.\n\n### 神荼郁垒\n> ### Shentu and Yulei\n\n第二区为门神神荼郁垒。其基本造型为铺首衔环，但铺首部分更似人面。铺首与铺环之间，二虎咬尾交尾，其形态又似交叉相抱于胸前的人的双臂。将二虎与铺环联系，又形成二虎穿壁交尾咬尾造型。神荼郁垒下铺环两边各有一鱼，上部山形冠两边各有一常青树，表示的应是阴阳两界。\n> The second section depicts the door gods Shentu and Yulei. Their basic form is a *pushou* (door knocker base) holding a ring, but the *pushou* part more closely resembles a human face. Between the *pushou* and the ring, two tigers bite each other's tails, their forms also resembling a person's arms crossed over their chest. Linking the two tigers with the ring creates a design of two tigers passing through a *bi* disk while biting their tails. On either side of the ring below Shentu and Yulei is a fish, and on either side of the mountain-shaped crown at the top is an evergreen tree, likely representing the realms of Yin and Yang.\n\n### 九十三字铭\n> ### The 93-Character Inscription\n\n第三区为铭文，铭文为八分书，八行，前七行各十二字，末行九字，共九十三字，人称“九十三字铭”。全文为：“建和元年，大岁在丁亥，三月庚戌朔，四日癸丑。孝子武始公，弟绥宗、景兴、开明使石工孟孚、季弟卯造此阙，直钱十五万。孙宗作师子，直四万。开明子宜张，仕济阴，年廿五，曹府君察举孝廉，除敦煌长史，被病天没，苗秀不遂，呜呼哀哉，士女痛伤。”\n> The third section is the inscription, written in *Bafen* (clerical) script in eight lines. The first seven lines have twelve characters each, and the last line has nine, totaling ninety-three characters, known as the \"93-Character Inscription.\" The full text reads: \"In the first year of Jianhe, the year of Dinghai, on the first day of the third month (Gengxu), the fourth day (Guichou). The filial son Wu Shigong, along with his younger brothers Suizong, Jingxing, and Kaiming, commissioned the stonemason Meng Fu and the youngest brother Mao to build this pillar, costing 150,000 coins. The grandson Zong made the stone lions, costing 40,000 coins. Kaiming's son Yizhang served in Jiyin; at age twenty-five, he was recommended as a 'Filial and Incorrupt' candidate by Governor Cao and appointed as the Chief Administrator of Dunhuang. He died of illness in his prime. His promising career was cut short. Alas! Men and women alike mourn his loss.\"\n\n由铭文可知，此阙是武始公、绥宗、景兴、开明四兄弟为父祖墓地祠堂所建，记载了家族中最可炫耀的敦煌长史武班壮年殒殁一事，并记下造阙时间、耗资情况及用石工等内容，成为后人研究汉代社会和中国庙阙文化的重要参考。\n> From the inscription, it is known that this pillar was built by the four brothers Wu Shigong, Suizong, Jingxing, and Kaiming for their father's and ancestors' cemetery shrine. It records the death of Wu Ban, the Chief Administrator of Dunhuang—the most prestigious event in the family—and notes the time of construction, costs, and the stonemasons involved, serving as an important reference for studying Han dynasty society and Chinese temple and pillar culture.\n\n年代：东汉；产地：山东嘉祥；规格：52.5cm×140cm\n> Era: Eastern Han; Origin: Jiaxiang, Shandong; Dimensions: 52.5cm × 140cm"
+        }
+      ],
+      "tags": [
+        "其他展品"
+      ]
+    },
+    {
+      "id": "artifact-054",
+      "name": "残块1",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AE%8B%E5%9D%971.png",
+      "modelImageThumb": "/generated/models/artifact-054-320.webp",
+      "modelImageLarge": "/generated/models/artifact-054-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-055",
+      "name": "残块2",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E6%AE%8B%E5%9D%972.png",
+      "modelImageThumb": "/generated/models/artifact-055-320.webp",
+      "modelImageLarge": "/generated/models/artifact-055-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-056",
+      "name": "石狮子",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E7%9F%B3%E7%8B%AE%E5%AD%90.png",
+      "modelImageThumb": "/generated/models/artifact-056-320.webp",
+      "modelImageLarge": "/generated/models/artifact-056-720.webp",
+      "infoImage": "",
+      "infoText": "",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    },
+    {
+      "id": "artifact-057",
+      "name": "祥瑞图-上图",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E7%A5%A5%E7%91%9E%E5%9B%BE-%E4%B8%8A%E5%9B%BE.png",
+      "modelImageThumb": "/generated/models/artifact-057-320.webp",
+      "modelImageLarge": "/generated/models/artifact-057-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E7%A5%A5%E7%91%9E%E5%9B%BE-%E4%B8%8A%E5%9B%BE.jpg",
+      "infoText": "## 武梁祠顶盖【祥瑞图一】（上）\n> The roof of Wuliang Temple (Auspicious Picture 1) (top)",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "武梁祠系列",
+        "祥瑞图一"
+      ]
+    },
+    {
+      "id": "artifact-058",
+      "name": "祥瑞图-下图",
+      "series": "武梁祠系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E7%A5%A5%E7%91%9E%E5%9B%BE-%E4%B8%8B%E5%9B%BE.png",
+      "modelImageThumb": "/generated/models/artifact-058-320.webp",
+      "modelImageLarge": "/generated/models/artifact-058-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E7%A5%A5%E7%91%9E%E5%9B%BE-%E4%B8%8B%E5%9B%BE.jpg",
+      "infoText": "## 武梁祠顶盖【祥瑞图二】（下）\n> The roof of Wuliang Temple (Auspicious picture 2) (below)",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "武梁祠系列",
+        "祥瑞图二"
+      ]
+    },
+    {
+      "id": "artifact-059",
+      "name": "第一展室介绍牌",
+      "series": "其他展品",
+      "modelImage": "",
+      "modelImageThumb": "",
+      "modelImageLarge": "",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E7%AC%AC%E4%B8%80%E5%B1%95%E5%AE%A4%E4%BB%8B%E7%BB%8D%E7%89%8C.jpg",
+      "infoText": "## 第一展室介绍\n> Introduction to the First Exhibition Hall\n\n武氏墓群石刻第一展室展示石阙、石狮各一对，汉碑两通及清代发掘的武氏祠记事碑10通。\n> The First Exhibition Hall of the Stone Carvings of the Wu Family Tombs displays a pair of stone watchtowers (Que), a pair of stone lions, two Han Dynasty steles, and 10 commemorative steles of the Wu Family Ancestral Hall excavated in the Qing Dynasty.\n\n石阙：是原地原方位就地提升，是目前全国保存最完整的石质汉代建筑之一，为我国建筑史的研究提供了可贵的依据。\n> Stone Watchtowers (Que): They were raised in situ at their original locations and orientations. They are among the best-preserved stone buildings of the Han Dynasty in China, providing valuable evidence for the study of Chinese architectural history.\n\n石狮：是我国最早有确切年代记载的石狮造型艺术珍品，堪称石狮雕刻的鼻祖。\n> Stone Lions: They are rare artistic treasures of stone lion modeling with the earliest confirmed date recorded in China, and can be called the ancestors of stone lion carving.\n\n汉碑：现存武斑碑、无字碑两通，是中国最古老的汉碑之一。\n> Han Dynasty Steles: There are two existing steles, the Wu Ban Stele and the Wordless Stele, which are among the oldest Han Dynasty steles in China.",
+      "pdfPages": [],
+      "pdfTopic": "石阙、石狮、汉碑介绍",
+      "linkedPdf": [],
+      "tags": [
+        "其他展品"
+      ]
+    },
+    {
+      "id": "artifact-060",
+      "name": "第二展室介绍牌",
+      "series": "其他展品",
+      "modelImage": "",
+      "modelImageThumb": "",
+      "modelImageLarge": "",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E7%AC%AC%E4%BA%8C%E5%B1%95%E5%AE%A4%E4%BB%8B%E7%BB%8D%E7%89%8C.jpg",
+      "infoText": "## 第二展室介绍\n> Introduction to the Second Exhibition Hall\n\n武氏墓群石刻第二展室展示汉画像石46块，主要展现了神话传说、祥瑞灵异、古代帝王、历史故事、忠臣义士、孝子节妇、庖厨狩猎、车骑出行、楼阁宴居、乐舞百戏、水陆攻战等内容，从不同角度反映了汉代的社会状况、风土人情、典章制度、宗教信仰等，被誉为“中国历史百科全书”。\n> The Second Exhibition Hall of the Wu Family Shrines Stone Carvings displays 46 Han Dynasty pictorial stones. These stones primarily depict myths and legends, auspicious omens and supernatural beings, ancient emperors, historical stories, loyal officials and righteous men, filial sons and chaste women, kitchen scenes and hunting, chariot and horse processions, pavilion banquets and daily life, music, dance and acrobatics, as well as land and water battles. They reflect the social conditions, local customs, laws and institutions, and religious beliefs of the Han Dynasty from various perspectives, and are hailed as the \"Encyclopedia of Chinese History.\"\n\n武氏墓群石刻汉画像石榜题约有1069个字，皆为汉隶，字体遒劲古朴，是研究我国古代文字的重要资料。\n> There are approximately 1,069 characters in the inscriptions on the Han pictorial stones of the Wu Family Shrines. All are written in Han clerical script, and the calligraphy is vigorous and archaic, serving as important material for the study of ancient Chinese characters.",
+      "pdfPages": [],
+      "pdfTopic": "汉画像石总览",
+      "linkedPdf": [],
+      "tags": [
+        "其他展品"
+      ]
+    },
+    {
+      "id": "artifact-061",
+      "name": "脊石",
+      "series": "其他石刻系列",
+      "modelImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E5%9B%BE%E7%89%87/%E8%84%8A%E7%9F%B3.png",
+      "modelImageThumb": "/generated/models/artifact-061-320.webp",
+      "modelImageLarge": "/generated/models/artifact-061-720.webp",
+      "infoImage": "/materials/raw/%E6%9D%A5%E8%87%AA%E6%AD%A6%E6%B0%8F%E5%A2%93%E7%BE%A4%E7%9F%B3%E5%88%BB%E5%8D%9A%E7%89%A9%E9%A6%86/%E5%B1%95%E5%93%81%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87/%E8%84%8A%E7%9F%B3.jpg",
+      "infoText": "## 脊石（下）\n> Other fourth stone Spine (below)",
+      "pdfPages": [],
+      "pdfTopic": "",
+      "linkedPdf": [],
+      "tags": [
+        "其他石刻系列"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# macOS / editor
+.DS_Store
+.qoder/
+.trae/
+
+# Node / Vite
+app/node_modules/
+app/dist/
+app/.vite/
+app/.vite-temp/
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
+app/pnpm-debug.log*
+
+# Local env secrets
+app/.env
+app/server/.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local-only large materials (keep repo lightweight)
+相关材料/
+开发资料/
+app/public/materials/
