@@ -54,7 +54,8 @@ export interface EnrichGuideResult {
   citations: AnswerCitation[];
 }
 
-const AI_API_BASE = "/api/ai";
+const rawAiApiBase = String(import.meta.env.VITE_AI_API_BASE || "").trim();
+const AI_API_BASE = rawAiApiBase ? rawAiApiBase.replace(/\/+$/, "") : "/api/ai";
 
 function extractTextContent(content: unknown): string {
   if (typeof content === "string") {
