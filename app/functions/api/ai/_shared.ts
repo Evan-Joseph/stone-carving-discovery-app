@@ -118,7 +118,7 @@ export function withCors(response: Response): Response {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
-export async function readJsonBody(request: Request, maxBytes = 2 * 1024 * 1024): Promise<Record<string, unknown>> {
+export async function readJsonBody(request: Request, maxBytes = 6 * 1024 * 1024): Promise<Record<string, unknown>> {
   const text = await request.text();
   if (text.length > maxBytes) {
     throw new Error("request body too large");
@@ -174,6 +174,7 @@ export function buildChatPayload(
   const artifactName = safeString(input.artifactName);
   const contextText = clipText(safeString(input.contextText), 6000);
   const question = safeString(input.question);
+  const imageDataUrl = normalizeImageDataUrl(input.imageDataUrl);
   const history = normalizeHistory(input.history, cfg.historyMaxItems, cfg.historyItemMaxChars);
 
   const groundingBrief = buildGroundingBrief(grounding.candidates);
@@ -189,7 +190,7 @@ export function buildChatPayload(
       content: buildSystemPrompt(scope, grounding.candidateRefs || "暂无")
     },
     ...history,
-    { role: "user", content: userQuestion }
+    { role: "user", content: buildUserContent(userQuestion, imageDataUrl) }
   ];
 
   const payload: Record<string, unknown> = {
@@ -568,6 +569,7 @@ function shouldUseWebSearch(question: string, grounding: GroundingResult): boole
 
 function buildSystemPrompt(scope: Scope, candidateRefs: string): string {
   const baseRules = [
+    "如果用户提供了现场照片/图片，请优先结合图片内容回答；不确定就明确写“图片信息不足/无法确认”。",
     "如果你要明确指向某件展品，请在对应段落紧跟一行固定标记：`[展品卡片:artifact-xxx|一句话理由]`。",
     "卡片标记必须单独占一行，前后不加其他文字。",
     "标记里的 artifact-xxx 必须来自“可引用展品清单”。",
@@ -599,6 +601,24 @@ function buildSystemPrompt(scope: Scope, candidateRefs: string): string {
     "输出用简洁 Markdown：先结论后展开，优先列表化，控制在 3-6 个关键点。",
     "当引用外部信息时，在句末追加简短来源提示，例如“（来源：xxx）”。"
   ].join("\n");
+}
+
+function normalizeImageDataUrl(value: unknown): string {
+  const raw = safeString(value);
+  if (!raw) return "";
+  // Allow data URLs and normal URLs; keep it simple and defensive.
+  if (raw.startsWith("data:image/")) return raw;
+  if (raw.startsWith("https://") || raw.startsWith("http://")) return raw;
+  return "";
+}
+
+function buildUserContent(text: string, imageUrl: string): string | Array<Record<string, unknown>> {
+  if (!imageUrl) return text;
+  // BigModel / OpenAI-compatible multimodal schema.
+  return [
+    { type: "text", text },
+    { type: "image_url", image_url: { url: imageUrl } }
+  ];
 }
 
 function buildArtifactUserQuestion(
@@ -917,4 +937,3 @@ function parseBool(raw: unknown, fallback: boolean): boolean {
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-

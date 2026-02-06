@@ -170,6 +170,7 @@ function buildChatPayload(input, grounding) {
   const artifactName = safeString(input.artifactName);
   const contextText = clipText(safeString(input.contextText), 6000);
   const question = safeString(input.question);
+  const imageDataUrl = normalizeImageDataUrl(input.imageDataUrl);
   const history = normalizeHistory(input.history);
   const candidateRefs = grounding.candidateRefs || "暂无";
   const groundingBrief = buildGroundingBrief(grounding.candidates);
@@ -185,7 +186,7 @@ function buildChatPayload(input, grounding) {
       content: buildSystemPrompt(scope, candidateRefs)
     },
     ...history,
-    { role: "user", content: userQuestion }
+    { role: "user", content: buildUserContent(userQuestion, imageDataUrl) }
   ];
 
   const payload = {
@@ -251,6 +252,7 @@ function shouldUseWebSearch(question, grounding) {
 
 function buildSystemPrompt(scope, candidateRefs) {
   const baseRules = [
+    "如果用户提供了现场照片/图片，请优先结合图片内容回答；不确定就明确写“图片信息不足/无法确认”。",
     "如果你要明确指向某件展品，请在对应段落紧跟一行固定标记：`[展品卡片:artifact-xxx|一句话理由]`。",
     "卡片标记必须单独占一行，前后不加其他文字。",
     "标记里的 artifact-xxx 必须来自“可引用展品清单”。",
@@ -282,6 +284,22 @@ function buildSystemPrompt(scope, candidateRefs) {
     "输出用简洁 Markdown：先结论后展开，优先列表化，控制在 3-6 个关键点。",
     "当引用外部信息时，在句末追加简短来源提示，例如“（来源：xxx）”。"
   ].join("\n");
+}
+
+function normalizeImageDataUrl(value) {
+  const raw = safeString(value);
+  if (!raw) return "";
+  if (raw.startsWith("data:image/")) return raw;
+  if (raw.startsWith("https://") || raw.startsWith("http://")) return raw;
+  return "";
+}
+
+function buildUserContent(text, imageUrl) {
+  if (!imageUrl) return text;
+  return [
+    { type: "text", text },
+    { type: "image_url", image_url: { url: imageUrl } }
+  ];
 }
 
 function buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint) {
@@ -980,7 +998,7 @@ async function readJsonBody(req) {
 
   for await (const chunk of req) {
     size += chunk.length;
-    if (size > 2 * 1024 * 1024) {
+    if (size > 6 * 1024 * 1024) {
       throw new Error("request body too large");
     }
     chunks.push(chunk);
