@@ -27,6 +27,8 @@ PAGE_TEXT_DIR = BOOK / "章节（一）武氏祠汉画-逐页介绍"
 INDEX_MD = MATERIALS / "PDF与展品信息双向索引.md"
 OUTPUT = APP_ROOT / "src" / "data" / "artifacts.json"
 MODEL_CACHE_DIR = APP_ROOT / "public" / "generated" / "models"
+INFO_CACHE_DIR = APP_ROOT / "public" / "generated" / "info"
+MAX_INLINE_PDF_SIZE = 25 * 1024 * 1024
 
 ROW_RE = re.compile(r"^\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|")
 RESAMPLING = Image.Resampling.LANCZOS if hasattr(Image, "Resampling") else Image.LANCZOS
@@ -128,10 +130,11 @@ def extract_tags(info_text: str, series: str) -> List[str]:
     return sorted(tags)
 
 
-def prepare_model_cache_dir() -> None:
-    if MODEL_CACHE_DIR.exists():
-        shutil.rmtree(MODEL_CACHE_DIR)
-    MODEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+def prepare_cache_dirs() -> None:
+    for cache_dir in (MODEL_CACHE_DIR, INFO_CACHE_DIR):
+        if cache_dir.exists():
+            shutil.rmtree(cache_dir)
+        cache_dir.mkdir(parents=True, exist_ok=True)
 
 
 def build_webp_variants(model_file: Path, artifact_id: str) -> Dict[str, str]:
@@ -163,11 +166,28 @@ def build_webp_variants(model_file: Path, artifact_id: str) -> Dict[str, str]:
     }
 
 
+def build_info_variant(info_file: Path, artifact_id: str) -> str:
+    if not info_file.exists():
+        return ""
+
+    info_name = f"{artifact_id}-1280.webp"
+    info_path = INFO_CACHE_DIR / info_name
+    try:
+        with Image.open(info_file) as raw:
+            image = raw.convert("RGB")
+            image.thumbnail((1280, 1280), RESAMPLING)
+            image.save(info_path, format="WEBP", quality=86, method=6)
+    except Exception:
+        return ""
+
+    return encode_url_path("generated", "info", info_name)
+
+
 def build() -> dict:
     mapping = parse_mapping()
     page_map = parse_book_pages()
     pdf_total_pages = max(page_map.keys(), default=0)
-    prepare_model_cache_dir()
+    prepare_cache_dirs()
 
     model_names = {path.stem for path in MODEL_DIR.glob("*.png")}
     info_names = {path.stem for path in INFO_IMAGE_DIR.glob("*.jpg")}
@@ -182,6 +202,7 @@ def build() -> dict:
         info_image_file = INFO_IMAGE_DIR / f"{name}.jpg"
         info_text_file = INFO_TEXT_DIR / f"{name}.txt"
         webp = build_webp_variants(model_file, artifact_id)
+        info_webp = build_info_variant(info_image_file, artifact_id)
 
         mapping_item = mapping.get(name, {})
         pages = mapping_item.get("pages", [])
@@ -205,25 +226,15 @@ def build() -> dict:
                 "name": name,
                 "series": series,
                 "modelImage": encode_url_path(
-                    "materials",
-                    "raw",
-                    "来自武氏墓群石刻博物馆",
-                    "展品图片",
-                    f"{name}.png"
+                    "generated",
+                    "models",
+                    f"{artifact_id}-720.webp"
                 )
-                if model_file.exists()
-                else "",
+                if webp["large"]
+                else webp["thumb"],
                 "modelImageThumb": webp["thumb"],
                 "modelImageLarge": webp["large"],
-                "infoImage": encode_url_path(
-                    "materials",
-                    "raw",
-                    "来自武氏墓群石刻博物馆",
-                    "展品信息图片",
-                    f"{name}.jpg"
-                )
-                if info_image_file.exists()
-                else "",
+                "infoImage": info_webp,
                 "infoText": info_text,
                 "pdfPages": pages,
                 "pdfTopic": mapping_item.get("pdfTopic", ""),
@@ -236,7 +247,7 @@ def build() -> dict:
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
         "totalArtifacts": len(artifacts),
         "pdfSource": encode_url_path("materials", "raw", "来自《鲁迅藏汉画珍赏》", "章节（一）武氏祠汉画.pdf")
-        if BOOK_PDF.exists()
+        if BOOK_PDF.exists() and BOOK_PDF.stat().st_size <= MAX_INLINE_PDF_SIZE
         else "",
         "pdfTotalPages": pdf_total_pages,
         "artifacts": artifacts
