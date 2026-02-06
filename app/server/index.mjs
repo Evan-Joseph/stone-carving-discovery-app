@@ -11,6 +11,7 @@ loadEnvFile(path.join(ROOT, ".env.server"));
 const PORT = parseInt(process.env.PORT || "8787", 10);
 const BASE_URL = (process.env.BIGMODEL_BASE_URL || "https://open.bigmodel.cn/api/paas/v4").replace(/\/+$/, "");
 const MODEL = process.env.BIGMODEL_MODEL || "glm-4.7-flash";
+const VISION_MODEL = process.env.BIGMODEL_VISION_MODEL || "glm-4.6v-flash";
 const API_KEY = process.env.BIGMODEL_API_KEY || "";
 const MAX_RETRIES = clampInt(process.env.AI_MAX_RETRIES, 3, 1, 5);
 const TIMEOUT_MS = clampInt(process.env.AI_TIMEOUT_MS, 45000, 5000, 120000);
@@ -38,7 +39,8 @@ const server = createServer(async (req, res) => {
       configured: {
         hasApiKey: Boolean(API_KEY),
         baseUrl: BASE_URL,
-        model: MODEL
+        model: MODEL,
+        visionModel: VISION_MODEL
       }
     });
   }
@@ -186,11 +188,11 @@ function buildChatPayload(input, grounding) {
       content: buildSystemPrompt(scope, candidateRefs)
     },
     ...history,
-    { role: "user", content: buildUserContent(userQuestion, imageDataUrl) }
+    { role: "user", content: buildUserContent(userQuestion, imageDataUrl, VISION_MODEL) }
   ];
 
   const payload = {
-    model: MODEL,
+    model: imageDataUrl ? VISION_MODEL : MODEL,
     messages,
     temperature: 0.5,
     top_p: 0.9,
@@ -294,12 +296,26 @@ function normalizeImageDataUrl(value) {
   return "";
 }
 
-function buildUserContent(text, imageUrl) {
+function buildUserContent(text, imageUrl, visionModel) {
   if (!imageUrl) return text;
+  if (!visionModel) {
+    return `${text}\n\n（系统提示：当前未配置视觉模型，无法读取图片内容。）`;
+  }
+  const normalizedImageUrl = toBigModelImageUrl(imageUrl);
   return [
     { type: "text", text },
-    { type: "image_url", image_url: { url: imageUrl } }
+    { type: "image_url", image_url: { url: normalizedImageUrl } }
   ];
+}
+
+function toBigModelImageUrl(imageUrl) {
+  const raw = safeString(imageUrl);
+  if (raw.startsWith("data:image/")) {
+    const marker = "base64,";
+    const idx = raw.indexOf(marker);
+    if (idx >= 0) return raw.slice(idx + marker.length);
+  }
+  return raw;
 }
 
 function buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint) {

@@ -60,6 +60,7 @@ export interface AiHealthStatus {
     hasApiKey?: boolean;
     baseUrl?: string;
     model?: string;
+    visionModel?: string;
   };
   error?: string;
 }

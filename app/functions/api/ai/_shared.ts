@@ -6,6 +6,7 @@ export interface Env {
   BIGMODEL_API_KEY?: string;
   BIGMODEL_BASE_URL?: string;
   BIGMODEL_MODEL?: string;
+  BIGMODEL_VISION_MODEL?: string;
   BIGMODEL_ENABLE_WEB_SEARCH?: string;
   BIGMODEL_WEB_SEARCH_ENGINE?: string;
   BIGMODEL_WEB_SEARCH_COUNT?: string;
@@ -141,6 +142,8 @@ export function requireApiKey(env: Env): string {
 export function getConfig(env: Env) {
   const baseUrl = (safeString(env.BIGMODEL_BASE_URL) || "https://open.bigmodel.cn/api/paas/v4").replace(/\/+$/, "");
   const model = safeString(env.BIGMODEL_MODEL) || "glm-4.7-flash";
+  // BigModel provides fully free vision models; keep a safe default here.
+  const visionModel = safeString(env.BIGMODEL_VISION_MODEL) || "glm-4.6v-flash";
   const maxRetries = clampInt(env.AI_MAX_RETRIES, 3, 1, 5);
   const timeoutMs = clampInt(env.AI_TIMEOUT_MS, 45000, 5000, 120000);
   const webSearchEnabled = parseBool(env.BIGMODEL_ENABLE_WEB_SEARCH, true);
@@ -153,6 +156,7 @@ export function getConfig(env: Env) {
   return {
     baseUrl,
     model,
+    visionModel,
     maxRetries,
     timeoutMs,
     webSearchEnabled,
@@ -190,11 +194,11 @@ export function buildChatPayload(
       content: buildSystemPrompt(scope, grounding.candidateRefs || "暂无")
     },
     ...history,
-    { role: "user", content: buildUserContent(userQuestion, imageDataUrl) }
+    { role: "user", content: buildUserContent(userQuestion, imageDataUrl, cfg.visionModel) }
   ];
 
   const payload: Record<string, unknown> = {
-    model: cfg.model,
+    model: imageDataUrl ? cfg.visionModel : cfg.model,
     messages,
     temperature: 0.5,
     top_p: 0.9,
@@ -612,13 +616,28 @@ function normalizeImageDataUrl(value: unknown): string {
   return "";
 }
 
-function buildUserContent(text: string, imageUrl: string): string | Array<Record<string, unknown>> {
+function buildUserContent(text: string, imageUrl: string, visionModel: string): string | Array<Record<string, unknown>> {
   if (!imageUrl) return text;
+  if (!visionModel) {
+    return `${text}\n\n（系统提示：当前未配置视觉模型，无法读取图片内容。）`;
+  }
+  const normalizedImageUrl = toBigModelImageUrl(imageUrl);
   // BigModel / OpenAI-compatible multimodal schema.
   return [
     { type: "text", text },
-    { type: "image_url", image_url: { url: imageUrl } }
+    { type: "image_url", image_url: { url: normalizedImageUrl } }
   ];
+}
+
+function toBigModelImageUrl(imageUrl: string): string {
+  const raw = safeString(imageUrl);
+  // BigModel docs accept pure base64 string for images; support data URLs by stripping the prefix.
+  if (raw.startsWith("data:image/")) {
+    const marker = "base64,";
+    const idx = raw.indexOf(marker);
+    if (idx >= 0) return raw.slice(idx + marker.length);
+  }
+  return raw;
 }
 
 function buildArtifactUserQuestion(

@@ -11,6 +11,13 @@ import { askGuideStream } from "@/lib/openaiClient";
 interface Message {
   role: "user" | "assistant";
   content: string;
+  attachment?: {
+    name: string;
+    width: number;
+    height: number;
+    bytes: number;
+    dataUrl?: string;
+  };
 }
 
 const CHAT_STORAGE_KEY = "stone-ai-guide-chat-v1";
@@ -91,13 +98,24 @@ export function AiGuidePage() {
   }, []);
 
   useEffect(() => {
+    const compactMessages = messages.slice(-MAX_STORED_MESSAGES).map((msg) => {
+      if (msg.role !== "user" || !msg.attachment) return msg;
+      // Avoid blowing up localStorage with base64 images.
+      return {
+        ...msg,
+        attachment: {
+          ...msg.attachment,
+          dataUrl: undefined
+        }
+      };
+    });
     localStorage.setItem(
       CHAT_STORAGE_KEY,
       JSON.stringify({
         savedAt: Date.now(),
         mode,
         selectedId,
-        messages: messages.slice(-MAX_STORED_MESSAGES)
+        messages: compactMessages
       })
     );
   }, [mode, selectedId, messages]);
@@ -118,7 +136,19 @@ export function AiGuidePage() {
     if (!question) return;
 
     setInput("");
-    const userMessage: Message = { role: "user", content: question };
+    const userMessage: Message = {
+      role: "user",
+      content: question,
+      attachment: attachment
+        ? {
+            name: attachment.name,
+            width: attachment.width,
+            height: attachment.height,
+            bytes: attachment.bytes,
+            dataUrl: attachment.dataUrl
+          }
+        : undefined
+    };
     const nextMessages = [...messages, userMessage];
     const assistantIndex = nextMessages.length;
     setMessages([...nextMessages, { role: "assistant", content: "" }]);
@@ -166,11 +196,12 @@ export function AiGuidePage() {
       if (error instanceof Error && error.name === "AbortError") {
         return;
       }
+      const message = error instanceof Error ? error.message : "";
       setMessages((prev) => [
         ...prev.slice(0, -1),
         {
           role: "assistant",
-          content: "AI 服务暂不可用，请稍后重试。后台连通后本页会自动使用服务端配置。"
+          content: message ? `AI 服务暂不可用：${message}` : "AI 服务暂不可用，请稍后重试。后台连通后本页会自动使用服务端配置。"
         }
       ]);
     } finally {
@@ -271,7 +302,16 @@ export function AiGuidePage() {
                 )}
               </>
             ) : (
-              message.content
+              <div className="user-bubble-body">
+                {message.attachment ? (
+                  message.attachment.dataUrl ? (
+                    <img className="user-attachment" src={message.attachment.dataUrl} alt="用户附件" />
+                  ) : (
+                    <span className="user-attachment-chip">已附图（刷新后不保留）</span>
+                  )
+                ) : null}
+                <p className="user-text">{message.content}</p>
+              </div>
             )}
           </article>
         ))}

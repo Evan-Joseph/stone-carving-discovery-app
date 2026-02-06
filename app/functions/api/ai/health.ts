@@ -16,9 +16,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       configured: {
         hasApiKey: Boolean(String(context.env.BIGMODEL_API_KEY || "").trim()),
         baseUrl: cfg.baseUrl,
-        model: cfg.model
+        model: cfg.model,
+        visionModel: cfg.visionModel
       }
     })
   );
 };
-

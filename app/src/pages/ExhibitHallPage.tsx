@@ -11,6 +11,13 @@ import { askGuideStream } from "@/lib/openaiClient";
 interface ChatMessage {
   role: "user" | "assistant";
   content: string;
+  attachment?: {
+    name: string;
+    width: number;
+    height: number;
+    bytes: number;
+    dataUrl?: string;
+  };
 }
 
 const HALL_CHAT_STORAGE_KEY = "stone-hall-chat-v1";
@@ -151,13 +158,23 @@ export function ExhibitHallPage() {
   }, [messages]);
 
   useEffect(() => {
+    const compactMessages = messages.slice(-MAX_HALL_MESSAGES).map((msg) => {
+      if (msg.role !== "user" || !msg.attachment) return msg;
+      return {
+        ...msg,
+        attachment: {
+          ...msg.attachment,
+          dataUrl: undefined
+        }
+      };
+    });
     localStorage.setItem(
       HALL_CHAT_STORAGE_KEY,
       JSON.stringify({
         savedAt: Date.now(),
         askMode,
         selectedId,
-        messages: messages.slice(-MAX_HALL_MESSAGES)
+        messages: compactMessages
       })
     );
   }, [askMode, selectedId, messages]);
@@ -222,7 +239,19 @@ export function ExhibitHallPage() {
     if (!question) return;
 
     setInput("");
-    const nextUserMessage: ChatMessage = { role: "user", content: question };
+    const nextUserMessage: ChatMessage = {
+      role: "user",
+      content: question,
+      attachment: attachment
+        ? {
+            name: attachment.name,
+            width: attachment.width,
+            height: attachment.height,
+            bytes: attachment.bytes,
+            dataUrl: attachment.dataUrl
+          }
+        : undefined
+    };
     const nextMessages = [...messages, nextUserMessage];
     const assistantIndex = nextMessages.length;
     setMessages([...nextMessages, { role: "assistant", content: "" }]);
@@ -270,11 +299,12 @@ export function ExhibitHallPage() {
       if (error instanceof Error && error.name === "AbortError") {
         return;
       }
+      const message = error instanceof Error ? error.message : "";
       setMessages((prev) => [
         ...prev.slice(0, -1),
         {
           role: "assistant",
-          content: "AI 服务暂不可用，请稍后再试。后台连通后这里会自动走服务端配置。"
+          content: message ? `AI 服务暂不可用：${message}` : "AI 服务暂不可用，请稍后再试。后台连通后这里会自动走服务端配置。"
         }
       ]);
     } finally {
@@ -433,7 +463,16 @@ export function ExhibitHallPage() {
                 )}
               </>
             ) : (
-              message.content
+              <div className="user-bubble-body">
+                {message.attachment ? (
+                  message.attachment.dataUrl ? (
+                    <img className="user-attachment" src={message.attachment.dataUrl} alt="用户附件" />
+                  ) : (
+                    <span className="user-attachment-chip">已附图（刷新后不保留）</span>
+                  )
+                ) : null}
+                <p className="user-text">{message.content}</p>
+              </div>
             )}
             </article>
           ))}

@@ -1135,6 +1135,35 @@ a {
   gap: 10px;
 }
 
+.user-bubble-body {
+  display: grid;
+  gap: 8px;
+}
+
+.user-text {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.user-attachment {
+  width: min(220px, 74vw);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+.user-attachment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
 .composer textarea {
   width: 100%;
   resize: vertical;

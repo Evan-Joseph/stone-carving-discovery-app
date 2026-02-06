@@ -8,6 +8,17 @@ import { artifacts, getArtifactById, getDatasetMeta } from "@/data";
 import type { ImageAttachment } from "@/lib/imageAttachment";
 import { askGuideStream } from "@/lib/openaiClient";
 
+interface InlineAskMessage {
+  content: string;
+  attachment?: {
+    name: string;
+    width: number;
+    height: number;
+    bytes: number;
+    dataUrl?: string;
+  };
+}
+
 export function ArtifactDetailPage() {
   const { artifactId } = useParams<{ artifactId: string }>();
   const [searchParams] = useSearchParams();
@@ -15,6 +26,7 @@ export function ArtifactDetailPage() {
   const [tab, setTab] = useState<"official" | "book" | "pdf">("official");
   const [askInput, setAskInput] = useState("");
   const [askAnswer, setAskAnswer] = useState("");
+  const [lastAsk, setLastAsk] = useState<InlineAskMessage | null>(null);
   const [isAsking, setIsAsking] = useState(false);
   const [attachment, setAttachment] = useState<ImageAttachment | null>(null);
   const totalPdfPages = Math.max(1, getDatasetMeta().pdfTotalPages || 1);
@@ -47,7 +59,20 @@ export function ArtifactDetailPage() {
 
     setAskInput("");
     setAskAnswer("");
+    setLastAsk({
+      content: question,
+      attachment: attachment
+        ? {
+            name: attachment.name,
+            width: attachment.width,
+            height: attachment.height,
+            bytes: attachment.bytes,
+            dataUrl: attachment.dataUrl
+          }
+        : undefined
+    });
     setIsAsking(true);
+    setAttachment(null);
     try {
       let streamedAnswer = "";
       const answer = await askGuideStream({
@@ -183,10 +208,22 @@ export function ArtifactDetailPage() {
             {isAsking ? "AI 回答中..." : "立即提问"}
           </button>
         </form>
-        {askAnswer ? (
+        {lastAsk || askAnswer ? (
           <div className="chat-panel inline-chat">
+            {lastAsk ? (
+              <article className="bubble user">
+                <div className="user-bubble-body">
+                  <p className="user-text">{lastAsk.content}</p>
+                  {lastAsk.attachment?.dataUrl ? (
+                    <img className="user-attachment" src={lastAsk.attachment.dataUrl} alt={lastAsk.attachment.name} loading="lazy" />
+                  ) : lastAsk.attachment ? (
+                    <span className="user-attachment-chip">已附图（刷新后不保留）</span>
+                  ) : null}
+                </div>
+              </article>
+            ) : null}
             <article className="bubble ai">
-              <MarkdownContent content={askAnswer} />
+              {askAnswer ? <MarkdownContent content={askAnswer} /> : <p className="typing-line">AI 回答中...</p>}
             </article>
           </div>
         ) : null}
