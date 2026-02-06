@@ -41,6 +41,9 @@ export function HomePage({ discoveredCount }: HomePageProps) {
           <Link className="btn ghost" to="/collection">
             查看文物库
           </Link>
+          <Link className="btn ghost" to="/ai-guide">
+            AI 咨询
+          </Link>
           <Link className="btn ghost" to="/hall">
             展厅模式
           </Link>

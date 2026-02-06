@@ -1,10 +1,11 @@
-import { ChangeEvent, FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AppShell } from "@/components/AppShell";
 import { ArtifactImage } from "@/components/ArtifactImage";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { ImageAttachmentBar } from "@/components/ImageAttachmentBar";
 import { artifacts, getDatasetMeta } from "@/data";
-import { fileToCompressedImageAttachment, type ImageAttachment } from "@/lib/imageAttachment";
+import type { ImageAttachment } from "@/lib/imageAttachment";
 import { askGuideStream } from "@/lib/openaiClient";
 
 interface ChatMessage {
@@ -72,13 +73,10 @@ export function ExhibitHallPage() {
   });
   const [input, setInput] = useState("");
   const [attachment, setAttachment] = useState<ImageAttachment | null>(null);
-  const [attachError, setAttachError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const listRef = useRef<HTMLDivElement | null>(null);
   const chatPanelRef = useRef<HTMLDivElement | null>(null);
   const abortRef = useRef<AbortController | null>(null);
-  const cameraInputRef = useRef<HTMLInputElement | null>(null);
-  const albumInputRef = useRef<HTMLInputElement | null>(null);
   const [scrollTop, setScrollTop] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(0);
   const [itemHeight, setItemHeight] = useState(VIRTUAL_ITEM_HEIGHT);
@@ -193,28 +191,7 @@ export function ExhibitHallPage() {
     setIsLoading(false);
     setInput("");
     setAttachment(null);
-    setAttachError("");
     setMessages([{ role: "assistant", content: buildHallWelcome(askMode, selected?.name) }]);
-  };
-
-  const onPickImage = async (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    event.target.value = "";
-    if (!file) return;
-
-    setAttachError("");
-    try {
-      const packed = await fileToCompressedImageAttachment(file, { maxEdge: 1280, quality: 0.78 });
-      if (packed.bytes > 1_800_000) {
-        setAttachError("图片过大，请换一张或稍后重试。");
-        setAttachment(null);
-        return;
-      }
-      setAttachment(packed);
-    } catch (error) {
-      setAttachment(null);
-      setAttachError(error instanceof Error ? error.message : "图片处理失败");
-    }
   };
 
   const selectArtifact = (id: string) => {
@@ -463,41 +440,7 @@ export function ExhibitHallPage() {
         </div>
 
         <form className="composer hall-composer" onSubmit={submitQuestion}>
-          <div className="attachment-row">
-            <input
-              ref={cameraInputRef}
-              type="file"
-              accept="image/*"
-              capture="environment"
-              onChange={onPickImage}
-              style={{ display: "none" }}
-            />
-            <input
-              ref={albumInputRef}
-              type="file"
-              accept="image/*"
-              onChange={onPickImage}
-              style={{ display: "none" }}
-            />
-
-            <button type="button" className="btn ghost btn-small" onClick={() => cameraInputRef.current?.click()}>
-              拍照
-            </button>
-            <button type="button" className="btn ghost btn-small" onClick={() => albumInputRef.current?.click()}>
-              相册
-            </button>
-
-            {attachment ? (
-              <div className="attachment-preview" title={`${attachment.name} · ${(attachment.bytes / 1024).toFixed(0)}KB`}>
-                <img src={attachment.dataUrl} alt="已选图片预览" />
-                <button type="button" className="attachment-remove" onClick={() => setAttachment(null)} aria-label="移除图片">
-                  ×
-                </button>
-              </div>
-            ) : null}
-
-            {attachError ? <span className="attachment-error">{attachError}</span> : null}
-          </div>
+          <ImageAttachmentBar value={attachment} onChange={setAttachment} disabled={isLoading} />
 
           <textarea
             rows={2}

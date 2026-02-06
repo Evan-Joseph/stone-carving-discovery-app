@@ -1,10 +1,11 @@
-import { ChangeEvent, FormEvent, KeyboardEvent, useMemo, useRef, useState } from "react";
+import { FormEvent, KeyboardEvent, useMemo, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArtifactImage } from "@/components/ArtifactImage";
 import { AppShell } from "@/components/AppShell";
+import { ImageAttachmentBar } from "@/components/ImageAttachmentBar";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { artifacts, getArtifactById, getDatasetMeta } from "@/data";
-import { fileToCompressedImageAttachment, type ImageAttachment } from "@/lib/imageAttachment";
+import type { ImageAttachment } from "@/lib/imageAttachment";
 import { askGuideStream } from "@/lib/openaiClient";
 
 export function ArtifactDetailPage() {
@@ -16,9 +17,6 @@ export function ArtifactDetailPage() {
   const [askAnswer, setAskAnswer] = useState("");
   const [isAsking, setIsAsking] = useState(false);
   const [attachment, setAttachment] = useState<ImageAttachment | null>(null);
-  const [attachError, setAttachError] = useState("");
-  const cameraInputRef = useRef<HTMLInputElement | null>(null);
-  const albumInputRef = useRef<HTMLInputElement | null>(null);
   const totalPdfPages = Math.max(1, getDatasetMeta().pdfTotalPages || 1);
   const fromPageRaw = Number.parseInt(searchParams.get("fromPage") || "", 10);
   const fromPage = Number.isFinite(fromPageRaw)
@@ -71,26 +69,6 @@ export function ArtifactDetailPage() {
       setAskAnswer("AI 服务暂不可用，请稍后重试。后台连通后将自动恢复。");
     } finally {
       setIsAsking(false);
-    }
-  };
-
-  const onPickImage = async (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    event.target.value = "";
-    if (!file) return;
-
-    setAttachError("");
-    try {
-      const packed = await fileToCompressedImageAttachment(file, { maxEdge: 1280, quality: 0.78 });
-      if (packed.bytes > 1_800_000) {
-        setAttachError("图片过大，请换一张或稍后重试。");
-        setAttachment(null);
-        return;
-      }
-      setAttachment(packed);
-    } catch (error) {
-      setAttachment(null);
-      setAttachError(error instanceof Error ? error.message : "图片处理失败");
     }
   };
 
@@ -191,41 +169,7 @@ export function ArtifactDetailPage() {
           <Link to={`/ai-guide?artifactId=${artifact.id}`}>完整对话</Link>
         </header>
         <form className="composer" onSubmit={submitAsk}>
-          <div className="attachment-row">
-            <input
-              ref={cameraInputRef}
-              type="file"
-              accept="image/*"
-              capture="environment"
-              onChange={onPickImage}
-              style={{ display: "none" }}
-            />
-            <input
-              ref={albumInputRef}
-              type="file"
-              accept="image/*"
-              onChange={onPickImage}
-              style={{ display: "none" }}
-            />
-
-            <button type="button" className="btn ghost btn-small" onClick={() => cameraInputRef.current?.click()}>
-              拍照
-            </button>
-            <button type="button" className="btn ghost btn-small" onClick={() => albumInputRef.current?.click()}>
-              相册
-            </button>
-
-            {attachment ? (
-              <div className="attachment-preview" title={`${attachment.name} · ${(attachment.bytes / 1024).toFixed(0)}KB`}>
-                <img src={attachment.dataUrl} alt="已选图片预览" />
-                <button type="button" className="attachment-remove" onClick={() => setAttachment(null)} aria-label="移除图片">
-                  ×
-                </button>
-              </div>
-            ) : null}
-
-            {attachError ? <span className="attachment-error">{attachError}</span> : null}
-          </div>
+          <ImageAttachmentBar value={attachment} onChange={setAttachment} disabled={isAsking} />
 
           <textarea
             rows={2}

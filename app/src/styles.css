@@ -1147,36 +1147,67 @@ a {
   color: var(--ink-soft);
 }
 
-.attachment-row {
+.attach-bar {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.attachment-preview {
-  position: relative;
+.attach-meta {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.attach-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.attach-preview-button {
   width: 46px;
   height: 46px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--surface-2);
+  padding: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
-.attachment-preview img {
+.attach-preview-button img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.attachment-remove {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  width: 18px;
-  height: 18px;
+.attach-chip {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.attach-chip-label {
+  font-size: 0.78rem;
+  color: var(--ink);
+}
+
+.attach-chip-meta {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.attach-remove {
+  width: 22px;
+  height: 22px;
   border-radius: 999px;
   border: 1px solid rgba(36, 28, 18, 0.25);
   background: rgba(255, 255, 255, 0.82);
@@ -1187,7 +1218,7 @@ a {
   cursor: pointer;
 }
 
-.attachment-error {
+.attach-error {
   color: var(--danger);
   font-size: 0.78rem;
 }
