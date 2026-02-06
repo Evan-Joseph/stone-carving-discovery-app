@@ -1042,8 +1042,55 @@ a {
   margin-top: 2px;
 }
 
+.chat-toolbar-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .chat-toolbar small {
   color: var(--ink-soft);
+}
+
+.ai-status-dot {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  cursor: default;
+}
+
+.ai-status-dot .dot-core {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(36, 28, 18, 0.25);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.28),
+    0 4px 8px rgba(40, 24, 10, 0.18);
+  background: rgba(179, 104, 45, 0.65);
+}
+
+.ai-status-dot.ok .dot-core {
+  background: radial-gradient(circle at 30% 30%, #d9ffe6 0%, #2fb35e 35%, #176a36 100%);
+}
+
+.ai-status-dot.warn .dot-core {
+  background: radial-gradient(circle at 30% 30%, #fff4d2 0%, #f0b429 40%, #a36a00 100%);
+}
+
+.ai-status-dot.down .dot-core {
+  background: radial-gradient(circle at 30% 30%, #ffe2d9 0%, #e34b32 45%, #7a1d12 100%);
+}
+
+.ai-status-dot:focus-visible {
+  outline: 2px solid rgba(181, 104, 45, 0.55);
+  outline-offset: 2px;
 }
 
 .btn-small {

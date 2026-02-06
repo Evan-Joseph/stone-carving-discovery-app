@@ -54,6 +54,16 @@ export interface EnrichGuideResult {
   citations: AnswerCitation[];
 }
 
+export interface AiHealthStatus {
+  ok: boolean;
+  configured?: {
+    hasApiKey?: boolean;
+    baseUrl?: string;
+    model?: string;
+  };
+  error?: string;
+}
+
 const rawAiApiBase = String(import.meta.env.VITE_AI_API_BASE || "").trim();
 const AI_API_BASE = rawAiApiBase ? rawAiApiBase.replace(/\/+$/, "") : "/api/ai";
 
@@ -183,6 +193,21 @@ async function requestBackendStream(
     throw new Error("AI 返回为空");
   }
   return answer;
+}
+
+export async function getAiHealth(signal?: AbortSignal): Promise<AiHealthStatus> {
+  try {
+    const response = await fetch(`${AI_API_BASE}/health`, { method: "GET", signal });
+    if (!response.ok) {
+      return { ok: false, error: `AI health ${response.status}: ${await response.text()}` };
+    }
+    const payload = (await response.json()) as AiHealthStatus;
+    if (!payload || typeof payload !== "object") return { ok: false, error: "AI health payload invalid" };
+    return payload;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "AI health request failed";
+    return { ok: false, error: message };
+  }
 }
 
 function readAnswerFromPayload(payload: unknown): string {

@@ -1,6 +1,7 @@
 import { FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AppShell } from "@/components/AppShell";
+import { AiStatusDot } from "@/components/AiStatusDot";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { artifacts } from "@/data";
 import { askGuideStream } from "@/lib/openaiClient";
@@ -222,7 +223,10 @@ export function AiGuidePage() {
         </p>
 
         <div className="chat-toolbar">
-          <small>{Math.max(0, Math.floor(messages.length / 2))} 轮对话</small>
+          <div className="chat-toolbar-left">
+            <AiStatusDot />
+            <small>{Math.max(0, Math.floor(messages.length / 2))} 轮对话</small>
+          </div>
           <button type="button" className="btn ghost btn-small" onClick={resetConversation}>
             新开对话
           </button>
