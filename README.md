@@ -1,6 +1,23 @@
-# Stone Carving Discovery App
+# Stone Carving Discovery App / 石室史诗
 
 Interactive stone-carving culture discovery app with museum browsing, 3D excavation, AI guide, PDF reading, and offline-friendly assets.
+
+This repository is a public showcase version of a China Collegiate Computing Contest project. It focuses on the engineering implementation and reproducible app structure; local source archives and non-public cultural-material collections are intentionally excluded.
+
+## Project Highlights
+
+- Built an interactive cultural-heritage web app around Han stone-relief artifacts, museum browsing, artifact detail pages, AI-guided explanation, and exhibition-display scenarios.
+- Implemented a Three.js excavation interaction that turns artifact discovery into a lightweight blind-box style exploration flow.
+- Added artifact-grounded AI Q&A with streamed responses, Markdown rendering, artifact-card references, and fallback local retrieval.
+- Built a PDF reading workflow with page navigation and artifact-to-document linking.
+- Added a Python data preparation workflow for extracting text, images, and structured artifact metadata from local materials.
+- Optimized the app for mobile, desktop, and exhibition screens, with selected static assets cached by a Service Worker.
+
+## My Role
+
+- Led most of the web application development, interaction design, and AI-assisted coding workflow.
+- Built the frontend routes, artifact browsing flow, Three.js excavation page, AI guide interaction, PDF reading workflow, and responsive exhibition mode.
+- Prepared project presentation materials and demonstration flow for competition use.
 
 The repository contains two parts:
 
