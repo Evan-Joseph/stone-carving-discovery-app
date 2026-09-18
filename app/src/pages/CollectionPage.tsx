@@ -1,5 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ArtifactImage } from "@/components/ArtifactImage";
 import { AppShell } from "@/components/AppShell";
 import { artifacts } from "@/data";
@@ -23,6 +25,7 @@ const FILTERS = [
 
 export function CollectionPage({ discoveredSet }: CollectionPageProps) {
   const [filter, setFilter] = useState("全部");
+  const gridRef = useRef<HTMLDivElement | null>(null);
 
   const list = useMemo(() => {
     if (filter === "全部") return artifacts;
@@ -32,6 +35,17 @@ export function CollectionPage({ discoveredSet }: CollectionPageProps) {
     if (filter === "巨野县博") return artifacts.filter((item) => item.museum?.includes("巨野"));
     return artifacts.filter((item) => item.series === filter || item.series.includes(filter));
   }, [filter, discoveredSet]);
+
+  useGSAP(() => {
+    if (!gridRef.current) return;
+    const cards = gridRef.current.querySelectorAll(".artifact-card");
+    if (!cards.length) return;
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.35, stagger: 0.025, ease: "power1.out", clearProps: "all" }
+    );
+  }, { scope: gridRef, dependencies: [filter] });
 
   return (
     <AppShell title="文物库" subtitle="三馆展品 · 按博物馆与系列分类浏览" mainClassName="collection-main">
@@ -48,7 +62,7 @@ export function CollectionPage({ discoveredSet }: CollectionPageProps) {
         ))}
       </section>
 
-      <section className="artifact-grid">
+      <section ref={gridRef} className="artifact-grid">
         {list.map((item) => (
           <Link key={item.id} to={`/artifact/${item.id}`} className="artifact-card">
             <div className="thumb-frame">

@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { AppShell } from "@/components/AppShell";
 import { ExcavationCanvas, type ExcavationCanvasHandle } from "@/components/ExcavationCanvas";
 import { artifacts } from "@/data";
+import { isAudioMuted, toggleAudioMuted } from "@/lib/stoneAudio";
 import { pickArtifactByWish } from "@/lib/openaiClient";
 import type { Artifact } from "@/types/artifact";
 
@@ -63,6 +66,19 @@ export function ExcavationPage({ discoveredSet, markDiscovered }: ExcavationPage
   const canvasRef = useRef<ExcavationCanvasHandle | null>(null);
   const completedRef = useRef(false);
   const hasStartedRef = useRef(false);
+
+  const [muted, setMuted] = useState(() => isAudioMuted());
+  const sealRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(() => {
+    if (phase === "revealed" && sealRef.current) {
+      gsap.fromTo(
+        sealRef.current,
+        { scale: 2.4, opacity: 0, rotation: -24 },
+        { scale: 1, opacity: 1, rotation: -4, duration: 0.6, ease: "back.out(2.2)" }
+      );
+    }
+  }, [phase]);
 
   const pool = useMemo(
     () => artifacts.filter((item) => Boolean(item.modelImage) && !discoveredSet.has(item.id)),
@@ -231,7 +247,17 @@ export function ExcavationPage({ discoveredSet, markDiscovered }: ExcavationPage
 
         <div className="progress-row">
           <span>发掘进度</span>
-          <strong>{Math.round(displayProgress)}%</strong>
+          <div className="progress-status-group">
+            <strong>{Math.round(displayProgress)}%</strong>
+            <button
+              type="button"
+              className={`sound-toggle-btn ${muted ? "muted" : ""}`}
+              onClick={() => setMuted(toggleAudioMuted())}
+              title={muted ? "开启金石敲击音效" : "静音"}
+            >
+              {muted ? "🔇 静音" : "🔊 敲凿音"}
+            </button>
+          </div>
         </div>
         <div className="progress-track">
           <div className="progress-fill" style={{ width: `${displayProgress}%` }} />
@@ -297,11 +323,19 @@ export function ExcavationPage({ discoveredSet, markDiscovered }: ExcavationPage
 
         {phase === "revealed" && currentArtifact ? (
           <div className="reveal-panel">
+            <div ref={sealRef} className="han-seal-stamp" title="考古入藏印鉴">
+              <div className="seal-border">
+                <span className="seal-char">漢</span>
+                <span className="seal-char">石</span>
+                <span className="seal-char">入</span>
+                <span className="seal-char">藏</span>
+              </div>
+            </div>
             <h3>亮相完成：{currentArtifact.name}</h3>
-            <p>石刻已完整显露。可以先欣赏，再进入详情查看文献与 AI 导览。</p>
+            <p>{currentArtifact.museum || "鲁西南文博场馆"} · 现已完成考古发掘与考据入藏。</p>
             <div className="hero-actions">
               <Link className="btn primary" to={`/artifact/${currentArtifact.id}`}>
-                查看并收纳文物
+                查看考据并收纳
               </Link>
               <button type="button" className="btn ghost" onClick={toPickPhase}>
                 继续下一件

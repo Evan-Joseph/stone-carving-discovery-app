@@ -1,5 +1,7 @@
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { AppShell } from "@/components/AppShell";
 import { ArtifactImage } from "@/components/ArtifactImage";
 import { artifacts, getDatasetMeta } from "@/data";
@@ -12,6 +14,20 @@ export function HomePage({ discoveredCount }: HomePageProps) {
   const navigate = useNavigate();
   const featured = artifacts.slice(0, 6);
   const [quickAsk, setQuickAsk] = useState("");
+  const mainRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(() => {
+    if (!mainRef.current) return;
+    gsap.from(mainRef.current.querySelectorAll(".hero-card, .home-spotlight, .stats-grid, .panel"), {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "power2.out",
+      clearProps: "all"
+    });
+  }, { scope: mainRef });
+
   const meta = getDatasetMeta();
   const spotlight = useMemo(
     () => artifacts.find((item) => item.modelImage && item.infoText) || artifacts.find((item) => item.modelImage),
@@ -45,7 +61,8 @@ export function HomePage({ discoveredCount }: HomePageProps) {
 
   return (
     <AppShell title="石刻文化发现" subtitle="沉浸式发掘 · 文物库 · AI导游" mainClassName="home-main">
-      <section className="hero-card">
+      <div ref={mainRef} style={{ display: "contents" }}>
+        <section className="hero-card">
         <p className="eyebrow">鲁西南汉画像石数字展厅 · 三馆汇聚</p>
         <h2>先发掘，再理解石刻里的历史叙事</h2>
         <p>汇集嘉祥武氏墓群石刻博物馆、济宁市博物馆、巨野县博物馆汉代石刻艺术珍品。</p>
@@ -135,6 +152,7 @@ export function HomePage({ discoveredCount }: HomePageProps) {
           ))}
         </div>
       </section>
+      </div>
     </AppShell>
   );
 }

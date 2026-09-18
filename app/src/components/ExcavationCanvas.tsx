@@ -1,5 +1,6 @@
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 import * as THREE from "three";
+import { playArtifactFoundFanfare, playChiselSound } from "@/lib/stoneAudio";
 
 export interface ExcavationCanvasHandle {
   revealNow: () => void;
@@ -508,6 +509,7 @@ export const ExcavationCanvas = forwardRef<ExcavationCanvasHandle, ExcavationCan
 
           clickStep += 1;
           tapStepRef.current(clickStep);
+          playChiselSound(0.9 + Math.random() * 0.25);
 
           const remaining = shards.filter((s) => s.active && !s.falling);
           if (!remaining.length) return;
@@ -538,6 +540,7 @@ export const ExcavationCanvas = forwardRef<ExcavationCanvasHandle, ExcavationCan
           }
 
           if (clickStep >= clickTargetRef.current) {
+            playArtifactFoundFanfare();
             for (const shard of shards) {
               if (!shard.active || shard.falling) continue;
               shard.falling = true;

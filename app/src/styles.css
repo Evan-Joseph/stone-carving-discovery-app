@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --bg: #efe7d6;
   --ink: #2f2418;
-  --ink-soft: #655644;
+  --ink-soft: #4a3b2b;
   --panel: rgba(255, 250, 242, 0.86);
   --line: rgba(83, 58, 28, 0.2);
   --accent: #b5682d;
@@ -16,8 +16,8 @@
     radial-gradient(circle at -10% 110%, #ceb692 0%, transparent 35%),
     linear-gradient(180deg, #f7f1e4 0%, #e9ddc8 100%);
   --hero-bg:
-    linear-gradient(140deg, rgba(255, 247, 233, 0.95), rgba(246, 227, 197, 0.78)),
-    url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    linear-gradient(140deg, rgba(255, 247, 233, 0.96), rgba(246, 227, 197, 0.88)),
+    radial-gradient(circle at 50% 0%, rgba(181, 104, 45, 0.08) 0%, transparent 75%);
   --surface-1: rgba(255, 255, 255, 0.67);
   --surface-2: rgba(255, 255, 255, 0.58);
   --surface-3: rgba(255, 249, 239, 0.7);
@@ -2114,4 +2114,339 @@ a {
     grid-column: 3;
     grid-row: 1;
   }
+}
+
+/* Micro-interactions & animations */
+.btn {
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.artifact-card, .artifact-chip {
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s ease;
+}
+.artifact-card:hover, .artifact-chip:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(48, 31, 16, 0.16);
+}
+
+/* Excavation Sound Toggle & Progress */
+.progress-status-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sound-toggle-btn {
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+  color: var(--ink);
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.sound-toggle-btn:hover {
+  background: var(--surface-2);
+  transform: scale(1.04);
+}
+
+.sound-toggle-btn.muted {
+  opacity: 0.65;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Han Dynasty Vermilion Seal Stamp */
+.han-seal-stamp {
+  display: inline-block;
+  margin: 12px auto 16px;
+  padding: 5px;
+  border: 3px solid #b32a1e;
+  border-radius: 8px;
+  background: #bb2f22;
+  box-shadow: 0 8px 22px rgba(179, 42, 30, 0.38), inset 0 0 10px rgba(0, 0, 0, 0.18);
+  transform: rotate(-3deg);
+  transform-origin: center center;
+}
+
+.seal-border {
+  border: 1.5px solid rgba(255, 235, 220, 0.92);
+  padding: 6px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  text-align: center;
+}
+
+.seal-char {
+  color: #fff6ee;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-family: "STKaiti", "ZCOOL XiaoWei", serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Stone Inspect Modal (Deep Zoom & Rubbing Lens) */
+.stone-inspect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(18, 14, 10, 0.94);
+  backdrop-filter: blur(12px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #f5ede0;
+  overflow: hidden;
+}
+
+.stone-inspect-header {
+  padding: 12px 18px;
+  background: rgba(26, 20, 15, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.inspect-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inspect-badge {
+  background: #b5682d;
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.inspect-title-group h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff3e2;
+}
+
+.inspect-title-group small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.82rem;
+}
+
+.inspect-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inspect-rubbing-switch {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.inspect-rubbing-switch button {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.inspect-rubbing-switch button.active {
+  background: #b5682d;
+  color: #fff;
+}
+
+.inspect-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 2px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.inspect-zoom-controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.zoom-indicator {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 42px;
+  text-align: center;
+}
+
+.btn-close-inspect {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+
+.btn-close-inspect:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.stone-inspect-stage {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  background: radial-gradient(circle at 50% 50%, rgba(45, 34, 25, 0.4) 0%, rgba(12, 9, 6, 0.95) 100%);
+}
+
+.stone-inspect-canvas-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.stone-inspect-img {
+  max-width: 88vw;
+  max-height: 72vh;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+.inspect-hotspot-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(181, 104, 45, 0.88);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.76rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.inspect-hotspot-pin:hover,
+.inspect-hotspot-pin.active {
+  background: #c84020;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hotspot-pulse {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse-hotspot 1.8s infinite;
+}
+
+@keyframes pulse-hotspot {
+  0% { transform: scale(0.9); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.4; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+.stone-inspect-footer {
+  padding: 12px 18px;
+  background: rgba(24, 18, 14, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 8px;
+}
+
+.stone-inspect-footer.compact p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.hotspots-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.hotspots-strip-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+}
+
+.hotspot-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.hotspot-chip:hover,
+.hotspot-chip.active {
+  background: #b5682d;
+  color: #fff;
+  border-color: #b5682d;
+}
+
+.hotspot-detail-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #b5682d;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+}
+
+.hotspot-detail-box h4 {
+  margin: 0 0 3px;
+  font-size: 0.92rem;
+  color: #f7e2c8;
+}
+
+.hotspot-detail-box p,
+.hotspot-hint-box p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.45;
 }

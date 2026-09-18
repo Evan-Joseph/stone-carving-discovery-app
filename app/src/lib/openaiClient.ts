@@ -1,4 +1,6 @@
 import type { ArtifactRecommendation } from "@/lib/artifactRecommend";
+import { artifacts } from "@/data";
+import { resolveOfflineGuideAnswer } from "@/lib/offlineKnowledge";
 
 interface ChatMessage {
   role: "system" | "user" | "assistant";
@@ -303,20 +305,38 @@ export async function askGuide(input: AskGuideInput): Promise<string> {
 
 export async function askGuideStream(input: AskGuideInput, handlers?: AskGuideStreamHandlers): Promise<string> {
   const scope = inferAutoScope(input);
-  return await requestBackendStream(
-    "/chat-stream",
-    {
-      question: input.question,
-      scope,
-      artifactId: input.artifactId || "",
-      contextText: input.contextText || "",
-      artifactName: input.artifactName || "",
-      imageDataUrl: input.imageDataUrl || "",
-      history: input.history || [],
-      visionCandidates: input.visionCandidates || []
-    },
-    handlers
-  );
+  try {
+    return await requestBackendStream(
+      "/chat-stream",
+      {
+        question: input.question,
+        scope,
+        artifactId: input.artifactId || "",
+        contextText: input.contextText || "",
+        artifactName: input.artifactName || "",
+        imageDataUrl: input.imageDataUrl || "",
+        history: input.history || [],
+        visionCandidates: input.visionCandidates || []
+      },
+      handlers
+    );
+  } catch (error) {
+    if (handlers?.signal?.aborted) throw error;
+
+    const target = input.artifactId ? artifacts.find((item) => item.id === input.artifactId) : undefined;
+    const { answer } = resolveOfflineGuideAnswer(input.question, target, input.contextText);
+
+    if (handlers?.onDelta) {
+      const parts = answer.split("");
+      let buffer = "";
+      for (const char of parts) {
+        buffer += char;
+        handlers.onDelta(char, buffer);
+        await new Promise((resolve) => setTimeout(resolve, 8));
+      }
+    }
+    return answer;
+  }
 }
 
 function readEnrichResult(payload: unknown): EnrichGuideResult {
@@ -340,44 +360,63 @@ function readEnrichResult(payload: unknown): EnrichGuideResult {
         .slice(0, 3)
     : [];
 
-  const citationsRaw = Array.isArray(data.citations)
+  const citationsRaw: AnswerCitation[] = Array.isArray(data.citations)
     ? data.citations
-        .map((item) => {
+        .map((item): AnswerCitation | null => {
           const citation = item as Record<string, unknown>;
           const title = typeof citation.title === "string" ? citation.title : "";
           const snippet = typeof citation.snippet === "string" ? citation.snippet : "";
           if (!snippet) return null;
           const sourceTypeRaw = typeof citation.sourceType === "string" ? citation.sourceType : "artifact";
-          const sourceType = ["artifact", "pdf", "museum", "web"].includes(sourceTypeRaw)
-            ? (sourceTypeRaw as AnswerCitation["sourceType"])
-            : "artifact";
+          const sourceType: AnswerCitation["sourceType"] =
+            sourceTypeRaw === "pdf" || sourceTypeRaw === "museum" || sourceTypeRaw === "web"
+              ? sourceTypeRaw
+              : "artifact";
           const artifactId = typeof citation.artifactId === "string" ? citation.artifactId : undefined;
-          const normalized: AnswerCitation = {
-            title: title || "资料依据",
-            snippet,
-            sourceType,
-            artifactId
-          };
-          return normalized;
+          return { title, snippet, sourceType, ...(artifactId ? { artifactId } : {}) };
         })
-        .filter((item) => Boolean(item))
+        .filter((item): item is AnswerCitation => item !== null)
+        .slice(0, 4)
     : [];
-  const citations = citationsRaw.slice(0, 4) as AnswerCitation[];
 
-  return { recommendations, citations };
+  return { recommendations, citations: citationsRaw };
 }
 
-export async function enrichGuideAnswer(input: EnrichGuideInput): Promise<EnrichGuideResult> {
-  const payload = await requestBackend("/enrich", {
-    question: input.question,
-    answer: input.answer,
-    scope: input.scope || "museum",
-    artifactId: input.artifactId || "",
-    artifactName: input.artifactName || "",
-    contextText: input.contextText || ""
-  });
+export async function enrichGuide(input: EnrichGuideInput): Promise<EnrichGuideResult> {
+  const scope = input.scope || (input.artifactId ? "artifact" : "museum");
+  try {
+    const payload = await requestBackend("/enrich", {
+      question: input.question,
+      answer: input.answer,
+      scope,
+      artifactId: input.artifactId || "",
+      artifactName: input.artifactName || "",
+      contextText: input.contextText || ""
+    });
 
-  return readEnrichResult(payload);
+    return readEnrichResult(payload);
+  } catch {
+    const target = input.artifactId ? artifacts.find((item) => item.id === input.artifactId) : undefined;
+    const { recommendedIds } = resolveOfflineGuideAnswer(input.question, target, input.contextText);
+    const recs: ArtifactRecommendation[] = recommendedIds
+      .map((id) => {
+        const a = artifacts.find((item) => item.id === id);
+        return a ? { id: a.id, reason: `${a.museum || "鲁西南石刻"}核心馆藏`, score: 95 } : null;
+      })
+      .filter((item): item is ArtifactRecommendation => Boolean(item));
+
+    return {
+      recommendations: recs,
+      citations: [
+        {
+          title: target ? target.name : "鲁西南汉代石刻考据志",
+          snippet: (target?.infoText || "汇聚嘉祥武氏墓群、济宁市博、巨野县博三馆田野考据实录。").slice(0, 100),
+          sourceType: "museum",
+          artifactId: target?.id
+        }
+      ]
+    };
+  }
 }
 
 export async function pickArtifactByWish(input: PickByWishInput): Promise<{ id: string; reason: string }> {

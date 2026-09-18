@@ -4,6 +4,7 @@ import { ArtifactImage } from "@/components/ArtifactImage";
 import { AppShell } from "@/components/AppShell";
 import { ImageAttachmentBar } from "@/components/ImageAttachmentBar";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { StoneInspectModal } from "@/components/StoneInspectModal";
 import { artifacts, getArtifactById, getDatasetMeta } from "@/data";
 import type { ImageAttachment } from "@/lib/imageAttachment";
 import { askGuideStream } from "@/lib/openaiClient";
@@ -24,6 +25,7 @@ export function ArtifactDetailPage() {
   const [searchParams] = useSearchParams();
   const artifact = artifactId ? getArtifactById(artifactId) : undefined;
   const [tab, setTab] = useState<"official" | "book" | "pdf">("official");
+  const [isInspectOpen, setIsInspectOpen] = useState(false);
   const [askInput, setAskInput] = useState("");
   const [askAnswer, setAskAnswer] = useState("");
   const [lastAsk, setLastAsk] = useState<InlineAskMessage | null>(null);
@@ -128,6 +130,9 @@ export function ArtifactDetailPage() {
           </div>
         ) : null}
         <div className="hero-actions compact">
+          <button type="button" className="btn primary" onClick={() => setIsInspectOpen(true)}>
+            显微探照与拓片研学
+          </button>
           <Link className="btn ghost" to={`/ai-guide?artifactId=${artifact.id}`}>
             打开 AI 对话
           </Link>
@@ -261,6 +266,8 @@ export function ArtifactDetailPage() {
           ))}
         </div>
       </section>
+
+      {isInspectOpen ? <StoneInspectModal artifact={artifact} onClose={() => setIsInspectOpen(false)} /> : null}
     </AppShell>
   );
 }
