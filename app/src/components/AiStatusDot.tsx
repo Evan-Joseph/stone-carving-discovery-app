@@ -14,7 +14,7 @@ function computeLevel(payload: AiHealthStatus | null, errorText: string): DotLev
 function buildReason(payload: AiHealthStatus | null, errorText: string): string {
   if (errorText) return `AI 不可用：${errorText}`;
   if (!payload) return "正在检测 AI 服务…";
-  if (payload.ok && payload.configured?.hasApiKey === false) return "AI 服务可达，但未配置 BIGMODEL_API_KEY（请在 Cloudflare Pages 环境变量中设置）。";
+  if (payload.ok && payload.configured?.hasApiKey === false) return "AI 服务可达，但未配置 SILICONFLOW_API_KEY（请在服务端环境变量中设置）。";
   if (payload.ok) return `AI 服务正常（model=${payload.configured?.model || "unknown"}）`;
   return payload.error ? `AI 不可用：${payload.error}` : "AI 不可用：未知原因";
 }
@@ -60,4 +60,3 @@ export function AiStatusDot() {
     </button>
   );
 }
-

@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { FormEvent, useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AppShell } from "@/components/AppShell";
 import { ArtifactImage } from "@/components/ArtifactImage";
 import { artifacts, getDatasetMeta } from "@/data";
@@ -9,7 +9,9 @@ interface HomePageProps {
 }
 
 export function HomePage({ discoveredCount }: HomePageProps) {
+  const navigate = useNavigate();
   const featured = artifacts.slice(0, 6);
+  const [quickAsk, setQuickAsk] = useState("");
   const meta = getDatasetMeta();
   const spotlight = useMemo(
     () => artifacts.find((item) => item.modelImage && item.infoText) || artifacts.find((item) => item.modelImage),
@@ -28,12 +30,25 @@ export function HomePage({ discoveredCount }: HomePageProps) {
     return plain.slice(0, 74) + (plain.length > 74 ? "..." : "");
   }, [spotlight?.infoText]);
 
+  const submitQuickAsk = (event: FormEvent) => {
+    event.preventDefault();
+    const question = quickAsk.trim();
+    if (!question) return;
+    navigate(`/ai-guide?q=${encodeURIComponent(question)}`);
+  };
+
+  const quickAskTemplates = [
+    "第一次来馆里，先看哪几件最容易看懂？",
+    "汉代石刻里常见的叙事主题有哪些？",
+    "拍照后你能帮我识别并讲解吗？"
+  ];
+
   return (
     <AppShell title="石刻文化发现" subtitle="沉浸式发掘 · 文物库 · AI导游" mainClassName="home-main">
       <section className="hero-card">
-        <p className="eyebrow">武氏墓群石刻博物馆</p>
+        <p className="eyebrow">鲁西南汉画像石数字展厅 · 三馆汇聚</p>
         <h2>先发掘，再理解石刻里的历史叙事</h2>
-        <p>基于展品抠图、馆方信息图、鲁迅《藏汉画珍赏》节选与双向索引构建。</p>
+        <p>汇集嘉祥武氏墓群石刻博物馆、济宁市博物馆、巨野县博物馆汉代石刻艺术珍品。</p>
         <div className="hero-actions">
           <Link className="btn primary" to="/excavate">
             开始发掘
@@ -41,13 +56,32 @@ export function HomePage({ discoveredCount }: HomePageProps) {
           <Link className="btn ghost" to="/collection">
             查看文物库
           </Link>
-          <Link className="btn ghost" to="/ai-guide">
-            AI 咨询
-          </Link>
           <Link className="btn ghost" to="/hall">
             展厅模式
           </Link>
         </div>
+
+        <form className="home-ai-entry" onSubmit={submitQuickAsk}>
+          <label htmlFor="home-ai-question">先问一句再进入 AI 导游</label>
+          <div className="home-ai-entry-row">
+            <input
+              id="home-ai-question"
+              value={quickAsk}
+              onChange={(event) => setQuickAsk(event.target.value)}
+              placeholder="例如：先看哪几件最容易理解？"
+            />
+            <button className="btn primary" type="submit" disabled={!quickAsk.trim()}>
+              一步发问
+            </button>
+          </div>
+          <div className="home-ai-suggestions">
+            {quickAskTemplates.map((item) => (
+              <button key={item} type="button" className="pill" onClick={() => setQuickAsk(item)}>
+                {item}
+              </button>
+            ))}
+          </div>
+        </form>
       </section>
 
       {spotlight ? (
@@ -72,15 +106,15 @@ export function HomePage({ discoveredCount }: HomePageProps) {
       <section className="stats-grid">
         <article>
           <strong>{meta.totalArtifacts}</strong>
-          <span>可浏览展品</span>
+          <span>馆藏珍品（3大博物馆）</span>
         </article>
         <article>
           <strong>{discoveredCount}</strong>
           <span>已发掘展品</span>
         </article>
         <article>
-          <strong>{meta.generatedAt ? new Date(meta.generatedAt).toLocaleDateString("zh-CN") : "-"}</strong>
-          <span>数据更新时间</span>
+          <strong>3 处</strong>
+          <span>研学文博场馆</span>
         </article>
       </section>
 

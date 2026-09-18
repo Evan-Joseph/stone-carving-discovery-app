@@ -113,7 +113,11 @@ export function ArtifactDetailPage() {
   };
 
   return (
-    <AppShell title={artifact.name} subtitle={artifact.series} mainClassName="detail-main">
+    <AppShell
+      title={artifact.name}
+      subtitle={artifact.museum ? `${artifact.museum} · ${artifact.series}` : artifact.series}
+      mainClassName="detail-main"
+    >
       <section className="panel artifact-hero">
         <ArtifactImage artifact={artifact} alt={artifact.name} loading="eager" sizes="(max-width: 720px) 92vw, 680px" />
         {fromPage ? (
@@ -125,7 +129,7 @@ export function ArtifactDetailPage() {
         ) : null}
         <div className="hero-actions compact">
           <Link className="btn ghost" to={`/ai-guide?artifactId=${artifact.id}`}>
-            打开 AI 展品问询
+            打开 AI 对话
           </Link>
         </div>
       </section>
@@ -139,6 +143,17 @@ export function ArtifactDetailPage() {
       {tab === "official" ? (
         <section className="panel prose-panel">
           {artifact.infoText ? <MarkdownContent content={artifact.infoText} /> : <p>暂无相关资料</p>}
+          {artifact.infoImage ? (
+            <div style={{ marginTop: "16px", paddingTop: "12px", borderTop: "1px dashed var(--line)" }}>
+              <p style={{ fontSize: "0.85rem", color: "var(--ink-soft)", marginBottom: "8px" }}>馆方现场展板说明：</p>
+              <img
+                src={artifact.infoImage}
+                alt={`${artifact.name} 展板说明`}
+                style={{ width: "100%", borderRadius: "8px", border: "1px solid var(--line)" }}
+                loading="lazy"
+              />
+            </div>
+          ) : null}
         </section>
       ) : null}
 
@@ -217,7 +232,7 @@ export function ArtifactDetailPage() {
                   {lastAsk.attachment?.dataUrl ? (
                     <img className="user-attachment" src={lastAsk.attachment.dataUrl} alt={lastAsk.attachment.name} loading="lazy" />
                   ) : lastAsk.attachment ? (
-                    <span className="user-attachment-chip">已附图（刷新后不保留）</span>
+                    <span className="user-attachment-chip">已附图</span>
                   ) : null}
                 </div>
               </article>

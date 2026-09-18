@@ -1,8 +1,19 @@
 import dataset from "../../../src/data/artifacts.json";
+import { searchBochaWeb, type BochaSearchItem } from "./bocha";
+import { detectIntent, extractCorrectionTarget, type IntentDecision } from "./routing";
 
 type Scope = "artifact" | "museum";
 
 export interface Env {
+  SILICONFLOW_API_KEY?: string;
+  SILICONFLOW_BASE_URL?: string;
+  SILICONFLOW_MODEL?: string;
+  SILICONFLOW_VLM_MODEL?: string;
+  BOCHA_API_KEY?: string;
+  BOCHA_BASE_URL?: string;
+  BOCHA_SEARCH_COUNT?: string;
+  BOCHA_TIMEOUT_MS?: string;
+  AI_ENABLE_WEB_SEARCH?: string;
   BIGMODEL_API_KEY?: string;
   BIGMODEL_BASE_URL?: string;
   BIGMODEL_MODEL?: string;
@@ -54,6 +65,9 @@ interface GroundingResult {
   allowedArtifactIds: Set<string>;
   primaryArtifactId: string;
   primaryArtifactScore: number;
+  visionCandidates: VisionCandidate[];
+  correctionArtifactId: string;
+  correctionText: string;
 }
 
 export interface CandidateRef {
@@ -70,6 +84,20 @@ type ChatRole = "system" | "user" | "assistant";
 export interface ChatMessage {
   role: ChatRole;
   content: string;
+}
+
+interface VisionCandidate {
+  id: string;
+  score: number;
+  name?: string;
+}
+
+export interface PreparedChatRequest {
+  payload: Record<string, unknown>;
+  grounding: GroundingResult;
+  intent: IntentDecision;
+  webSearch: BochaSearchItem[];
+  webSearchError?: string;
 }
 
 const ARTIFACT_DATASET = dataset as unknown as ArtifactDataset;
@@ -134,59 +162,159 @@ export async function readJsonBody(request: Request, maxBytes = 6 * 1024 * 1024)
 }
 
 export function requireApiKey(env: Env): string {
-  const key = safeString(env.BIGMODEL_API_KEY);
-  if (!key) throw new Error("BIGMODEL_API_KEY is missing");
+  const key = safeString(env.SILICONFLOW_API_KEY) || safeString(env.BIGMODEL_API_KEY);
+  if (!key) throw new Error("SILICONFLOW_API_KEY is missing");
   return key;
 }
 
 export function getConfig(env: Env) {
-  const baseUrl = (safeString(env.BIGMODEL_BASE_URL) || "https://open.bigmodel.cn/api/paas/v4").replace(/\/+$/, "");
-  const model = safeString(env.BIGMODEL_MODEL) || "glm-4.7-flash";
-  // BigModel provides fully free vision models; keep a safe default here.
-  const visionModel = safeString(env.BIGMODEL_VISION_MODEL) || "glm-4.6v-flash";
+  const apiKey = safeString(env.SILICONFLOW_API_KEY) || safeString(env.BIGMODEL_API_KEY);
+  const baseUrl = (safeString(env.SILICONFLOW_BASE_URL) || safeString(env.BIGMODEL_BASE_URL) || "https://api.siliconflow.cn/v1").replace(/\/+$/, "");
+  const model = safeString(env.SILICONFLOW_MODEL) || safeString(env.BIGMODEL_MODEL) || "deepseek-ai/DeepSeek-V4-Flash";
+  const visionModel = safeString(env.SILICONFLOW_VLM_MODEL) || safeString(env.BIGMODEL_VISION_MODEL) || "Qwen/Qwen3-VL-32B-Instruct";
   const maxRetries = clampInt(env.AI_MAX_RETRIES, 3, 1, 5);
   const timeoutMs = clampInt(env.AI_TIMEOUT_MS, 45000, 5000, 120000);
-  const webSearchEnabled = parseBool(env.BIGMODEL_ENABLE_WEB_SEARCH, true);
-  const webSearchEngine = safeString(env.BIGMODEL_WEB_SEARCH_ENGINE) || "search_pro";
-  const webSearchCount = clampInt(env.BIGMODEL_WEB_SEARCH_COUNT, 5, 1, 10);
-  const webSearchContentSize = safeString(env.BIGMODEL_WEB_SEARCH_CONTENT_SIZE) || "medium";
+  const webSearchEnabled = parseBool(env.AI_ENABLE_WEB_SEARCH ?? env.BIGMODEL_ENABLE_WEB_SEARCH, true);
+  const bochaApiKey = safeString(env.BOCHA_API_KEY);
+  const bochaBaseUrl = (safeString(env.BOCHA_BASE_URL) || "https://api.bochaai.com").replace(/\/+$/, "");
+  const bochaSearchCount = clampInt(env.BOCHA_SEARCH_COUNT, 5, 1, 10);
+  const bochaTimeoutMs = clampInt(env.BOCHA_TIMEOUT_MS, 12000, 3000, 30000);
   const historyMaxItems = clampInt(env.AI_HISTORY_MAX_ITEMS, 10, 2, 20);
   const historyItemMaxChars = clampInt(env.AI_HISTORY_ITEM_MAX_CHARS, 800, 120, 2000);
 
   return {
+    apiKey,
     baseUrl,
     model,
     visionModel,
     maxRetries,
     timeoutMs,
     webSearchEnabled,
-    webSearchEngine,
-    webSearchCount,
-    webSearchContentSize,
+    bochaApiKey,
+    bochaBaseUrl,
+    bochaSearchCount,
+    bochaTimeoutMs,
     historyMaxItems,
     historyItemMaxChars
+  };
+}
+
+export async function prepareChatRequest(env: Env, input: Record<string, unknown>): Promise<PreparedChatRequest> {
+  const cfg = getConfig(env);
+  const question = safeString(input.question);
+  const imageDataUrl = normalizeImageDataUrl(input.imageDataUrl);
+  const hasImage = Boolean(imageDataUrl);
+  const history = hasImage ? [] : normalizeHistory(input.history, cfg.historyMaxItems, cfg.historyItemMaxChars);
+  const historyText = history.map((item) => item.content).join("\n");
+
+  const groundingInput = hasImage
+    ? { ...input, artifactId: "", artifactName: "", contextText: "", history: [] }
+    : input;
+  const initialGrounding = resolveArtifactGrounding(groundingInput, env);
+  const correctionTarget = extractCorrectionTarget(question);
+  const intent = detectIntent({
+    question,
+    historyText,
+    hasImage,
+    hasArtifactHint: hasImage ? false : Boolean(safeString(input.artifactId) || safeString(input.artifactName)),
+    primaryArtifactScore: initialGrounding.primaryArtifactScore,
+    correctionTarget
+  });
+
+  const explicitArtifactId = hasImage ? "" : safeString(input.artifactId);
+  const inferredArtifactId = initialGrounding.primaryArtifactId;
+  const correctionArtifactId = initialGrounding.correctionArtifactId;
+  const artifactId =
+    correctionArtifactId || (intent.scope === "artifact" ? explicitArtifactId || inferredArtifactId : explicitArtifactId || "");
+  const artifact = artifactId ? ARTIFACT_CATALOG.find((item) => item.id === artifactId) : undefined;
+  const artifactName = (hasImage ? "" : safeString(input.artifactName)) || artifact?.name || "";
+  const contextText = (hasImage ? "" : safeString(input.contextText)) || safeString(artifact?.summary);
+
+  const normalizedInput: Record<string, unknown> = {
+    ...input,
+    scope: intent.scope,
+    artifactId,
+    artifactName,
+    contextText
+  };
+  const grounding = resolveArtifactGrounding(normalizedInput, env);
+
+  let webSearch: BochaSearchItem[] = [];
+  let webSearchError = "";
+  if (cfg.webSearchEnabled && intent.shouldUseWebSearch) {
+    const searchQuery = buildSearchQuery(question, grounding, intent.scope);
+    if (searchQuery && cfg.bochaApiKey) {
+      const result = await searchBochaWeb(searchQuery, {
+        apiKey: cfg.bochaApiKey,
+        baseUrl: cfg.bochaBaseUrl,
+        count: cfg.bochaSearchCount,
+        timeoutMs: cfg.bochaTimeoutMs
+      });
+      webSearch = result.items.slice(0, cfg.bochaSearchCount);
+      webSearchError = safeString(result.error);
+    } else if (searchQuery) {
+      webSearchError = "bocha key missing";
+    }
+  }
+
+  const payload = buildChatPayload(env, normalizedInput, grounding, {
+    intent,
+    webSearch,
+    webSearchError
+  });
+
+  return {
+    payload,
+    grounding,
+    intent,
+    webSearch,
+    webSearchError: webSearchError || undefined
   };
 }
 
 export function buildChatPayload(
   env: Env,
   input: Record<string, unknown>,
-  grounding: GroundingResult
+  grounding: GroundingResult,
+  options?: {
+    intent?: IntentDecision;
+    webSearch?: BochaSearchItem[];
+    webSearchError?: string;
+  }
 ): Record<string, unknown> {
   const cfg = getConfig(env);
-  const scope: Scope = safeString(input.scope) === "artifact" ? "artifact" : "museum";
+  const scope: Scope = options?.intent?.scope || (safeString(input.scope) === "artifact" ? "artifact" : "museum");
   const artifactName = safeString(input.artifactName);
   const contextText = clipText(safeString(input.contextText), 6000);
   const question = safeString(input.question);
   const imageDataUrl = normalizeImageDataUrl(input.imageDataUrl);
   const history = normalizeHistory(input.history, cfg.historyMaxItems, cfg.historyItemMaxChars);
+  const webContext = buildWebSearchContext(options?.webSearch || []);
+  const webSearchError = safeString(options?.webSearchError);
 
   const groundingBrief = buildGroundingBrief(grounding.candidates);
   const ambiguityHint = grounding.ambiguityHint || "";
+  const correctionHint = grounding.correctionText
+    ? `用户纠正信息：${grounding.correctionText}${grounding.correctionArtifactId ? `（对应展品ID：${grounding.correctionArtifactId}）` : ""}`
+    : "";
+  const visionHint = buildVisionCandidateHint(grounding.visionCandidates, grounding.candidates);
+  const webSearchHint = webContext
+    ? `联网参考（来自博查检索）：\n${webContext}`
+    : webSearchError
+      ? "联网检索暂时不可用，请明确告知用户“联网资料暂不可用”，并优先基于馆内资料回答。"
+      : "";
+
   const userQuestion =
     scope === "artifact"
-      ? buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint)
-      : [question, `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief || "暂无"}`, ambiguityHint].filter(Boolean).join("\n\n");
+      ? buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint, {
+          correctionHint,
+          webSearchHint,
+          visionHint,
+          hasImage: Boolean(imageDataUrl)
+        })
+      : [question, webSearchHint, `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief || "暂无"}`, ambiguityHint, correctionHint]
+          .filter(Boolean)
+          .join("\n\n");
 
   const messages: ChatMessage[] = [
     {
@@ -197,43 +325,30 @@ export function buildChatPayload(
     { role: "user", content: buildUserContent(userQuestion, imageDataUrl, cfg.visionModel) }
   ];
 
-  const payload: Record<string, unknown> = {
+  return {
     model: imageDataUrl ? cfg.visionModel : cfg.model,
     messages,
     temperature: 0.5,
     top_p: 0.9,
     stream: false
   };
-
-  if (scope === "museum" && cfg.webSearchEnabled && shouldUseWebSearch(question, grounding)) {
-    payload.tools = [
-      {
-        type: "web_search",
-        web_search: {
-          enable: true,
-          search_engine: cfg.webSearchEngine,
-          search_result: true,
-          count: cfg.webSearchCount,
-          content_size: cfg.webSearchContentSize
-        }
-      }
-    ];
-  }
-
-  return payload;
 }
 
 export function resolveArtifactGrounding(input: Record<string, unknown>, env: Env): GroundingResult {
   const cfg = getConfig(env);
   const scope: Scope = safeString(input.scope) === "artifact" ? "artifact" : "museum";
-  const artifactId = safeString(input.artifactId);
-  const artifactName = safeString(input.artifactName);
+  const hasImage = Boolean(normalizeImageDataUrl(input.imageDataUrl));
+  const artifactId = hasImage ? "" : safeString(input.artifactId);
+  const artifactName = hasImage ? "" : safeString(input.artifactName);
   const question = safeString(input.question);
-  const history = normalizeHistory(input.history, cfg.historyMaxItems, cfg.historyItemMaxChars);
+  const history = hasImage ? [] : normalizeHistory(input.history, cfg.historyMaxItems, cfg.historyItemMaxChars);
   const historyText = history.map((item) => item.content).join("\n");
-
-  const query = `${historyText}\n${question}\n${artifactName}`;
-  const candidates = pickArtifactCandidates(query, artifactId, scope === "artifact" ? 12 : 10);
+  const visionCandidates = normalizeVisionCandidates(input.visionCandidates);
+  const correctionText = extractCorrectionTarget(question);
+  const correctionArtifact = correctionText ? findArtifactByKeyword(correctionText) : null;
+  const preferredArtifactId = correctionArtifact?.id || artifactId;
+  const query = `${historyText}\n${question}\n${artifactName}\n${correctionText}`;
+  const candidates = pickArtifactCandidates(query, preferredArtifactId, scope === "artifact" ? 12 : 10, visionCandidates);
   const candidateRefs = buildArtifactReferenceSnippet(candidates);
   const allowedArtifactIds = new Set(candidates.map((item) => item.id));
   const primaryArtifact = candidates[0];
@@ -244,8 +359,11 @@ export function resolveArtifactGrounding(input: Record<string, unknown>, env: En
     candidateRefs,
     ambiguityHint,
     allowedArtifactIds,
-    primaryArtifactId: primaryArtifact?.id || artifactId || "",
-    primaryArtifactScore: Number.isFinite(primaryArtifact?.rankScore) ? (primaryArtifact.rankScore as number) : 0
+    primaryArtifactId: primaryArtifact?.id || preferredArtifactId || "",
+    primaryArtifactScore: Number.isFinite(primaryArtifact?.rankScore) ? (primaryArtifact.rankScore as number) : 0,
+    visionCandidates,
+    correctionArtifactId: correctionArtifact?.id || "",
+    correctionText
   };
 }
 
@@ -277,6 +395,12 @@ export function sanitizeAnswerContent(
     return `\n[展品卡片:${artifactId}${note}]\n`;
   });
   normalized = normalized.replace(/\n{3,}/g, "\n\n").trim();
+
+  // Do not leak internal artifact ids into visible text.
+  // Card markers are still allowed and will be rendered by the UI.
+  normalized = normalized.replace(/(?<!\[展品卡片:)artifact-[a-zA-Z0-9_-]+/g, "");
+  normalized = normalized.replace(/\(\s*\)/g, "");
+  normalized = normalized.replace(/\s{2,}/g, " ").trim();
 
   if (!markerCount && shouldForceMarkerByIntent(context.question || "")) {
     const fallbackId =
@@ -371,7 +495,7 @@ function processSseBuffer(buffer: string, onEvent: (event: unknown) => void): st
 
 export async function callBigModel(env: Env, payload: Record<string, unknown>): Promise<unknown> {
   const cfg = getConfig(env);
-  const apiKey = requireApiKey(env);
+  const apiKey = cfg.apiKey || requireApiKey(env);
   const url = `${cfg.baseUrl}/chat/completions`;
   let lastError: unknown = null;
 
@@ -398,7 +522,7 @@ export async function callBigModel(env: Env, payload: Record<string, unknown>): 
           await sleep(attempt * 350);
           continue;
         }
-        throw new Error(`bigmodel_http_${response.status}: ${text.slice(0, 900)}`);
+        throw new Error(`siliconflow_http_${response.status}: ${text.slice(0, 900)}`);
       }
 
       return await response.json();
@@ -409,7 +533,7 @@ export async function callBigModel(env: Env, payload: Record<string, unknown>): 
     }
   }
 
-  throw lastError instanceof Error ? lastError : new Error("bigmodel request failed");
+  throw lastError instanceof Error ? lastError : new Error("siliconflow request failed");
 }
 
 export async function callBigModelStream(
@@ -418,7 +542,7 @@ export async function callBigModelStream(
   handlers: { onDelta?: (delta: string) => void; onMeta?: (meta: Record<string, unknown>) => void }
 ): Promise<void> {
   const cfg = getConfig(env);
-  const apiKey = requireApiKey(env);
+  const apiKey = cfg.apiKey || requireApiKey(env);
   const url = `${cfg.baseUrl}/chat/completions`;
   let lastError: unknown = null;
 
@@ -446,7 +570,7 @@ export async function callBigModelStream(
           await sleep(attempt * 350);
           continue;
         }
-        throw new Error(`bigmodel_http_${response.status}: ${text.slice(0, 900)}`);
+        throw new Error(`siliconflow_http_${response.status}: ${text.slice(0, 900)}`);
       }
 
       if (!response.body) throw new Error("empty stream body");
@@ -489,7 +613,7 @@ export async function callBigModelStream(
     }
   }
 
-  throw lastError instanceof Error ? lastError : new Error("bigmodel stream failed");
+  throw lastError instanceof Error ? lastError : new Error("siliconflow stream failed");
 }
 
 export async function pickWishByModel(env: Env, wish: string, candidates: CandidateRef[]): Promise<{ id: string; reason: string }> {
@@ -574,7 +698,8 @@ function shouldUseWebSearch(question: string, grounding: GroundingResult): boole
 function buildSystemPrompt(scope: Scope, candidateRefs: string): string {
   const baseRules = [
     "如果用户提供了现场照片/图片，请优先结合图片内容回答；不确定就明确写“图片信息不足/无法确认”。",
-    "如果你要明确指向某件展品，请在对应段落紧跟一行固定标记：`[展品卡片:artifact-xxx|一句话理由]`。",
+    "正文里引用展品时，只写展品名称，不要输出任何展品ID（例如 artifact-xxx）。",
+    "如果你要让系统渲染展品卡片，请在对应段落紧跟一行固定标记：`[展品卡片:artifact-xxx|一句话理由]`（这行仅用于系统识别）。",
     "卡片标记必须单独占一行，前后不加其他文字。",
     "标记里的 artifact-xxx 必须来自“可引用展品清单”。",
     "不能编造展品名称、室号、石号；不确定时必须明确写“暂无法确认具体展品”。",
@@ -621,22 +746,17 @@ function buildUserContent(text: string, imageUrl: string, visionModel: string): 
   if (!visionModel) {
     return `${text}\n\n（系统提示：当前未配置视觉模型，无法读取图片内容。）`;
   }
-  const normalizedImageUrl = toBigModelImageUrl(imageUrl);
-  // BigModel / OpenAI-compatible multimodal schema.
+  const normalizedImageUrl = toProviderImageUrl(imageUrl);
+  // SiliconFlow follows OpenAI-compatible multimodal schema.
   return [
     { type: "text", text },
     { type: "image_url", image_url: { url: normalizedImageUrl } }
   ];
 }
 
-function toBigModelImageUrl(imageUrl: string): string {
+function toProviderImageUrl(imageUrl: string): string {
   const raw = safeString(imageUrl);
-  // BigModel docs accept pure base64 string for images; support data URLs by stripping the prefix.
-  if (raw.startsWith("data:image/")) {
-    const marker = "base64,";
-    const idx = raw.indexOf(marker);
-    if (idx >= 0) return raw.slice(idx + marker.length);
-  }
+  if (!raw) return "";
   return raw;
 }
 
@@ -645,11 +765,23 @@ function buildArtifactUserQuestion(
   contextText: string,
   question: string,
   groundingBrief: string,
-  ambiguityHint: string
+  ambiguityHint: string,
+  options?: {
+    correctionHint?: string;
+    webSearchHint?: string;
+    visionHint?: string;
+    hasImage?: boolean;
+  }
 ): string {
   return [
     artifactName ? `当前展品：${artifactName}` : "",
     contextText ? `展品资料：\n${contextText}` : "展品资料：暂无结构化资料。",
+    options?.hasImage
+      ? "任务要求：用户上传了现场图片，请先独立观察图片内容，再判断最可能对应的展品；图像相似候选只能作为弱参考，不能直接当作结论。如果照片和候选不一致，必须写“暂无法确认具体展品”。"
+      : "",
+    options?.visionHint || "",
+    options?.webSearchHint || "",
+    options?.correctionHint || "",
     groundingBrief ? `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief}` : "",
     ambiguityHint,
     "请基于上述资料回答下列问题，并给出最有价值的观察点。",
@@ -680,6 +812,78 @@ function buildGroundingBrief(candidates: CandidateRef[]): string {
       return `${index + 1}. ${item.id} ${item.name}（${item.series}）- ${summary}`;
     })
     .join("\n");
+}
+
+function buildWebSearchContext(items: BochaSearchItem[]): string {
+  if (!items.length) return "";
+  return items
+    .slice(0, 5)
+    .map((item, index) => {
+      const title = clipText(safeString(item.title) || "联网资料", 42);
+      const snippet = clipText(safeString(item.snippet), 140);
+      const url = safeString(item.url);
+      const dateText = safeString(item.publishedAt);
+      return `${index + 1}. ${title}${dateText ? `（${dateText}）` : ""}\n摘要：${snippet}\n链接：${url}`;
+    })
+    .join("\n\n");
+}
+
+function buildVisionCandidateHint(visionCandidates: VisionCandidate[], candidates: CandidateRef[]): string {
+  if (!visionCandidates.length) return "";
+  const candidateMap = new Map(candidates.map((item) => [item.id, item]));
+  const lines = visionCandidates.slice(0, 5).map((item, index) => {
+    const row = candidateMap.get(item.id);
+    const name = row?.name || item.name || item.id;
+    return `${index + 1}. ${item.id} ${name}（图像相似度${Math.round(item.score * 100)}%）`;
+  });
+  return `图像相似候选（非最终结论，仅供判别；如果与照片内容不一致，必须以照片内容为准）：\n${lines.join("\n")}`;
+}
+
+function buildSearchQuery(question: string, grounding: GroundingResult, scope: Scope): string {
+  const raw = safeString(question);
+  if (!raw) return "";
+  const top = grounding.candidates[0];
+  const withArtifact = scope === "artifact" && top?.name ? `${raw} ${top.name}` : raw;
+  return clipText(withArtifact.replace(/\s+/g, " ").trim(), 220);
+}
+
+function normalizeVisionCandidates(value: unknown): VisionCandidate[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => {
+      const row = item as Record<string, unknown>;
+      const id = safeString(row.id);
+      const scoreRaw = Number(row.score ?? 0);
+      const score = Number.isFinite(scoreRaw) ? Math.max(0, Math.min(1, scoreRaw)) : 0;
+      const name = safeString(row.name);
+      if (!id || score <= 0) return null;
+      return { id, score, name: name || undefined } satisfies VisionCandidate;
+    })
+    .filter((item): item is VisionCandidate => Boolean(item))
+    .slice(0, 8);
+}
+
+function findArtifactByKeyword(text: string): CandidateRef | null {
+  const query = normalizeSearchText(text);
+  if (!query) return null;
+  const matched = ARTIFACT_CATALOG.find((item) => {
+    if (item.id === query) return true;
+    return (
+      item.nameNorm.includes(query) ||
+      item.topicNorm.includes(query) ||
+      item.aliasNorm.some((alias) => alias.includes(query)) ||
+      item.tagsNorm.some((tag) => tag.includes(query))
+    );
+  });
+  if (!matched) return null;
+  return {
+    id: matched.id,
+    name: matched.name,
+    series: matched.series,
+    tags: matched.tags,
+    pdfTopic: matched.pdfTopic,
+    summary: matched.summary
+  };
 }
 
 function buildAmbiguityHint(question: string, candidates: CandidateRef[]): string {
@@ -744,11 +948,18 @@ function buildArtifactCatalog(artifacts: Artifact[]): ArtifactCatalogItem[] {
     .filter(Boolean) as ArtifactCatalogItem[];
 }
 
-function pickArtifactCandidates(queryText: string, preferredId: string, limit = 10): CandidateRef[] {
+function pickArtifactCandidates(queryText: string, preferredId: string, limit = 10, visionCandidates: VisionCandidate[] = []): CandidateRef[] {
   if (!ARTIFACT_CATALOG.length) return [];
   const normalizedQuery = normalizeSearchText(queryText);
   const tokens = tokenizeSearchTerms(queryText);
   const phrases = buildSearchPhrases(queryText, tokens);
+  const visionBoostMap = new Map(
+    visionCandidates.map((item) => {
+      const score = Math.max(0, Math.min(1, Number(item.score || 0)));
+      const boost = score >= 0.72 ? Math.round(score * 90) : 0;
+      return [item.id, boost] as const;
+    })
+  );
 
   const scored = ARTIFACT_CATALOG.map((item) => {
     let score = Math.round(item.richness * 0.6);
@@ -758,6 +969,16 @@ function pickArtifactCandidates(queryText: string, preferredId: string, limit = 
     if (preferredId && item.id === preferredId) {
       score += 120;
       structuredHitCount += 1;
+    }
+
+    const visionBoost = Number(visionBoostMap.get(item.id) || 0);
+    if (visionBoost > 0) {
+      score += visionBoost;
+      if (visionBoost >= 120) {
+        structuredHitCount += 2;
+      } else {
+        structuredHitCount += 1;
+      }
     }
 
     for (const phrase of phrases) {

@@ -14,7 +14,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     json({
       ok: true,
       configured: {
-        hasApiKey: Boolean(String(context.env.BIGMODEL_API_KEY || "").trim()),
+        provider: "siliconflow",
+        hasApiKey: Boolean(cfg.apiKey),
+        hasBochaKey: Boolean(String(context.env.BOCHA_API_KEY || "").trim()),
         baseUrl: cfg.baseUrl,
         model: cfg.model,
         visionModel: cfg.visionModel

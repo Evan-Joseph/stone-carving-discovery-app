@@ -1,5 +1,5 @@
 import type { Env } from "./_shared";
-import { buildChatPayload, callBigModel, extractAssistantText, json, readJsonBody, resolveArtifactGrounding, sanitizeAnswerContent, withCors } from "./_shared";
+import { callBigModel, extractAssistantText, json, prepareChatRequest, readJsonBody, sanitizeAnswerContent, withCors } from "./_shared";
 
 export const onRequest: PagesFunction<Env> = async (context) => {
   if (context.request.method === "OPTIONS") {
@@ -16,14 +16,13 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       return withCors(json({ error: "question is required" }, { status: 400 }));
     }
 
-    const grounding = resolveArtifactGrounding(body, context.env);
-    const payload = buildChatPayload(context.env, body, grounding);
-    const response = await callBigModel(context.env, payload);
+    const prepared = await prepareChatRequest(context.env, body);
+    const response = await callBigModel(context.env, prepared.payload);
     const answer = sanitizeAnswerContent(extractAssistantText(response), {
-      allowedArtifactIds: grounding.allowedArtifactIds,
+      allowedArtifactIds: prepared.grounding.allowedArtifactIds,
       question,
-      primaryArtifactId: grounding.primaryArtifactId,
-      primaryArtifactScore: grounding.primaryArtifactScore
+      primaryArtifactId: prepared.grounding.primaryArtifactId,
+      primaryArtifactScore: prepared.grounding.primaryArtifactScore
     });
 
     if (!answer) {
@@ -36,7 +35,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         answer,
         model: modelName || undefined,
         usage: (response as { usage?: unknown })?.usage ?? null,
-        web_search: Array.isArray((response as { web_search?: unknown })?.web_search) ? (response as { web_search: unknown[] }).web_search : []
+        intent: prepared.intent,
+        web_search: prepared.webSearch,
+        web_search_error: prepared.webSearchError || undefined
       })
     );
   } catch (error) {
@@ -45,4 +46,3 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return withCors(json({ error: message }, { status }));
   }
 };
-

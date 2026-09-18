@@ -9,16 +9,17 @@ loadEnvFile(path.join(__dirname, ".env"));
 loadEnvFile(path.join(ROOT, ".env.server"));
 
 const PORT = parseInt(process.env.PORT || "8787", 10);
-const BASE_URL = (process.env.BIGMODEL_BASE_URL || "https://open.bigmodel.cn/api/paas/v4").replace(/\/+$/, "");
-const MODEL = process.env.BIGMODEL_MODEL || "glm-4.7-flash";
-const VISION_MODEL = process.env.BIGMODEL_VISION_MODEL || "glm-4.6v-flash";
-const API_KEY = process.env.BIGMODEL_API_KEY || "";
+const BASE_URL = (process.env.SILICONFLOW_BASE_URL || process.env.BIGMODEL_BASE_URL || "https://api.siliconflow.cn/v1").replace(/\/+$/, "");
+const MODEL = process.env.SILICONFLOW_MODEL || process.env.BIGMODEL_MODEL || "deepseek-ai/DeepSeek-V4-Flash";
+const VISION_MODEL = process.env.SILICONFLOW_VLM_MODEL || process.env.BIGMODEL_VISION_MODEL || "Qwen/Qwen3-VL-32B-Instruct";
+const API_KEY = process.env.SILICONFLOW_API_KEY || process.env.BIGMODEL_API_KEY || "";
 const MAX_RETRIES = clampInt(process.env.AI_MAX_RETRIES, 3, 1, 5);
 const TIMEOUT_MS = clampInt(process.env.AI_TIMEOUT_MS, 45000, 5000, 120000);
-const WEB_SEARCH_ENABLED = parseBool(process.env.BIGMODEL_ENABLE_WEB_SEARCH, true);
-const WEB_SEARCH_ENGINE = process.env.BIGMODEL_WEB_SEARCH_ENGINE || "search_pro";
-const WEB_SEARCH_COUNT = clampInt(process.env.BIGMODEL_WEB_SEARCH_COUNT, 5, 1, 10);
-const WEB_SEARCH_CONTENT_SIZE = process.env.BIGMODEL_WEB_SEARCH_CONTENT_SIZE || "medium";
+const WEB_SEARCH_ENABLED = parseBool(process.env.AI_ENABLE_WEB_SEARCH ?? process.env.BIGMODEL_ENABLE_WEB_SEARCH, true);
+const BOCHA_API_KEY = process.env.BOCHA_API_KEY || "";
+const BOCHA_BASE_URL = (process.env.BOCHA_BASE_URL || "https://api.bochaai.com").replace(/\/+$/, "");
+const BOCHA_SEARCH_COUNT = clampInt(process.env.BOCHA_SEARCH_COUNT, 5, 1, 10);
+const BOCHA_TIMEOUT_MS = clampInt(process.env.BOCHA_TIMEOUT_MS, 12000, 3000, 30000);
 const ARTIFACT_DATA_PATH = path.join(ROOT, "src", "data", "artifacts.json");
 const ARTIFACT_CATALOG = loadArtifactCatalog();
 const HISTORY_MAX_ITEMS = clampInt(process.env.AI_HISTORY_MAX_ITEMS, 10, 2, 20);
@@ -37,7 +38,9 @@ const server = createServer(async (req, res) => {
     return sendJson(res, 200, {
       ok: true,
       configured: {
+        provider: "siliconflow",
         hasApiKey: Boolean(API_KEY),
+        hasBochaKey: Boolean(BOCHA_API_KEY),
         baseUrl: BASE_URL,
         model: MODEL,
         visionModel: VISION_MODEL
@@ -55,7 +58,17 @@ const server = createServer(async (req, res) => {
       }
 
       const grounding = resolveArtifactGrounding(body);
-      const payload = buildChatPayload(body, grounding);
+      const scope = inferAutoScope(body, grounding);
+      const webSearch = await buildBochaSearchContext(question, scope, grounding);
+      const payload = buildChatPayload(
+        {
+          ...body,
+          scope,
+          webSearchContext: webSearch.context,
+          webSearchError: webSearch.error
+        },
+        grounding
+      );
       const response = await callBigModel(payload);
       const answer = sanitizeAnswerContent(extractAssistantText(response), {
         allowedArtifactIds: grounding.allowedArtifactIds,
@@ -72,7 +85,8 @@ const server = createServer(async (req, res) => {
         answer,
         model: safeString(response.model) || MODEL,
         usage: response.usage || null,
-        web_search: Array.isArray(response.web_search) ? response.web_search : []
+        web_search: webSearch.items,
+        web_search_error: webSearch.error || undefined
       });
     } catch (error) {
       return handleError(res, error);
@@ -89,14 +103,32 @@ const server = createServer(async (req, res) => {
       }
 
       const grounding = resolveArtifactGrounding(body);
-      const payload = buildChatPayload(body, grounding);
+      const scope = inferAutoScope(body, grounding);
+      const webSearch = await buildBochaSearchContext(question, scope, grounding);
+      const payload = buildChatPayload(
+        {
+          ...body,
+          scope,
+          webSearchContext: webSearch.context,
+          webSearchError: webSearch.error
+        },
+        grounding
+      );
       payload.stream = true;
-      return await handleChatStream(res, payload, {
-        allowedArtifactIds: grounding.allowedArtifactIds,
-        question,
-        primaryArtifactId: grounding.primaryArtifactId,
-        primaryArtifactScore: grounding.primaryArtifactScore
-      });
+      return await handleChatStream(
+        res,
+        payload,
+        {
+          allowedArtifactIds: grounding.allowedArtifactIds,
+          question,
+          primaryArtifactId: grounding.primaryArtifactId,
+          primaryArtifactScore: grounding.primaryArtifactScore
+        },
+        {
+          web_search: webSearch.items,
+          web_search_error: webSearch.error || undefined
+        }
+      );
     } catch (error) {
       return handleError(res, error);
     }
@@ -168,19 +200,27 @@ server.listen(PORT, "0.0.0.0", () => {
 });
 
 function buildChatPayload(input, grounding) {
-  const scope = safeString(input.scope) === "artifact" ? "artifact" : "museum";
-  const artifactName = safeString(input.artifactName);
-  const contextText = clipText(safeString(input.contextText), 6000);
-  const question = safeString(input.question);
+  const scope = inferAutoScope(input, grounding);
   const imageDataUrl = normalizeImageDataUrl(input.imageDataUrl);
-  const history = normalizeHistory(input.history);
+  const hasImage = Boolean(imageDataUrl);
+  const artifactName = hasImage ? "" : safeString(input.artifactName);
+  const contextText = hasImage ? "" : clipText(safeString(input.contextText), 6000);
+  const question = safeString(input.question);
+  const webSearchContext = clipText(safeString(input.webSearchContext), 3600);
+  const webSearchError = safeString(input.webSearchError);
+  const history = hasImage ? [] : normalizeHistory(input.history);
   const candidateRefs = grounding.candidateRefs || "暂无";
   const groundingBrief = buildGroundingBrief(grounding.candidates);
   const ambiguityHint = grounding.ambiguityHint || "";
+  const searchHint = webSearchContext
+    ? `联网参考（来自博查检索）：\n${webSearchContext}`
+    : webSearchError
+      ? "联网检索暂时不可用，请明确告知用户“联网资料暂不可用”，并优先基于馆内资料回答。"
+      : "";
   const userQuestion =
     scope === "artifact"
-      ? buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint)
-      : [question, `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief || "暂无"}`, ambiguityHint].filter(Boolean).join("\n\n");
+      ? buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint, searchHint, hasImage)
+      : [question, searchHint, `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief || "暂无"}`, ambiguityHint].filter(Boolean).join("\n\n");
 
   const messages = [
     {
@@ -199,30 +239,16 @@ function buildChatPayload(input, grounding) {
     stream: false
   };
 
-  if (scope === "museum" && WEB_SEARCH_ENABLED && shouldUseWebSearch(question, grounding)) {
-    payload.tools = [
-      {
-        type: "web_search",
-        web_search: {
-          enable: true,
-          search_engine: WEB_SEARCH_ENGINE,
-          search_result: true,
-          count: WEB_SEARCH_COUNT,
-          content_size: WEB_SEARCH_CONTENT_SIZE
-        }
-      }
-    ];
-  }
-
   return payload;
 }
 
 function resolveArtifactGrounding(input) {
   const scope = safeString(input.scope) === "artifact" ? "artifact" : "museum";
-  const artifactId = safeString(input.artifactId);
-  const artifactName = safeString(input.artifactName);
+  const hasImage = Boolean(normalizeImageDataUrl(input.imageDataUrl));
+  const artifactId = hasImage ? "" : safeString(input.artifactId);
+  const artifactName = hasImage ? "" : safeString(input.artifactName);
   const question = safeString(input.question);
-  const history = normalizeHistory(input.history);
+  const history = hasImage ? [] : normalizeHistory(input.history);
   const historyText = history.map((item) => item.content).join("\n");
   const query = `${historyText}\n${question}\n${artifactName}`;
   const candidates = pickArtifactCandidates(query, artifactId, scope === "artifact" ? 12 : 10);
@@ -241,15 +267,138 @@ function resolveArtifactGrounding(input) {
   };
 }
 
-function shouldUseWebSearch(question, grounding) {
-  const q = safeString(question);
-  if (!q) return true;
+function inferAutoScope(input, grounding) {
+  const explicitScope = safeString(input.scope);
+  if (explicitScope === "artifact" || explicitScope === "museum") return explicitScope;
 
-  const artifactLookupIntent = /(哪块|哪一块|哪件|哪个展品|第几石|第几室|对应|是哪一石|是哪块|是哪件)/.test(q);
-  if (!artifactLookupIntent) return true;
+  const question = safeString(input.question);
+  const hasImage = Boolean(normalizeImageDataUrl(input.imageDataUrl));
+  const hasHint = Boolean(safeString(input.artifactId) || safeString(input.artifactName));
+
+  if (hasImage) return "artifact";
+  if (hasHint && !/(全馆|整体|参观路线|动线|整个博物馆)/.test(question)) return "artifact";
 
   const confidence = Number(grounding?.primaryArtifactScore || 0);
-  return confidence < 120;
+  if (/(这件|这块|细节|纹饰|图像|雕刻|故事场景)/.test(question) && confidence >= 96) {
+    return "artifact";
+  }
+
+  return "museum";
+}
+
+function shouldUseWebSearch(question, scope) {
+  const q = safeString(question);
+  if (!q) return false;
+  if (/(最新|近年|近期|今年|现在|新闻|研究进展|学界|论文|出处|网址|参考文献|联网查)/.test(q)) return true;
+  if (scope === "museum" && /(为什么|如何|区别|背景|来源|意义|影响|争议|演变)/.test(q)) return true;
+  if (scope === "museum" && /(请给来源|给出处|依据是什么)/.test(q)) return true;
+  return false;
+}
+
+async function buildBochaSearchContext(question, scope, grounding) {
+  if (!WEB_SEARCH_ENABLED || !shouldUseWebSearch(question, scope)) {
+    return { items: [], context: "", error: "" };
+  }
+
+  const query = buildBochaQuery(question, scope, grounding);
+  if (!query) {
+    return { items: [], context: "", error: "" };
+  }
+
+  if (!BOCHA_API_KEY) {
+    return {
+      items: [],
+      context: "",
+      error: "bocha key missing"
+    };
+  }
+
+  const result = await searchBochaWeb(query);
+  return {
+    items: result.items,
+    context: result.items.length ? formatBochaContext(result.items) : "",
+    error: result.error || ""
+  };
+}
+
+function buildBochaQuery(question, scope, grounding) {
+  const text = safeString(question);
+  if (!text) return "";
+  const top = grounding?.candidates?.[0];
+  const withArtifact = scope === "artifact" && top?.name ? `${text} ${top.name}` : text;
+  return clipText(withArtifact.replace(/\s+/g, " ").trim(), 220);
+}
+
+async function searchBochaWeb(query) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort("timeout"), BOCHA_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(`${BOCHA_BASE_URL}/v1/web-search`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${BOCHA_API_KEY}`
+      },
+      body: JSON.stringify({
+        query,
+        count: BOCHA_SEARCH_COUNT,
+        summary: true,
+        freshness: "noLimit"
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      return { items: [], error: `bocha_http_${response.status}: ${text.slice(0, 220)}` };
+    }
+
+    const payload = await response.json();
+    const items = normalizeBochaItems(payload, BOCHA_SEARCH_COUNT);
+    return { items, error: "" };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "bocha request failed";
+    return { items: [], error: message };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function normalizeBochaItems(payload, count) {
+  const rows = resolveBochaRows(payload);
+  return rows
+    .map((item) => {
+      const title = safeString(item?.name) || safeString(item?.title) || "联网资料";
+      const url = safeString(item?.url) || safeString(item?.link);
+      const snippet = safeString(item?.summary) || safeString(item?.snippet) || safeString(item?.description);
+      const publishedAt = safeString(item?.dateLastCrawled) || safeString(item?.publishedAt) || "";
+      if (!url || !snippet) return null;
+      return { title, url, snippet, publishedAt };
+    })
+    .filter(Boolean)
+    .slice(0, count);
+}
+
+function resolveBochaRows(payload) {
+  if (Array.isArray(payload?.webPages?.value)) return payload.webPages.value;
+  if (Array.isArray(payload?.data?.webPages?.value)) return payload.data.webPages.value;
+  if (Array.isArray(payload?.results)) return payload.results;
+  if (Array.isArray(payload?.data?.results)) return payload.data.results;
+  return [];
+}
+
+function formatBochaContext(items) {
+  if (!items.length) return "";
+  return items
+    .map((item, index) => {
+      const title = clipText(safeString(item.title) || "联网资料", 42);
+      const snippet = clipText(safeString(item.snippet), 140);
+      const dateText = safeString(item.publishedAt);
+      const url = safeString(item.url);
+      return `${index + 1}. ${title}${dateText ? `（${dateText}）` : ""}\n摘要：${snippet}\n链接：${url}`;
+    })
+    .join("\n\n");
 }
 
 function buildSystemPrompt(scope, candidateRefs) {
@@ -301,27 +450,26 @@ function buildUserContent(text, imageUrl, visionModel) {
   if (!visionModel) {
     return `${text}\n\n（系统提示：当前未配置视觉模型，无法读取图片内容。）`;
   }
-  const normalizedImageUrl = toBigModelImageUrl(imageUrl);
+  const normalizedImageUrl = toProviderImageUrl(imageUrl);
   return [
     { type: "text", text },
     { type: "image_url", image_url: { url: normalizedImageUrl } }
   ];
 }
 
-function toBigModelImageUrl(imageUrl) {
+function toProviderImageUrl(imageUrl) {
   const raw = safeString(imageUrl);
-  if (raw.startsWith("data:image/")) {
-    const marker = "base64,";
-    const idx = raw.indexOf(marker);
-    if (idx >= 0) return raw.slice(idx + marker.length);
-  }
   return raw;
 }
 
-function buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint) {
+function buildArtifactUserQuestion(artifactName, contextText, question, groundingBrief, ambiguityHint, searchHint = "", hasImage = false) {
   return [
     artifactName ? `当前展品：${artifactName}` : "",
     contextText ? `展品资料：\n${contextText}` : "展品资料：暂无结构化资料。",
+    hasImage
+      ? "任务要求：用户上传了现场图片，请先独立观察图片内容，再判断最可能对应的展品；候选索引只能作为弱参考，不能直接当作结论。如果照片和候选不一致，必须写“暂无法确认具体展品”。"
+      : "",
+    searchHint,
     groundingBrief ? `候选展品索引（用于消歧，不是全部馆藏）：\n${groundingBrief}` : "",
     ambiguityHint,
     "请基于上述资料回答下列问题，并给出最有价值的观察点。",
@@ -702,7 +850,7 @@ function pickWishByFallback(wish, candidates) {
   return { id: safeString(random.id), reason: "未命中关键词，已随机抽取盲盒。" };
 }
 
-async function handleChatStream(res, payload, answerContext) {
+async function handleChatStream(res, payload, answerContext, finalMeta = {}) {
   sendStreamHeaders(res);
 
   let fullAnswer = "";
@@ -722,7 +870,7 @@ async function handleChatStream(res, payload, answerContext) {
     });
 
     const normalizedAnswer = sanitizeAnswerContent(fullAnswer, answerContext);
-    sendStreamEvent(res, { type: "done", answer: normalizedAnswer, model: modelName });
+    sendStreamEvent(res, { type: "done", answer: normalizedAnswer, model: modelName, ...finalMeta });
     res.end();
   } catch (error) {
     const message = error instanceof Error ? error.message : "stream error";
@@ -759,7 +907,7 @@ async function callBigModelStream(payload, handlers) {
           await sleep(attempt * 350);
           continue;
         }
-        throw new Error(`bigmodel_http_${response.status}: ${text.slice(0, 900)}`);
+        throw new Error(`siliconflow_http_${response.status}: ${text.slice(0, 900)}`);
       }
 
       if (!response.body) {
@@ -806,7 +954,7 @@ async function callBigModelStream(payload, handlers) {
     }
   }
 
-  throw lastError || new Error("bigmodel stream failed");
+  throw lastError || new Error("siliconflow stream failed");
 }
 
 async function callBigModel(payload) {
@@ -836,7 +984,7 @@ async function callBigModel(payload) {
           await sleep(attempt * 350);
           continue;
         }
-        throw new Error(`bigmodel_http_${response.status}: ${text.slice(0, 900)}`);
+        throw new Error(`siliconflow_http_${response.status}: ${text.slice(0, 900)}`);
       }
 
       return await response.json();
@@ -849,7 +997,7 @@ async function callBigModel(payload) {
     }
   }
 
-  throw lastError || new Error("bigmodel request failed");
+  throw lastError || new Error("siliconflow request failed");
 }
 
 function normalizeHistory(history) {
@@ -1042,7 +1190,7 @@ function handleError(res, error) {
 
 function requireApiKey() {
   if (!API_KEY) {
-    throw new Error("BIGMODEL_API_KEY is missing");
+    throw new Error("SILICONFLOW_API_KEY is missing");
   }
 }
 

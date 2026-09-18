@@ -7,6 +7,7 @@ export interface LinkedPdf {
 export interface Artifact {
   id: string;
   name: string;
+  museum?: string;
   series: string;
   modelImage?: string;
   modelImageThumb?: string;

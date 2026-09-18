@@ -26,7 +26,7 @@ function chooseByWishHeuristic(wish: string, pool: Artifact[]): { id: string; re
   const normalizedWish = wish.replace(/\s+/g, "");
   const scored = pool
     .map((item) => {
-      const fields = [item.name, item.series, item.pdfTopic || "", ...item.tags];
+      const fields = [item.name, item.series, item.museum || "", item.pdfTopic || "", ...item.tags];
       const score = fields.reduce((sum, field) => {
         const token = field.replace(/[（）()、，。\s]/g, "");
         if (!token || token.length < 2) return sum;
@@ -72,7 +72,7 @@ export function ExcavationPage({ discoveredSet, markDiscovered }: ExcavationPage
   const currentArtifact = useMemo(() => artifacts.find((item) => item.id === currentId), [currentId]);
   const remainingCount = pool.length;
   const seriesOptions = useMemo(
-    () => Array.from(new Set(pool.map((item) => item.series))).filter(Boolean).slice(0, 6),
+    () => Array.from(new Set(pool.map((item) => item.series))).filter(Boolean),
     [pool]
   );
 

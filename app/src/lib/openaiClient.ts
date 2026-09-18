@@ -13,6 +13,11 @@ interface AskGuideInput {
   scope?: "artifact" | "museum";
   artifactId?: string;
   artifactName?: string;
+  visionCandidates?: {
+    id: string;
+    name?: string;
+    score: number;
+  }[];
 }
 
 interface AskGuideStreamHandlers {
@@ -57,7 +62,9 @@ export interface EnrichGuideResult {
 export interface AiHealthStatus {
   ok: boolean;
   configured?: {
+    provider?: string;
     hasApiKey?: boolean;
+    hasBochaKey?: boolean;
     baseUrl?: string;
     model?: string;
     visionModel?: string;
@@ -67,6 +74,45 @@ export interface AiHealthStatus {
 
 const rawAiApiBase = String(import.meta.env.VITE_AI_API_BASE || "").trim();
 const AI_API_BASE = rawAiApiBase ? rawAiApiBase.replace(/\/+$/, "") : "/api/ai";
+
+function buildFriendlyApiError(status: number, rawBody: string): string {
+  const text = rawBody.trim();
+  let detail = text;
+  try {
+    const parsed = JSON.parse(text) as Record<string, unknown>;
+    const parsedError = typeof parsed.error === "string" ? parsed.error.trim() : "";
+    if (parsedError) detail = parsedError;
+  } catch {
+    // keep raw text
+  }
+
+  if (status === 401 || status === 403) {
+    return "AI 服务认证失败，请稍后再试。";
+  }
+  if (/SILICONFLOW_API_KEY|API_KEY is missing/i.test(detail)) {
+    return "AI 服务暂未完成配置，请稍后再试。";
+  }
+  if (/bocha key missing/i.test(detail)) {
+    return "联网资料暂不可用，已自动改为馆内资料讲解。";
+  }
+  if (/timeout/i.test(detail)) {
+    return "AI 响应超时，请稍后重试。";
+  }
+
+  return detail ? `AI 服务异常（${status}）：${detail}` : `AI 服务异常（${status}）`;
+}
+
+function inferAutoScope(input: AskGuideInput): "artifact" | "museum" | "" {
+  if (input.scope === "artifact" || input.scope === "museum") return input.scope;
+
+  const question = typeof input.question === "string" ? input.question : "";
+  if (input.imageDataUrl) return "artifact";
+  if (input.artifactId || input.artifactName) {
+    if (/(全馆|整体|参观路线|动线|整个博物馆)/.test(question)) return "museum";
+    return "artifact";
+  }
+  return "";
+}
 
 function extractTextContent(content: unknown): string {
   if (typeof content === "string") {
@@ -102,7 +148,7 @@ async function requestBackend(path: string, payload: Record<string, unknown>): P
       });
 
       if (!response.ok) {
-        throw new Error(`AI API ${response.status}: ${await response.text()}`);
+        throw new Error(buildFriendlyApiError(response.status, await response.text()));
       }
 
       return await response.json();
@@ -132,7 +178,7 @@ async function requestBackendStream(
   });
 
   if (!response.ok) {
-    throw new Error(`AI API ${response.status}: ${await response.text()}`);
+    throw new Error(buildFriendlyApiError(response.status, await response.text()));
   }
 
   if (!response.body) {
@@ -236,14 +282,16 @@ function readAnswerFromPayload(payload: unknown): string {
 }
 
 export async function askGuide(input: AskGuideInput): Promise<string> {
+  const scope = inferAutoScope(input);
   const payload = await requestBackend("/chat", {
     question: input.question,
-    scope: input.scope || "museum",
+    scope,
     artifactId: input.artifactId || "",
     contextText: input.contextText || "",
     artifactName: input.artifactName || "",
     imageDataUrl: input.imageDataUrl || "",
-    history: input.history || []
+    history: input.history || [],
+    visionCandidates: input.visionCandidates || []
   });
 
   const answer = readAnswerFromPayload(payload);
@@ -254,16 +302,18 @@ export async function askGuide(input: AskGuideInput): Promise<string> {
 }
 
 export async function askGuideStream(input: AskGuideInput, handlers?: AskGuideStreamHandlers): Promise<string> {
+  const scope = inferAutoScope(input);
   return await requestBackendStream(
     "/chat-stream",
     {
       question: input.question,
-      scope: input.scope || "museum",
+      scope,
       artifactId: input.artifactId || "",
       contextText: input.contextText || "",
       artifactName: input.artifactName || "",
       imageDataUrl: input.imageDataUrl || "",
-      history: input.history || []
+      history: input.history || [],
+      visionCandidates: input.visionCandidates || []
     },
     handlers
   );

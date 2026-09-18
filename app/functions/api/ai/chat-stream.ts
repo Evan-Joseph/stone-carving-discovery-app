@@ -1,10 +1,9 @@
 import type { Env } from "./_shared";
 import {
-  buildChatPayload,
   callBigModelStream,
   ndjsonStream,
+  prepareChatRequest,
   readJsonBody,
-  resolveArtifactGrounding,
   sanitizeAnswerContent,
   withCors,
   json
@@ -26,8 +25,8 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       return withCors(json({ error: "question is required" }, { status: 400 }));
     }
 
-    const grounding = resolveArtifactGrounding(body, context.env);
-    const payload = buildChatPayload(context.env, body, grounding);
+    const prepared = await prepareChatRequest(context.env, body);
+    const payload = prepared.payload;
     payload.stream = true;
 
     const stream = ndjsonStream();
@@ -52,12 +51,19 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           });
 
           const normalized = sanitizeAnswerContent(fullAnswer, {
-            allowedArtifactIds: grounding.allowedArtifactIds,
+            allowedArtifactIds: prepared.grounding.allowedArtifactIds,
             question,
-            primaryArtifactId: grounding.primaryArtifactId,
-            primaryArtifactScore: grounding.primaryArtifactScore
+            primaryArtifactId: prepared.grounding.primaryArtifactId,
+            primaryArtifactScore: prepared.grounding.primaryArtifactScore
           });
-          await stream.write({ type: "done", answer: normalized, model: modelName || undefined });
+          await stream.write({
+            type: "done",
+            answer: normalized,
+            model: modelName || undefined,
+            intent: prepared.intent,
+            web_search: prepared.webSearch,
+            web_search_error: prepared.webSearchError || undefined
+          });
         } catch (error) {
           const message = error instanceof Error ? error.message : "stream error";
           await stream.write({ type: "error", error: message });
@@ -74,4 +80,3 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return withCors(json({ error: message }, { status }));
   }
 };
-

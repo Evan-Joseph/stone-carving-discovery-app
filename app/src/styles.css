@@ -26,7 +26,8 @@
   --input-bg: #fffef8;
   --progress-track: #d6c2a4;
   --bubble-ai-bg: #f2eadb;
-  --bubble-user-bg: #a35c28;
+  --bubble-user-bg: #87451c;
+  --bubble-user-ink: #ffffff;
   --blockquote-bg: rgba(255, 255, 255, 0.45);
   --blockquote-line: #9b7c50;
   --inline-code-bg: rgba(77, 55, 34, 0.12);
@@ -157,6 +158,42 @@ a {
 
 .hero-actions.compact {
   margin-top: 8px;
+}
+
+.home-ai-entry {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.home-ai-entry label {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.home-ai-entry-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.home-ai-entry-row input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  font: inherit;
+  background: var(--input-bg);
+  color: var(--ink);
+}
+
+.home-ai-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .home-spotlight {
@@ -899,7 +936,13 @@ a {
 .bubble.user {
   justify-self: end;
   background: var(--bubble-user-bg);
-  color: #fff6e4;
+  color: var(--bubble-user-ink);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bubble.user .user-text,
+.bubble.user .user-attachment-chip {
+  color: var(--bubble-user-ink);
 }
 
 .bubble .markdown-content {
@@ -1531,7 +1574,8 @@ a {
     --input-bg: rgba(34, 28, 23, 0.95);
     --progress-track: rgba(110, 89, 63, 0.86);
     --bubble-ai-bg: rgba(64, 52, 39, 0.92);
-    --bubble-user-bg: #e1934f;
+    --bubble-user-bg: #6f3411;
+    --bubble-user-ink: #ffffff;
     --blockquote-bg: rgba(88, 68, 49, 0.48);
     --blockquote-line: #d9a66f;
     --inline-code-bg: rgba(255, 213, 158, 0.2);
@@ -1564,7 +1608,8 @@ a {
   }
 
   .bubble.user {
-    color: #23160a;
+    color: var(--bubble-user-ink);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
   }
 
   .bubble.ai .markdown-content table {
@@ -1659,6 +1704,14 @@ a {
 
   .home-main .hero-actions .btn.primary {
     grid-column: 1 / -1;
+  }
+
+  .home-ai-entry-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-ai-entry-row .btn {
+    width: 100%;
   }
 
   .home-spotlight {

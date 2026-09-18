@@ -8,7 +8,18 @@ interface CollectionPageProps {
   discoveredSet: Set<string>;
 }
 
-const FILTERS = ["全部", "仅已发掘", "武梁祠系列", "前石室系列", "后石室系列", "左石室系列", "其他石刻系列"];
+const FILTERS = [
+  "全部",
+  "武氏墓群",
+  "济宁市博",
+  "巨野县博",
+  "仅已发掘",
+  "武梁祠系列",
+  "前石室系列",
+  "后石室系列",
+  "左石室系列",
+  "其他石刻系列"
+];
 
 export function CollectionPage({ discoveredSet }: CollectionPageProps) {
   const [filter, setFilter] = useState("全部");
@@ -16,11 +27,14 @@ export function CollectionPage({ discoveredSet }: CollectionPageProps) {
   const list = useMemo(() => {
     if (filter === "全部") return artifacts;
     if (filter === "仅已发掘") return artifacts.filter((item) => discoveredSet.has(item.id));
-    return artifacts.filter((item) => item.series === filter);
+    if (filter === "武氏墓群") return artifacts.filter((item) => item.museum?.includes("武氏"));
+    if (filter === "济宁市博") return artifacts.filter((item) => item.museum?.includes("济宁"));
+    if (filter === "巨野县博") return artifacts.filter((item) => item.museum?.includes("巨野"));
+    return artifacts.filter((item) => item.series === filter || item.series.includes(filter));
   }, [filter, discoveredSet]);
 
   return (
-    <AppShell title="文物库" subtitle="按发掘进度与展区浏览" mainClassName="collection-main">
+    <AppShell title="文物库" subtitle="三馆展品 · 按博物馆与系列分类浏览" mainClassName="collection-main">
       <section className="filter-row">
         {FILTERS.map((name) => (
           <button
@@ -42,7 +56,7 @@ export function CollectionPage({ discoveredSet }: CollectionPageProps) {
             </div>
             <div className="card-meta">
               <h3>{item.name}</h3>
-              <p>{item.series}</p>
+              <p>{item.museum ? `${item.museum} · ${item.series}` : item.series}</p>
               <small>{discoveredSet.has(item.id) ? "已发掘" : "未发掘"}</small>
             </div>
           </Link>

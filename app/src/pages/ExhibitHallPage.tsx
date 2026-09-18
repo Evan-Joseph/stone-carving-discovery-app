@@ -5,8 +5,10 @@ import { ArtifactImage } from "@/components/ArtifactImage";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { ImageAttachmentBar } from "@/components/ImageAttachmentBar";
 import { artifacts, getDatasetMeta } from "@/data";
+import { persistChatAttachment, restoreChatAttachments } from "@/lib/chatAttachmentStore";
 import type { ImageAttachment } from "@/lib/imageAttachment";
 import { askGuideStream } from "@/lib/openaiClient";
+import { recallArtifactsByPhoto } from "@/lib/visionRecall";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -17,32 +19,26 @@ interface ChatMessage {
     height: number;
     bytes: number;
     dataUrl?: string;
+    assetId?: string;
   };
 }
 
-const HALL_CHAT_STORAGE_KEY = "stone-hall-chat-v1";
+const HALL_CHAT_STORAGE_KEY = "stone-hall-chat-v2";
 const MAX_HALL_MESSAGES = 40;
 const HALL_CHAT_STORAGE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
-function buildHallWelcome(mode: "artifact" | "museum", artifactName?: string): string {
-  if (mode === "artifact") {
-    return `欢迎来到展厅模式。\n\n你可以直接问 **${artifactName || "当前展品"}** 的纹饰、时代背景和图像细节。`;
+function buildHallWelcome(artifactName?: string): string {
+  if (artifactName) {
+    return `欢迎来到展厅模式。\n\n你正在浏览 **${artifactName}**，可直接问细节，也可问全馆。`;
   }
-  return "欢迎来到展厅模式。\n\n你可以从全馆角度提问，我会给出结构化、可核实的回答。";
+  return "欢迎来到展厅模式。\n\n你可以直接提问，系统会自动判断是展品问题还是全馆问题。";
 }
 
-function buildHallQuickPrompts(mode: "artifact" | "museum", artifactName?: string): string[] {
-  if (mode === "artifact") {
-    return [
-      `${artifactName || "这件展品"}最值得先看的细节是什么？`,
-      `请用3点说明${artifactName || "该展品"}的文化意义`,
-      `${artifactName || "该展品"}和同系列相比有什么特点？`
-    ];
-  }
+function buildHallQuickPrompts(artifactName?: string): string[] {
   return [
+    `${artifactName || "这件展品"}最值得先看的细节是什么？`,
     "先看哪几件展品最容易建立整体理解？",
-    "武梁祠与前后石室的主要差异是什么？",
-    "请按时间线梳理馆内常见叙事主题"
+    "拍这块石刻后，你最可能识别到什么线索？"
   ];
 }
 
@@ -59,7 +55,6 @@ export function ExhibitHallPage() {
   const [keyword, setKeyword] = useState("");
   const [selectedId, setSelectedId] = useState(initialArtifactId);
   const [tab, setTab] = useState<"official" | "book" | "pdf">("official");
-  const [askMode, setAskMode] = useState<"artifact" | "museum">("artifact");
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
     try {
       const raw = localStorage.getItem(HALL_CHAT_STORAGE_KEY);
@@ -73,7 +68,7 @@ export function ExhibitHallPage() {
       return [
         {
           role: "assistant",
-          content: buildHallWelcome("artifact", initialArtifactName)
+          content: buildHallWelcome(initialArtifactName)
         }
       ];
     }
@@ -89,14 +84,14 @@ export function ExhibitHallPage() {
   const [itemHeight, setItemHeight] = useState(VIRTUAL_ITEM_HEIGHT);
 
   const selected = useMemo(() => artifacts.find((item) => item.id === selectedId) || artifacts[0], [selectedId]);
-  const quickPrompts = useMemo(() => buildHallQuickPrompts(askMode, selected?.name), [askMode, selected?.name]);
+  const quickPrompts = useMemo(() => buildHallQuickPrompts(selected?.name), [selected?.name]);
   const totalPdfPages = Math.max(1, getDatasetMeta().pdfTotalPages || 1);
 
   const filtered = useMemo(() => {
     const key = keyword.trim();
     if (!key) return artifacts;
     return artifacts.filter((item) =>
-      [item.name, item.series, item.pdfTopic || "", ...item.tags].some((field) => field.includes(key))
+      [item.name, item.series, item.museum || "", item.pdfTopic || "", ...item.tags].some((field) => field.includes(key))
     );
   }, [keyword]);
 
@@ -158,8 +153,44 @@ export function ExhibitHallPage() {
   }, [messages]);
 
   useEffect(() => {
+    const unresolvedAssetIds = Array.from(
+      new Set(
+        messages
+          .filter((message) => message.role === "user" && message.attachment?.assetId && !message.attachment?.dataUrl)
+          .map((message) => String(message.attachment?.assetId || ""))
+          .filter(Boolean)
+      )
+    );
+    if (!unresolvedAssetIds.length) return;
+
+    let cancelled = false;
+    void restoreChatAttachments(unresolvedAssetIds).then((map) => {
+      if (cancelled || !Object.keys(map).length) return;
+      setMessages((prev) =>
+        prev.map((message) => {
+          if (message.role !== "user" || !message.attachment?.assetId || message.attachment.dataUrl) return message;
+          const restored = map[message.attachment.assetId];
+          if (!restored) return message;
+          return {
+            ...message,
+            attachment: {
+              ...message.attachment,
+              dataUrl: restored
+            }
+          };
+        })
+      );
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [messages]);
+
+  useEffect(() => {
     const compactMessages = messages.slice(-MAX_HALL_MESSAGES).map((msg) => {
       if (msg.role !== "user" || !msg.attachment) return msg;
+      if (!msg.attachment.assetId) return msg;
       return {
         ...msg,
         attachment: {
@@ -172,25 +203,21 @@ export function ExhibitHallPage() {
       HALL_CHAT_STORAGE_KEY,
       JSON.stringify({
         savedAt: Date.now(),
-        askMode,
         selectedId,
         messages: compactMessages
       })
     );
-  }, [askMode, selectedId, messages]);
+  }, [selectedId, messages]);
 
   useEffect(() => {
     try {
       const raw = localStorage.getItem(HALL_CHAT_STORAGE_KEY);
       if (!raw) return;
-      const parsed = JSON.parse(raw) as { savedAt?: number; askMode?: "artifact" | "museum"; selectedId?: string };
+      const parsed = JSON.parse(raw) as { savedAt?: number; selectedId?: string };
       const savedAt = Number(parsed.savedAt || 0);
       if (!savedAt || Date.now() - savedAt > HALL_CHAT_STORAGE_TTL_MS) {
         localStorage.removeItem(HALL_CHAT_STORAGE_KEY);
         return;
-      }
-      if (parsed.askMode === "artifact" || parsed.askMode === "museum") {
-        setAskMode(parsed.askMode);
       }
       if (parsed.selectedId && artifacts.some((item) => item.id === parsed.selectedId)) {
         setSelectedId(parsed.selectedId);
@@ -208,12 +235,11 @@ export function ExhibitHallPage() {
     setIsLoading(false);
     setInput("");
     setAttachment(null);
-    setMessages([{ role: "assistant", content: buildHallWelcome(askMode, selected?.name) }]);
+    setMessages([{ role: "assistant", content: buildHallWelcome(selected?.name) }]);
   };
 
   const selectArtifact = (id: string) => {
     setSelectedId(id);
-    setAskMode("artifact");
   };
 
   const renderListItem = (item: (typeof filtered)[number], indexInFiltered: number, virtualized: boolean) => (
@@ -229,7 +255,7 @@ export function ExhibitHallPage() {
       </div>
       <div className="hall-item-meta">
         <h4>{item.name}</h4>
-        <p>{item.series}</p>
+        <p>{item.museum ? `${item.museum} · ${item.series}` : item.series}</p>
       </div>
     </button>
   );
@@ -239,36 +265,67 @@ export function ExhibitHallPage() {
     if (!question) return;
 
     setInput("");
+    const activeAttachment = attachment;
+    setAttachment(null);
+
     const nextUserMessage: ChatMessage = {
       role: "user",
       content: question,
-      attachment: attachment
+      attachment: activeAttachment
         ? {
-            name: attachment.name,
-            width: attachment.width,
-            height: attachment.height,
-            bytes: attachment.bytes,
-            dataUrl: attachment.dataUrl
+            name: activeAttachment.name,
+            width: activeAttachment.width,
+            height: activeAttachment.height,
+            bytes: activeAttachment.bytes,
+            dataUrl: activeAttachment.dataUrl
           }
         : undefined
     };
     const nextMessages = [...messages, nextUserMessage];
+    const userIndex = nextMessages.length - 1;
     const assistantIndex = nextMessages.length;
     setMessages([...nextMessages, { role: "assistant", content: "" }]);
     setIsLoading(true);
     const controller = new AbortController();
     abortRef.current = controller;
 
+    const persistPromise = activeAttachment
+      ? persistChatAttachment({ dataUrl: activeAttachment.dataUrl, bytes: activeAttachment.bytes }).catch(() => undefined)
+      : Promise.resolve(undefined);
+    const recallPromise = activeAttachment
+      ? recallArtifactsByPhoto(activeAttachment.dataUrl, artifacts, 6).catch(() => [])
+      : Promise.resolve([]);
+
     try {
+      const [assetId, visionCandidates] = await Promise.all([persistPromise, recallPromise]);
+
+      if (assetId) {
+        setMessages((prev) => {
+          if (!prev[userIndex] || prev[userIndex].role !== "user" || !prev[userIndex].attachment) return prev;
+          const updated = [...prev];
+          const currentAttachment = updated[userIndex].attachment;
+          if (!currentAttachment) return prev;
+          updated[userIndex] = {
+            ...updated[userIndex],
+            attachment: {
+              ...currentAttachment,
+              assetId
+            }
+          };
+          return updated;
+        });
+      }
+
       let streamedAnswer = "";
+      const imageMode = Boolean(activeAttachment);
       const answer = await askGuideStream({
         question,
-        scope: askMode,
-        artifactId: askMode === "artifact" ? selected?.id : undefined,
-        artifactName: selected?.name,
-        contextText: askMode === "artifact" ? selected?.infoText : undefined,
-        imageDataUrl: attachment?.dataUrl,
-        history: nextMessages.slice(-6).map((item) => ({ role: item.role, content: item.content }))
+        artifactId: imageMode ? undefined : selected?.id,
+        artifactName: imageMode ? undefined : selected?.name,
+        contextText: imageMode ? undefined : selected?.infoText,
+        imageDataUrl: activeAttachment?.dataUrl,
+        visionCandidates,
+        history: imageMode ? [] : nextMessages.slice(-6).map((item) => ({ role: item.role, content: item.content }))
       }, {
         signal: controller.signal,
         onDelta: (_, fullText) => {
@@ -363,7 +420,7 @@ export function ExhibitHallPage() {
       <section className="panel hall-detail-panel">
         <header className="panel-title-row">
           <h3>{selected.name}</h3>
-          <span>{selected.series}</span>
+          <span>{selected.museum ? `${selected.museum} · ${selected.series}` : selected.series}</span>
         </header>
         <div className="hall-hero">
           <div className="thumb-frame hall-hero-image">
@@ -391,7 +448,20 @@ export function ExhibitHallPage() {
 
         <div className="hall-body">
           {tab === "official" ? (
-            selected.infoText ? <MarkdownContent content={selected.infoText} /> : <p>暂无相关资料</p>
+            <>
+              {selected.infoText ? <MarkdownContent content={selected.infoText} /> : <p>暂无相关资料</p>}
+              {selected.infoImage ? (
+                <div style={{ marginTop: "14px", paddingTop: "10px", borderTop: "1px dashed var(--line)" }}>
+                  <p style={{ fontSize: "0.82rem", color: "var(--ink-soft)", marginBottom: "6px" }}>馆方展板说明：</p>
+                  <img
+                    src={selected.infoImage}
+                    alt={`${selected.name} 展板说明`}
+                    style={{ width: "100%", borderRadius: "6px", border: "1px solid var(--line)" }}
+                    loading="lazy"
+                  />
+                </div>
+              ) : null}
+            </>
           ) : null}
 
           {tab === "book" ? (
@@ -426,13 +496,8 @@ export function ExhibitHallPage() {
       <section className="panel hall-ai-panel">
         <header className="panel-title-row">
           <h3>AI问询</h3>
-          <small>{askMode === "artifact" ? `针对：${selected.name}` : "全馆模式"}</small>
+          <small>当前展品：{selected.name}</small>
         </header>
-
-        <div className="pick-grid">
-          <button type="button" className={askMode === "artifact" ? "pill active" : "pill"} onClick={() => setAskMode("artifact")}>问这个展品</button>
-          <button type="button" className={askMode === "museum" ? "pill active" : "pill"} onClick={() => setAskMode("museum")}>问整个博物馆</button>
-        </div>
 
         <div className="chat-toolbar">
           <small>{Math.max(0, Math.floor(messages.length / 2))} 轮对话</small>
@@ -468,7 +533,7 @@ export function ExhibitHallPage() {
                   message.attachment.dataUrl ? (
                     <img className="user-attachment" src={message.attachment.dataUrl} alt="用户附件" />
                   ) : (
-                    <span className="user-attachment-chip">已附图（刷新后不保留）</span>
+                    <span className="user-attachment-chip">{message.attachment.assetId ? "正在恢复图片..." : "图片暂不可用"}</span>
                   )
                 ) : null}
                 <p className="user-text">{message.content}</p>
@@ -479,14 +544,14 @@ export function ExhibitHallPage() {
         </div>
 
         <form className="composer hall-composer" onSubmit={submitQuestion}>
-          <ImageAttachmentBar value={attachment} onChange={setAttachment} disabled={isLoading} />
+          <ImageAttachmentBar value={attachment} onChange={setAttachment} disabled={isLoading} compact />
 
           <textarea
             rows={2}
             value={input}
             onChange={(event) => setInput(event.target.value)}
             onKeyDown={handleComposerKeyDown}
-            placeholder={askMode === "artifact" ? `问“${selected.name}”的纹饰、故事或出处` : "问馆藏、展厅、时代背景或人物故事"}
+            placeholder={`可以问“${selected.name}”的细节，也可以问全馆背景`}
           />
           <p className="composer-tip">Enter 发送 · Shift+Enter 换行</p>
           <button className="btn primary" type="submit" disabled={isLoading}>

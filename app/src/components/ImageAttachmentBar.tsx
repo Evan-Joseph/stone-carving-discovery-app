@@ -7,6 +7,7 @@ interface ImageAttachmentBarProps {
   value: ImageAttachment | null;
   onChange: (next: ImageAttachment | null) => void;
   disabled?: boolean;
+  compact?: boolean;
 }
 
 function formatKib(bytes: number): string {
@@ -14,7 +15,7 @@ function formatKib(bytes: number): string {
   return `${Math.max(1, Math.round(kib))}KB`;
 }
 
-export function ImageAttachmentBar({ value, onChange, disabled }: ImageAttachmentBarProps) {
+export function ImageAttachmentBar({ value, onChange, disabled, compact }: ImageAttachmentBarProps) {
   const cameraInputRef = useRef<HTMLInputElement | null>(null);
   const albumInputRef = useRef<HTMLInputElement | null>(null);
   const [errorText, setErrorText] = useState("");
@@ -74,14 +75,16 @@ export function ImageAttachmentBar({ value, onChange, disabled }: ImageAttachmen
       >
         拍照
       </button>
-      <button
-        type="button"
-        className="btn ghost btn-small"
-        disabled={Boolean(disabled) || isWorking}
-        onClick={() => albumInputRef.current?.click()}
-      >
-        相册
-      </button>
+      {!compact ? (
+        <button
+          type="button"
+          className="btn ghost btn-small"
+          disabled={Boolean(disabled) || isWorking}
+          onClick={() => albumInputRef.current?.click()}
+        >
+          相册
+        </button>
+      ) : null}
 
       {isWorking ? <span className="attach-meta">处理中...</span> : null}
 
@@ -104,4 +107,3 @@ export function ImageAttachmentBar({ value, onChange, disabled }: ImageAttachmen
     </div>
   );
 }
-
