@@ -1,83 +1,85 @@
-# Stone Carving Discovery App / 石室史诗
+# Stone Carving Discovery App · 石室史诗
 
-Interactive stone-carving culture discovery app with museum browsing, 3D excavation, AI guide, PDF reading, and offline-friendly assets.
+> An interactive 3D cultural heritage discovery web app featuring virtual excavation, museum browsing, and AI-guided storytelling.  
+> 围绕汉代石刻艺术打造的三维交互文化探索 Web 应用，融合数字化虚拟发掘、展厅文物导览与流式 AI 伴学问答。
 
-This repository is a public showcase version of a China Collegiate Computing Contest project. It focuses on the engineering implementation and reproducible app structure; local source archives and non-public cultural-material collections are intentionally excluded.
+<p>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/badge/Three.js-WebGL-black.svg?style=flat-square&logo=three.js" alt="Three.js" />
+  <img src="https://img.shields.io/badge/React-18.x-61DAFB.svg?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-5.x-646CFF.svg?style=flat-square&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-blue.svg?style=flat-square&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020.svg?style=flat-square&logo=cloudflare" alt="Cloudflare Pages" />
+</p>
 
-## Project Highlights
+---
 
-- Built an interactive cultural-heritage web app around Han stone-relief artifacts, museum browsing, artifact detail pages, AI-guided explanation, and exhibition-display scenarios.
-- Implemented a Three.js excavation interaction that turns artifact discovery into a lightweight blind-box style exploration flow.
-- Added artifact-grounded AI Q&A with streamed responses, Markdown rendering, artifact-card references, and fallback local retrieval.
-- Built a PDF reading workflow with page navigation and artifact-to-document linking.
-- Added a Python data preparation workflow for extracting text, images, and structured artifact metadata from local materials.
-- Optimized the app for mobile, desktop, and exhibition screens, with selected static assets cached by a Service Worker.
+## 💡 Overview
 
-## My Role
+**Stone Carving Discovery App (石室史诗)** bridges traditional Chinese cultural heritage with modern web graphics and generative AI. Built around Han dynasty stone-relief carvings, the application transforms passive museum viewing into an active tactile discovery experience, enabling users to explore archaeological excavation, inspect high-resolution historical artifacts, and interact with an AI docent in real time.
 
-- Led most of the web application development, interaction design, and AI-assisted coding workflow.
-- Built the frontend routes, artifact browsing flow, Three.js excavation page, AI guide interaction, PDF reading workflow, and responsive exhibition mode.
-- Prepared project presentation materials and demonstration flow for competition use.
+---
 
-The repository contains two parts:
+## ✨ Key Features
 
-- `app/`: Vite + React + TypeScript web application.
-- `打标工具/`: Python utilities for extracting text, images, and structured artifact data from source materials.
+- **🎮 3D Virtual Excavation**: An interactive Three.js mini-game simulating archaeological stone-carving excavation with tactile exploration and particle effects.
+- **🏛️ Museum Gallery & Catalog**: Deep-dive digital archive of stone reliefs, featuring multi-angle views, rubbings, and rich historical background contexts.
+- **🤖 Grounded AI Docent**: Real-time streaming conversational agent providing contextual explanations, referenced citations to specific artifact cards, and markdown rendering.
+- **📄 Interactive Source Document Reader**: Embedded document viewer linking highlighted historical texts directly to relevant 3D artifacts.
+- **📱 Responsive Exhibition Mode**: Optimized for desktop monitors, exhibition touch kiosks, and mobile browsers with Service Worker offline caching.
 
-Local source materials are intentionally excluded from Git. Generated public assets and private cultural-material collections should be kept outside the repository unless they are explicitly cleared for publication.
+---
 
-## Features
+## 🛠️ Tech Stack & Architecture
 
-- Museum-style artifact browsing and artifact detail pages.
-- Three.js excavation interaction for blind-box style artifact discovery.
-- AI guide with whole-museum and artifact-specific Q&A.
-- Streamed AI responses with Markdown rendering and artifact-card references.
-- PDF reading workflow with page navigation and artifact-to-PDF linking.
-- Responsive layout for mobile, desktop, and exhibition-display use.
-- Service Worker support for selected static assets.
-
-## Quick Start
-
-```bash
-cd app
-python3 scripts/build_artifacts.py
-npm install
-npm run dev:server
+```text
+stone-carving-discovery-app/
+├── app/                  # Main web application (React + Vite + TypeScript)
+│   ├── src/
+│   │   ├── components/   # 3D Canvas, Excavation Scene, AI Chat, Artifact Cards
+│   │   ├── hooks/        # Audio playback, AI stream handlers, Touch listeners
+│   │   └── data/         # Structured artifact JSON catalog and offline embeddings
+├── 打标工具/              # Python data pipeline utilities for asset extraction and preprocessing
 ```
 
-Open another terminal:
+| Layer | Technologies |
+|---|---|
+| **Frontend Framework** | React 18 + Vite 5 + TypeScript 5 |
+| **3D Rendering** | Three.js (WebGL, Shader material, Orbit controls) |
+| **Styling & Motion** | Tailwind CSS + Framer Motion |
+| **AI Integration** | Server-Sent Events (SSE) streaming API with fallback local retrieval |
+| **Data Processing** | Python (Pillow, OCR, metadata extraction scripts) |
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone & Install Dependencies
 
 ```bash
-cd app
-npm run dev
+git clone https://github.com/Evan-Joseph/stone-carving-discovery-app.git
+cd stone-carving-discovery-app/app
+
+# Install dependencies
+pnpm install
 ```
 
-## Environment
-
-Backend AI calls use BigModel/GLM-compatible credentials. Copy the example file and set the real key locally:
+### 2. Run Locally
 
 ```bash
-cd app
-cp server/.env.example server/.env
+pnpm dev
 ```
 
-Do not commit `app/.env`, `app/server/.env`, generated materials, or local source archives.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Useful Commands
+### 3. Build for Production
 
 ```bash
-cd app
-npm run check
-npm run build
-npm run gen:data
+pnpm build
 ```
 
-## Data Workflow
+---
 
-The Python tools under `打标工具/` support OCR/text extraction and artifact metadata preparation. The app consumes generated artifact data from `app/src/data/artifacts.json`.
+## 📄 License
 
-Large local material directories are ignored by `.gitignore`:
-
-- `相关材料/`
-- `开发资料/`
-- `app/public/materials/`
+This repository is licensed under the [MIT License](./LICENSE).
