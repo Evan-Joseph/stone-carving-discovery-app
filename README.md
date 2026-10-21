@@ -1,86 +1,95 @@
-# 🏺 Stone Carving Discovery App (石韵流芳)
+# 🏺 石刻文化发现应用 (Stone Carving Cultural Discovery App)
 
 <p align="center">
   <b>An Interactive 3D Cultural Heritage Discovery Web App</b><br>
-  基于 Three.js + React + Vite 的非遗石雕文化虚拟探掘与 AI 导览研学 Web 应用
+  基于 Three.js + React 18 + Vite 的非遗石雕文化虚拟探掘、文献考证与多模态 AI 导览 Web 应用
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Three.js-0.160-black?logo=threedotjs" alt="Three.js">
   <img src="https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black" alt="React 18">
   <img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Vite-6.4-646CFF?logo=vite&logoColor=white" alt="Vite">
   <img src="https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/PDF.js-Integrated-red?logo=adobeacrobatreader" alt="PDF.js">
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
 </p>
 
 ---
 
-## 🏛️ 3D 虚拟考古探掘体验 (Hero Preview)
+## 🏛️ 实机探掘模拟演示 (Live Hero Preview)
 
 <p align="center">
-  <img src="assets/screenshots/02_excavation_3d.png" width="850" alt="3D Virtual Excavation Experience" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);" />
+  <img src="assets/screenshots/02_excavate_live.png" width="360" alt="3D Virtual Excavation Experience" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);" />
 </p>
 
 <p align="center">
-  <i>实时三维泥土粒子剔除、手铲/毛刷拟真工具交互与地下石雕文物出土动效</i>
+  <i>基于 Three.js 的实时泥土碎片剔除粒子系统、手铲/毛刷拟真工具交互与音效触感反馈</i>
 </p>
 
 ---
 
-## 🌟 核心特性与多场景画廊 (Feature Showcase)
+## 🌟 核心页面与实机画廊 (Interface Showcase)
 
-| 🏛️ 非遗石雕数字漫游首页 | 🔍 文物 3D 全景交互与历史档案 |
+| 🏛️ 数字展厅与首页漫游 | 🔍 文物 3D 鉴赏与历史考证 |
 | :---: | :---: |
-| <img src="assets/screenshots/01_home_screen.png" width="380" alt="Cultural Discovery Home" /> | <img src="assets/screenshots/03_artifact_viewer.png" width="380" alt="Artifact 3D Viewer" /> |
-| **文化图景导览**：时代编年史、地域流派分类检索与数字展馆快速入口。 | **三维高精度观察**：支持 360° 旋转缩放、材质光影渲染与工艺技法结构透析。 |
+| <img src="assets/screenshots/01_home_live.png" width="320" alt="Cultural Discovery Home" /> | <img src="assets/screenshots/06_artifact_detail_live.png" width="320" alt="Artifact 3D Detail" /> |
+| **全景导览与文物矩阵**：时代编年史、展厅分类陈列与文物快速入口。 | **高精度形貌观察**：支持 360° 旋转缩放、材质光影透析与工艺技法解说。 |
 
-| 🤖 AI 文化向导伴游对话 | 🏆 我的数字文物馆藏集锦 |
+| 🤖 AI 文化向导与文献溯源 | 🏆 我的数字馆藏图鉴集锦 |
 | :---: | :---: |
-| <img src="assets/screenshots/04_ai_guide_chat.png" width="380" alt="AI Cultural Guide" /> | <img src="assets/screenshots/05_museum_collection.png" width="380" alt="Artifact Museum Collection" /> |
-| **智能对话导览**：结合非遗数据库与大模型，解答石雕纹样寓意与民俗背景。 | **成就与馆藏管理**：记录用户的探掘里程碑、点亮图鉴印章与证书生成。 |
+| <img src="assets/screenshots/04_ai_guide_live.png" width="320" alt="AI Cultural Guide" /> | <img src="assets/screenshots/05_collection_live.png" width="320" alt="Artifact Museum Collection" /> |
+| **多模态问答与知识库检索**：支持图片上传识图问答，自动附带古籍文献引用卡。 | **探掘里程碑记录**：追踪已探掘文物进度，点亮非遗印章图鉴。 |
 
 ---
 
 ## 📖 项目简介 (Overview)
 
-**Stone Carving Discovery App** 是针对非物质文化遗产（石雕艺术与古代石刻）数字化传播而打造的沉浸式研学交互 Web 应用。
+**石刻文化发现应用** 是针对非物质文化遗产（古代石雕艺术、碑刻、画像石）数字化传播而打造的沉浸式研学交互 Web 应用。
 
-项目以 Web 端三维图形技术（Three.js）为核心，摆脱了传统博物馆静态图文浏览的枯燥模式，开创性地设计了**「虚拟地层探测 → 拟真手铲清淤 → 文物出土修复 → 3D 鉴赏 → AI 伴游科普」**的闭环互动流程，让用户在趣味探掘中感受非遗文化的历史厚重感。
-
----
-
-## 🛠️ 技术栈清单 (Tech Stack)
-
-- **三维图形引擎**：Three.js + GLTFLoader + OrbitControls (支持 WebGL 2.0 渲染)
-- **前端架构**：React 18 + Vite 5 + TypeScript
-- **界面交互**：Tailwind CSS + Lucide Icons + Framer Motion
-- **多媒体与音效**：HTML5 Audio API (探掘触碰清脆音效、古琴禅意背景音)
-- **大模型集成**：OpenAI 兼容协议客户端与流式对话组件
+项目以 Web 端三维图形技术（Three.js）与大模型多模态检索技术为核心，摆脱了传统博物馆静态图文浏览的枯燥模式，实现了**「地层探测 → 3D 手铲泥土剥离 → 文物鉴赏 → 文献拓片查阅 → AI 多模态伴游」**的闭环研学体验。
 
 ---
 
-## 📦 项目结构 (Directory Structure)
+## 🛠️ 核心架构与功能模块 (Code Grounding)
+
+1. **三维探掘模拟 (`ExcavationCanvas.tsx`)**：
+   - 基于 Three.js 网格平面与刚体粒子 (`CoverShard`) 模拟泥土剥离；
+   - 包含粗糙度贴图、碎片散射飞溅物理动画与实时完成度百分比监听；
+   - 配合 Web Audio 音效引擎 (`stoneAudio.ts`) 实现手铲刮擦与出土铜锣共鸣。
+2. **多模态 AI 导览伴游 (`AiGuidePage.tsx` + `visionRecall.ts`)**：
+   - 支持文字与图片多模态输入 (`ImageAttachmentBar.tsx`)；
+   - 结合文物特征向量比对与大语言模型，自动生成专业导览词并标注文献引用来源 (`AnswerCitationList.tsx`)。
+3. **数字展厅与详情互动 (`ExhibitHallPage.tsx` + `ArtifactDetailPage.tsx`)**：
+   - 支持石人像、神兽、碑刻、画像石多维度分类切换；
+   - 内嵌放大镜深度观察模式 (`StoneInspectModal.tsx`)。
+4. **古籍拓片文献阅读器 (`PdfReaderPage.tsx`)**：
+   - 集成 `pdfjs-dist` 原生解析，支持离线高保真查阅历史考证古籍与石刻拓片文献。
+5. **离线 PWA 支持 (`registerServiceWorker.ts`)**：
+   - 本地持久化缓存文物元数据 (`storage.ts`)，保障在弱网展馆环境中依然流畅交互。
+
+---
+
+## 📦 项目代码结构 (Directory Layout)
 
 ```text
 stone-carving-discovery-app/
-├── assets/
-│   └── screenshots/         # 5 组高清界面实机预览图
+├── assets/screenshots/      # 6 组从真实运行环境抓取的实机截图
 ├── app/
 │   ├── src/
-│   │   ├── components/      # 3D 画布容器、考古工具箱、AI 对话抽屉
-│   │   ├── three/           # Three.js 场景构建、光照、粒子系统与摄像机控制器
-│   │   ├── hooks/           # 手势监听、音效触发与文物图鉴 Hook
-│   │   └── data/            # 石雕文物多维元数据与历史考证档案
-│   └── public/              # 3D GLTF/GLB 模型文件与纹理贴图
-└── package.json
+│   │   ├── components/      # 3D 探掘画布、石刻观察模态框、AI 引用列表
+│   │   ├── lib/             # Three.js 粒子控制器、音效引擎、多模态客户端
+│   │   ├── pages/           # 首页、展厅、探掘、详情、AI 导览、馆藏、PDF阅读
+│   │   └── data/            # 石刻文物图鉴元数据与考证档案
+│   ├── public/              # 3D 模型资产、拓片文献与纹理材质
+│   └── package.json
 ```
 
 ---
 
 ## 🚀 快速开始 (Quickstart)
 
-### 1. 克隆与安装依赖
+### 1. 安装依赖
 
 ```bash
 git clone https://github.com/Evan-Joseph/stone-carving-discovery-app.git
@@ -88,13 +97,20 @@ cd stone-carving-discovery-app/app
 npm install
 ```
 
-### 2. 本地启动开发服务
+### 2. 启动开发服务器
 
 ```bash
 npm run dev
 ```
 
-在浏览器打开 `http://localhost:5173`，即可体验完整的 3D 考古与文化漫游。
+在浏览器打开 `http://localhost:5173` 即可体验。
+
+### 3. 生产打包与本地预览
+
+```bash
+npm run build
+npm run preview
+```
 
 ---
 
